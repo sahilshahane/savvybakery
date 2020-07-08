@@ -10,13 +10,11 @@
 
 
 
-
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
+    <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/style.css">
+  
     <title>Savvy's Bakery</title>
 </head>
 <body>
@@ -38,7 +36,7 @@
     
 <section id="home" style="width: 100%;">
 
-  <div id="carouselIndicators" class="carousel slide homeslide" data-ride="carousel" data-interval=5000 data-pause=false>
+  <div id="carouselIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval=5000 data-pause=false>
     <!-- <ol class="carousel-indicators">
       <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselIndicators" data-slide-to="1"></li>
@@ -69,7 +67,6 @@
             </div>
           
           </div>
-
     </div>
 <!-- 
     <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
@@ -185,17 +182,73 @@
     <br><br><br>
 </section>
 <!-- <section id="gallery" style="width: 100%;min-height: 100%"></section> -->
-<section id="review" style="width: 100%;min-height: 100%"></section>
-<section id="contact" style="width: 100%;min-height: 100%"></section>
-<section id="aboutus" style="width: 100%;min-height: 100%"></section>
+<section id="review" style="width: 100%;">
+
+  <div class="review-slider" style="background-image: url(assets/images/bg4.jpg);">
+
+    <div class="slide-item carousel-cell">
+          <div class="inner">
+            <img src="assets/images/customer-review/cr1.jpg" alt="" srcset="" style="border-radius: 100%;">
+          </div>
+          <div class="inner2">
+            "It may look like your average neighborhood pizza joint, but Acme Pizza is anything but!"
+          </div>
+    </div>
+
+    <div class="slide-item carousel-cell">
+          <div class="inner">
+            <img src="assets/images/customer-review/cr2.jpg" alt="" srcset="" style="border-radius: 100%;">
+          </div>
+          <div class="inner2">
+            "It may look like your average neighborhood pizza joint, but Acme Pizza is anything but!"
+          </div>
+    </div>
+
+
+    <div class="slide-item carousel-cell">
+      <div class="inner">
+        <img src="assets/images/customer-review/cr3.jpg" alt="" srcset="" style="border-radius: 100%;">
+      </div>
+      <div class="inner2">
+        "It may look like your average neighborhood pizza joint, but Acme Pizza is anything but!"
+      </div>
+    </div>
+
+
+    <div class="slide-item carousel-cell">
+      <div class="inner">
+        <img src="assets/images/customer-review/cr4.jpg" alt="" srcset="" style="border-radius: 100%;">
+      </div>
+      <div class="inner2">
+        "It may look like your average neighborhood pizza joint, but Acme Pizza is anything but!"
+      </div>
+    </div>
+
+    <div class="slide-item carousel-cell">
+      <div class="inner">
+        <img src="assets/images/customer-review/cr5.jpg" alt="" srcset="" style="border-radius: 100%;">
+      </div>
+      <div class="inner2">
+        "It may look like your average neighborhood pizza joint, but Acme Pizza is anything but!"
+      </div>
+    </div>
+
+
+  </div>
+
+
+</section>
+<section id="contact" style="width: 100%;height: 100vh;"></section>
+<section id="aboutus" style="width: 100%;height: 100vh;"></section>
 
 
 </body>
 <script src="assets/vendors/jquery_3.5.1.js"></script>
+<script src="assets/vendors/bootstrap.bundle.min.js"></script>
 <script src="assets/vendors/jquery.sticky.js"></script>
 <script src="assets/vendors/jquery.easing.min.js"></script>
 <script src="assets/vendors/isotope.pkgd.min.js"></script>
-<script src="assets/vendors/bootstrap.min.js"></script>
+<script src="assets/vendors/flickity.pkgd.min.js"></script>
 
 <script src="js/main.js"></script>
 </html>

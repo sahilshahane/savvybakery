@@ -1,4 +1,6 @@
 
+
+
  $("#nav-line").css('width',$('.nav li.selected').outerWidth());
 
  function sumget(arr){
@@ -189,5 +191,19 @@ $(document).ready(function () {
         $('.nav li').removeClass("selected");
         $(this).addClass("selected");
     });
+
+    $('.review-slider').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true,
+        draggable: true,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true,
+        autoPlay: 5000,
+        pauseAutoPlayOnHover: false,
+        friction: 0.3,
+        pauseAutoPlay:false
+      });
     
 });
