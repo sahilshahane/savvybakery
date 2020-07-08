@@ -25,7 +25,8 @@ $(document).ready(function () {
     // else{
         
     // }
-    
+    // $('#review').css('padding-top',$('.nav').outerHeight()-30);
+    // $('#review').css('padding-bottom',$('.nav').outerHeight()+1);
 
     document.querySelector('#home .inner .wu').addEventListener('animationend', function(e){
         $(this).stop().animate({letterSpacing: '0px' }, 300,'easeInOutExpo',function(){
@@ -106,9 +107,8 @@ $(document).ready(function () {
      
     var ReviewScrollobserver1 = new IntersectionObserver(function(entries) {
         if(entries[0]['isIntersecting'] === true) {
-
+            
             if(entries[0]['intersectionRatio'] > 0.6){
-
                 var width = $(".nav .reviews").outerWidth();
                 $('#nav-line').css('width',width);
 
@@ -171,7 +171,7 @@ $(document).ready(function () {
 
         }
     });
-    var scrolltoOffset = $('.nav').outerHeight() - 1;
+    var scrolltoOffset = $('.nav').outerHeight();
     $('.nav a').on('click', function(e) {
           var target = $(this.hash);
           if (target.length) {
@@ -202,8 +202,37 @@ $(document).ready(function () {
         wrapAround: true,
         autoPlay: 5000,
         pauseAutoPlayOnHover: false,
-        friction: 0.3,
-        pauseAutoPlay:false
+        friction: 0.3
       });
-    
+
+      formcarry({
+        form: "2yWXkx33Cow4",
+        // id or the class name of the form element, only form element allowed
+        // works with css selectors
+        // # <= for id
+        // . <= for class
+        element: "#OrderForm",
+        extraData: {
+          // add whatever you want
+          Ordered_Items:getCartData(),
+        },
+        // Success callback, you can show alert messages
+        // or redirect the user in this function
+        onSuccess: function(response){
+          alert("Your Order Has Been Placed Successfully!\nWe'll Contact You within 5 hrs");
+        },
+        // Error callback, a good place to show errors 🗿
+        onError: function(error){
+            alert("Something Went Wrong!\nPlease Check Your Internet Connection!");
+        }
+      });
+
 });
+
+function getCartData(){
+    
+
+
+
+    return Data;
+}
