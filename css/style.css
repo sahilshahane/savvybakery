@@ -29,6 +29,17 @@ a:visited , a:hover, a:active, a{
 }
 
 
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    transition: background-color 0.4s;
+    background-color: rgba(0, 0, 0,0);
+    align-items: center;
+    justify-items: center;
+}
+
+
 #nav-text-logo{
     font-family: 'Galada', cursive;
     font-size: 1.3rem;
@@ -39,15 +50,6 @@ a:visited , a:hover, a:active, a{
     align-items: center;
     transition: all 0.3s;
     border-radius: 0px 0px 29px 0px;
-}
-
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    transition: background-color 0.4s;
-    background-color: rgba(0, 0, 0,0);
 }
 
 .navBackground{
@@ -87,6 +89,15 @@ a:visited , a:hover, a:active, a{
     border: none;
     transition:.2s ease-in-out;
 }
+
+#SearchBar{
+    border-radius: 60px;
+    background-color: white;
+}
+
+
+
+/* HOME */
 
 .carousel-fade .carousel-inner .carousel-item {
     transition-property: opacity;
