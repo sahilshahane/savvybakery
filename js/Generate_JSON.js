@@ -12,8 +12,8 @@ function download(filename, text) {
     document.body.removeChild(element);
   }
 
-function getJSONData(data){
-
+function getJSONData(data,mode){
+    if(mode==1){
     for(let DataObj of data) 
         for(let [fileIndex,MainObj] of Object.entries(DataObj)){
             parentCAT = MainObj["pCAT"]
@@ -45,22 +45,46 @@ function getJSONData(data){
                 JSON_ARRAY.push(obj);
             }
 
-        download(parentCAT+"_CAT"+fileIndex+".json", JSON.stringify(JSON_ARRAY,null, 4));
-        }
-    
+        download(parentCAT+"_cat"+fileIndex+".json", JSON.stringify(JSON_ARRAY,null, 4));
+         }
+    }
+    else if(mode==2){
+        JSON_ARRAY = []
+
+        for(let DataObj of data) 
+        for(let [fileIndex,MainObj] of Object.entries(DataObj)){
+            parentCAT = MainObj["pCAT"]
+            subCAT = MainObj["subCAT"]
+            Data_Array = MainObj["data"]
+       
+            for(item of Data_Array){
+                obj = {}
+                if(subCAT)
+                    obj["data"] = {"sub_category":subCAT,"parent_category":parentCAT}
+                else
+                    obj["data"] = {"sub_category":parentCAT,"parent_category":parentCAT}
+                obj["value"] = item;
+                JSON_ARRAY.push(obj);
+            }
+            
+         }
+
+         download("SEARCH_AUTOCOMPLETE_DATA.js", "var AUTOCOMPLETE_DATA="+JSON.stringify(JSON_ARRAY));
+    }
+
 }
 
 Data = [{
-    "1":{"pCAT":"cakes","subCAT":"chocolate-base","data":["CHOCOLATE SYRUP CAKE","BLACK FOREST","CHOCOLATE TRUFFEL","DUTCH CHOCOLATE","GANACHE","CHOCOLATE CHEESE CAKE"],"extraToken":["base"]},
-    "2":{"pCAT":"cakes","subCAT":"vanilla-base","data":["PINEAPPLE","BUTTER SCOTCH","STRAWBERRY"],"extraToken":["base"]},
-    "3":{"pCAT":"cakes","subCAT":"flavoured-specials","data":["PINACOLADA(TENDER COCONUT)", "RASMALAI", "KULFI FALOODA", "BLUE BERRY", "PAAN", "MANGO", "ORANGE", "PAANI PURI", "MERRY BERRY", "GULAB JAMUN", "HONEY CAKE", "ZEBRA MARVEL", "RED VELVET", "TIGER CREAM CAKE", "DATE CAKE (SPECIALITY)", "PLUM CAKE (SPECIALITY)", "MARBLE", "WINE CAKE", "SPONGE", "MIX FRUIT CAKE", "TROOTY FROOTY CAKE"]},
-    "4":{"pCAT":"cakes","subCAT":"designer","data":["CHRISTMAS CAKE", "CARWHEEL CAKE", "DOLL CAKE", "MARBLE"]}
+    "1":{"pCAT":"Cake","subCAT":"Chocolate Base","data":["CHOCOLATE SYRUP CAKE","BLACK FOREST","CHOCOLATE TRUFFEL","DUTCH CHOCOLATE","GANACHE","CHOCOLATE CHEESE CAKE"],"extraToken":["base"]},
+    "2":{"pCAT":"Cake","subCAT":"Vanilla Base","data":["PINEAPPLE","BUTTER SCOTCH","STRAWBERRY"],"extraToken":["base"]},
+    "3":{"pCAT":"Cake","subCAT":"Flavoured Specials","data":["PINACOLADA(TENDER COCONUT)", "RASMALAI", "KULFI FALOODA", "BLUE BERRY", "PAAN", "MANGO", "ORANGE", "PAANI PURI", "MERRY BERRY", "GULAB JAMUN", "HONEY CAKE", "ZEBRA MARVEL", "RED VELVET", "TIGER CREAM CAKE", "DATE CAKE (SPECIALITY)", "PLUM CAKE (SPECIALITY)", "MARBLE", "WINE CAKE", "SPONGE", "MIX FRUIT CAKE", "TROOTY FROOTY CAKE"]},
+    "4":{"pCAT":"Cake","subCAT":"Designer","data":["CHRISTMAS CAKE", "CARWHEEL CAKE", "DOLL CAKE", "MARBLE"]}
 },
 {
-    "1":{"pCAT":"cake_sides","data":["CAKE POPS","CAKESICAL","BROWNIE","TEA TIME CAKE","TROOTY FROOTY BREAD","PLUM CAKE","MUFFINS","CUP CAKES","BAKE DONUT","FRIED DONUT","CINNAMON ROLL","SWEET BREAD"]}
+    "1":{"pCAT":"Cake Sides","data":["CAKE POPS","CAKESICAL","BROWNIE","TEA TIME CAKE","TROOTY FROOTY BREAD","PLUM CAKE","MUFFINS","CUP CAKES","BAKE DONUT","FRIED DONUT","CINNAMON ROLL","SWEET BREAD"]}
 },
 {
-    "1":{"pCAT":"bakery","subCAT":"bread","data":["BREAD", "LADI PAV", "BROWN BREAD", "GARLIC BREAD", "BRAIDED BREAD", "PIZZA BASE", "WHOLE WHEAT PIZZA BASE", "BURGER BUN", "WHOLE WHEAT BURGER BUN"]},
-    "2":{"pCAT":"bakery","subCAT":"snacks","data":["STUFFED GARLIC BREAD", "PIZZA", "VEGIEE CHESSE", "PANEERY CHEESE", "SOYA CHEESE", "FOCCASIA", "STUFFED BRAIDED BREAD"]}
+    "1":{"pCAT":"Bakery","subCAT":"Breads","data":["BREAD", "LADI PAV", "BROWN BREAD", "GARLIC BREAD", "BRAIDED BREAD", "PIZZA BASE", "WHOLE WHEAT PIZZA BASE", "BURGER BUN", "WHOLE WHEAT BURGER BUN"]},
+    "2":{"pCAT":"Bakery","subCAT":"Snacks","data":["STUFFED GARLIC BREAD", "PIZZA", "VEGIEE CHESSE", "PANEERY CHEESE", "SOYA CHEESE", "FOCCASIA", "STUFFED BRAIDED BREAD"]}
 }
 ]

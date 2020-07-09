@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/typeaheadjs2.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
@@ -21,10 +20,15 @@
         <div class="nav">
             <div id="nav-text-logo"><span style="color: red;">S</span>avvy's<span style="color: red;">B</span>akery</div>
                 
-            <div id="SearchBar">
+            <!-- <div id="SearchBar">
               <input class="typeahead" type="text" placeholder="Search">
+            </div> -->
+            <div class="SearchBar">
+                <input type="text" name="country" class="inner" id="autocomplete" placeholder="Search" />
+                <div id="SearchSuggestions">
             </div>
-            
+            </div>
+
             <ul class="inner">
                     <li class="home selected">Home<a class="linkNav"></a></li>
                     <li class="menu">Menu<a href="#menu" class="linkNav"></a></li>
@@ -242,13 +246,10 @@
 
 
 </section>
-<section id="contact" style="width: 100%;height: 100vh;">
 
-  <div id="SearchBar">
-    <input class="typeahead" type="text" placeholder="Search">
-  </div>
-   
-<form id="OrderForm">
+
+<section id="contact" style="width: 100%;height: 100vh;"> 
+<form id="OrderForm" style="display: none;">
   <input name="First Name" placeholder="First Name" required>
   <input name="Last Name" placeholder="Last Name" required>
   <input type="email" name="Email" placeholder="Email" required>
@@ -256,6 +257,7 @@
   <input name="Address" placeholder="Address" required>
   <button type="submit">Submit</button>
 </form>
+
 
 
 </section>
@@ -269,12 +271,11 @@
 <script src="assets/vendors/jquery.easing.min.js"></script>
 <script src="assets/vendors/isotope.pkgd.min.js"></script>
 <script src="assets/vendors/flickity.pkgd.min.js"></script>
-<script src="assets/vendors/typeahead.bundle.min.js"></script>
+<script src="assets/vendors/jquery.autocomplete.min.js"></script>
 <script src="assets/vendors/formCarryv1.js"></script>
-
 <!-- <script src="https://carrier.formcarry.com/js/v1.js"></script> -->
  
-
+<script src="js/json/SEARCH_AUTOCOMPLETE_DATA.js"></script>
 <script src="js/main.js"></script>
 <script src="js/Generate_JSON.js"></script>
 </html>

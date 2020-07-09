@@ -36,8 +36,12 @@ a:visited , a:hover, a:active, a{
     transition: background-color 0.4s;
     background-color: rgba(0, 0, 0,0);
     align-items: center;
-    justify-content: space-between;
     width: 100%;
+    justify-content: space-between;
+}
+
+.nav ul{
+    min-width: 39%;
 }
 
 #nav-text-logo{
@@ -50,6 +54,7 @@ a:visited , a:hover, a:active, a{
     align-items: center;
     transition: all 0.3s;
     border-radius: 0px 0px 29px 0px;
+    margin-right: auto;
 }
 
 .navBackground{
@@ -71,6 +76,7 @@ a:visited , a:hover, a:active, a{
     margin:0;
     cursor: pointer;
     transition: color 0.5s;
+    
     font-weight: 500;
 }
 
@@ -90,22 +96,55 @@ a:visited , a:hover, a:active, a{
     transition:.2s ease-in-out;
 }
 
-.nav #SearchBar .SearchCategoryTitle {
-    margin: 0 10px 5px 10px;
-    padding: 3px 0;
-    border-bottom: 1px solid #ccc;
-    background-color: white;
+.nav .SearchBar{
+    width: 30%;
 }
 
-/* 
-.nav #SearchBar .SearchBar-selectable{
-   background-color: white;
-} */
-
-.tt-dropdown-menu{
-    max-height: 15px;
-    overflow-y: auto;
+.nav .SearchBar .inner{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
 }
+
+.autocomplete-suggestions {
+    border: 1px solid #999; 
+    background: #FFF; 
+    overflow-y: auto; 
+    border-radius: 4px;
+    cursor: default;
+    outline: none;
+    border: none;
+    width: 100%;
+    transition: all 2s;
+    }
+.autocomplete-suggestion {
+    white-space: nowrap;cursor: default;font-size: 1em;
+    margin: 0 auto;
+    padding-left: 30px;
+    color: #333333;
+}
+.autocomplete-selected { 
+    background: #337ab7; 
+    color: white;
+    cursor: default;}
+.autocomplete-suggestions strong { 
+    font-weight: normal;
+}
+.autocomplete-group {
+     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+     font-size: 14px;
+     margin: 5px auto;
+     text-align: left;
+     width: 90%;
+     cursor: default;
+}
+.autocomplete-group strong { 
+    display: block; 
+    border-bottom: 1px solid #000; 
+}
+
 
 /* HOME */
 
