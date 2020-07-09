@@ -19,10 +19,11 @@ arr = []
             parentCAT = MainObj["pCAT"]
             subCAT = MainObj["subCAT"]
             Data_Array = MainObj["data"]
+            extraToken = undefined
 
             try {
                 if(MainObj["extraToken"].length) extraToken = MainObj["extraToken"]
-            } catch (error) {extraToken = undefined}
+            } catch (error) {}
             
 
             JSON_ARRAY = []
@@ -37,7 +38,7 @@ arr = []
                 obj["tokens"].push(obj["sub_category"]);
                 obj["tokens"].push(obj["category"]);
 
-                if(extratoken)
+                if(extraToken)
                 obj["tokens"] = obj["tokens"].push(extraToken);
 
                 JSON_ARRAY.push(obj);
