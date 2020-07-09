@@ -1,0 +1,72 @@
+[
+    {
+        "category": "bakery",
+        "tokens": [
+            "STUFFED",
+            "GARLIC",
+            "BREAD",
+            "bakery"
+        ],
+        "sub_category": "snacks",
+        "value": "STUFFED GARLIC BREAD"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "PIZZA",
+            "bakery"
+        ],
+        "sub_category": "snacks",
+        "value": "PIZZA"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "VEGIEE",
+            "CHESSE",
+            "bakery"
+        ],
+        "sub_category": "snacks",
+        "value": "VEGIEE CHESSE"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "PANEERY",
+            "CHEESE",
+            "bakery"
+        ],
+        "sub_category": "snacks",
+        "value": "PANEERY CHEESE"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "SOYA",
+            "CHEESE",
+            "bakery"
+        ],
+        "sub_category": "snacks",
+        "value": "SOYA CHEESE"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "FOCCASIA",
+            "bakery"
+        ],
+        "sub_category": "snacks",
+        "value": "FOCCASIA"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "STUFFED",
+            "BRAIDED",
+            "BREAD",
+            "bakery"
+        ],
+        "sub_category": "snacks",
+        "value": "STUFFED BRAIDED BREAD"
+    }
+]

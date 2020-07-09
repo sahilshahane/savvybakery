@@ -1,36 +1,33 @@
 [
     {
-        "category": "cake",
-        "sub_category": "vanilla-base",
-        "value": "PINEAPPLE",
+        "category": "cakes",
         "tokens": [
             "PINEAPPLE",
-            "vanilla-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "vanilla-base",
+        "value": "PINEAPPLE"
     },
     {
-        "category": "cake",
-        "sub_category": "vanilla-base",
-        "value": "BUTTER SCOTCH",
+        "category": "cakes",
         "tokens": [
             "BUTTER",
             "SCOTCH",
-            "vanilla-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "vanilla-base",
+        "value": "BUTTER SCOTCH"
     },
     {
-        "category": "cake",
-        "sub_category": "vanilla-base",
-        "value": "STRAWBERRY",
+        "category": "cakes",
         "tokens": [
             "STRAWBERRY",
-            "vanilla-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "vanilla-base",
+        "value": "STRAWBERRY"
     }
 ]

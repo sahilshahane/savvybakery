@@ -1,75 +1,69 @@
 [
     {
-        "category": "cake",
-        "sub_category": "chocolate-base",
-        "value": "CHOCOLATE SYRUP CAKE",
+        "category": "cakes",
         "tokens": [
             "CHOCOLATE",
             "SYRUP",
             "CAKE",
-            "chocolate-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "chocolate-base",
+        "value": "CHOCOLATE SYRUP CAKE"
     },
     {
-        "category": "cake",
-        "sub_category": "chocolate-base",
-        "value": "BLACK FOREST",
+        "category": "cakes",
         "tokens": [
             "BLACK",
             "FOREST",
-            "chocolate-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "chocolate-base",
+        "value": "BLACK FOREST"
     },
     {
-        "category": "cake",
-        "sub_category": "chocolate-base",
-        "value": "CHOCOLATE TRUFFEL",
+        "category": "cakes",
         "tokens": [
             "CHOCOLATE",
             "TRUFFEL",
-            "chocolate-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "chocolate-base",
+        "value": "CHOCOLATE TRUFFEL"
     },
     {
-        "category": "cake",
-        "sub_category": "chocolate-base",
-        "value": "DUTCH CHOCOLATE",
+        "category": "cakes",
         "tokens": [
             "DUTCH",
             "CHOCOLATE",
-            "chocolate-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "chocolate-base",
+        "value": "DUTCH CHOCOLATE"
     },
     {
-        "category": "cake",
-        "sub_category": "chocolate-base",
-        "value": "GANACHE",
+        "category": "cakes",
         "tokens": [
             "GANACHE",
-            "chocolate-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "chocolate-base",
+        "value": "GANACHE"
     },
     {
-        "category": "cake",
-        "sub_category": "chocolate-base",
-        "value": "CHOCOLATE CHEESE CAKE",
+        "category": "cakes",
         "tokens": [
             "CHOCOLATE",
             "CHEESE",
             "CAKE",
-            "chocolate-base",
-            "cake",
+            "cakes",
             "base"
-        ]
+        ],
+        "sub_category": "chocolate-base",
+        "value": "CHOCOLATE CHEESE CAKE"
     }
 ]

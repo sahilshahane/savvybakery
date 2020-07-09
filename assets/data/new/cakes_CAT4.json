@@ -1,49 +1,41 @@
 [
     {
-        "category": "cake",
-        "sub_category": "designer",
-        "value": "CHRISTMAS CAKE",
+        "category": "cakes",
         "tokens": [
             "CHRISTMAS",
             "CAKE",
-            "designer",
-            "cake",
-            "base"
-        ]
+            "cakes"
+        ],
+        "sub_category": "designer",
+        "value": "CHRISTMAS CAKE"
     },
     {
-        "category": "cake",
-        "sub_category": "designer",
-        "value": "CARWHEEL CAKE",
+        "category": "cakes",
         "tokens": [
             "CARWHEEL",
             "CAKE",
-            "designer",
-            "cake",
-            "base"
-        ]
+            "cakes"
+        ],
+        "sub_category": "designer",
+        "value": "CARWHEEL CAKE"
     },
     {
-        "category": "cake",
-        "sub_category": "designer",
-        "value": "DOLL CAKE",
+        "category": "cakes",
         "tokens": [
             "DOLL",
             "CAKE",
-            "designer",
-            "cake",
-            "base"
-        ]
+            "cakes"
+        ],
+        "sub_category": "designer",
+        "value": "DOLL CAKE"
     },
     {
-        "category": "cake",
-        "sub_category": "designer",
-        "value": "MARBLE",
+        "category": "cakes",
         "tokens": [
             "MARBLE",
-            "designer",
-            "cake",
-            "base"
-        ]
+            "cakes"
+        ],
+        "sub_category": "designer",
+        "value": "MARBLE"
     }
 ]

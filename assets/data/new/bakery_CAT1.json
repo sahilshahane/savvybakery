@@ -1,0 +1,95 @@
+[
+    {
+        "category": "bakery",
+        "tokens": [
+            "BREAD",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "BREAD"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "LADI",
+            "PAV",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "LADI PAV"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "BROWN",
+            "BREAD",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "BROWN BREAD"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "GARLIC",
+            "BREAD",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "GARLIC BREAD"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "BRAIDED",
+            "BREAD",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "BRAIDED BREAD"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "PIZZA",
+            "BASE",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "PIZZA BASE"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "WHOLE",
+            "WHEAT",
+            "PIZZA",
+            "BASE",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "WHOLE WHEAT PIZZA BASE"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "BURGER",
+            "BUN",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "BURGER BUN"
+    },
+    {
+        "category": "bakery",
+        "tokens": [
+            "WHOLE",
+            "WHEAT",
+            "BURGER",
+            "BUN",
+            "bakery"
+        ],
+        "sub_category": "bread",
+        "value": "WHOLE WHEAT BURGER BUN"
+    }
+]
