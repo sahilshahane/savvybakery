@@ -1,0 +1,253 @@
+[
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "PINACOLADA(TENDER COCONUT)",
+        "tokens": [
+            "PINACOLADA(TENDER",
+            "COCONUT)",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "RASMALAI",
+        "tokens": [
+            "RASMALAI",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "KULFI FALOODA",
+        "tokens": [
+            "KULFI",
+            "FALOODA",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "BLUE BERRY",
+        "tokens": [
+            "BLUE",
+            "BERRY",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "PAAN",
+        "tokens": [
+            "PAAN",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "MANGO",
+        "tokens": [
+            "MANGO",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "ORANGE",
+        "tokens": [
+            "ORANGE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "PAANI PURI",
+        "tokens": [
+            "PAANI",
+            "PURI",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "MERRY BERRY",
+        "tokens": [
+            "MERRY",
+            "BERRY",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "GULAB JAMUN",
+        "tokens": [
+            "GULAB",
+            "JAMUN",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "HONEY CAKE",
+        "tokens": [
+            "HONEY",
+            "CAKE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "ZEBRA MARVEL",
+        "tokens": [
+            "ZEBRA",
+            "MARVEL",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "RED VELVET",
+        "tokens": [
+            "RED",
+            "VELVET",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "TIGER CREAM CAKE",
+        "tokens": [
+            "TIGER",
+            "CREAM",
+            "CAKE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "DATE CAKE (SPECIALITY)",
+        "tokens": [
+            "DATE",
+            "CAKE",
+            "(SPECIALITY)",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "PLUM CAKE (SPECIALITY)",
+        "tokens": [
+            "PLUM",
+            "CAKE",
+            "(SPECIALITY)",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "MARBLE",
+        "tokens": [
+            "MARBLE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "WINE CAKE",
+        "tokens": [
+            "WINE",
+            "CAKE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "SPONGE",
+        "tokens": [
+            "SPONGE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "MIX FRUIT CAKE",
+        "tokens": [
+            "MIX",
+            "FRUIT",
+            "CAKE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "flavoured-specials",
+        "value": "TROOTY FROOTY CAKE",
+        "tokens": [
+            "TROOTY",
+            "FROOTY",
+            "CAKE",
+            "flavoured-specials",
+            "cake",
+            "base"
+        ]
+    }
+]

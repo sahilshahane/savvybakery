@@ -28,17 +28,17 @@ a:visited , a:hover, a:active, a{
     text-decoration: none;
 }
 
+/* NAVIGATION */
 
 .nav{
     display: flex;
-    justify-content: space-between;
     flex-flow: row nowrap;
     transition: background-color 0.4s;
     background-color: rgba(0, 0, 0,0);
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
-
 
 #nav-text-logo{
     font-family: 'Galada', cursive;
@@ -90,12 +90,22 @@ a:visited , a:hover, a:active, a{
     transition:.2s ease-in-out;
 }
 
-#SearchBar{
-    border-radius: 60px;
+.nav #SearchBar .SearchCategoryTitle {
+    margin: 0 10px 5px 10px;
+    padding: 3px 0;
+    border-bottom: 1px solid #ccc;
     background-color: white;
 }
 
+/* 
+.nav #SearchBar .SearchBar-selectable{
+   background-color: white;
+} */
 
+.tt-dropdown-menu{
+    max-height: 15px;
+    overflow-y: auto;
+}
 
 /* HOME */
 

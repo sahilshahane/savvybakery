@@ -1,0 +1,36 @@
+[
+    {
+        "category": "cake",
+        "sub_category": "vanilla-base",
+        "value": "PINEAPPLE",
+        "tokens": [
+            "PINEAPPLE",
+            "vanilla-base",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "vanilla-base",
+        "value": "BUTTER SCOTCH",
+        "tokens": [
+            "BUTTER",
+            "SCOTCH",
+            "vanilla-base",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "vanilla-base",
+        "value": "STRAWBERRY",
+        "tokens": [
+            "STRAWBERRY",
+            "vanilla-base",
+            "cake",
+            "base"
+        ]
+    }
+]

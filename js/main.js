@@ -227,6 +227,134 @@ $(document).ready(function () {
         }
       });
 
+      // var Cakes = new Bloodhound({
+      //   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('CHOCOLATE BASE'),
+      //   queryTokenizer: Bloodhound.tokenizers.whitespace,
+      //   prefetch: 'assets/data/cakes.json'
+      // });
+      
+      // var Bakery = new Bloodhound({
+      //   datumTokenizer: Bloodhound.tokenizers.whitespace,
+      //   queryTokenizer: Bloodhound.tokenizers.whitespace,
+      //   prefetch: 'assets/data/bakery.json'
+      // });
+
+      var Cakes_CAT1 = new Bloodhound({
+          datumTokenizer: Bloodhound.tokenizers.whitespace,
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          prefetch: 'assets/data/ind/cakes_cat1.json'
+        });
+
+      var Cakes_CAT2 = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: 'assets/data/ind/cakes_cat2.json'
+      });
+
+      var Cakes_CAT3 = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: 'assets/data/ind/cakes_cat3.json'
+      });
+      var Cakes_CAT4 = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: 'assets/data/ind/cakes_cat4.json'
+      });
+
+      var Bakery_CAT1 = new Bloodhound({
+          datumTokenizer: Bloodhound.tokenizers.whitespace,
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          prefetch: 'assets/data/ind/bakery_cat1.json'
+        });
+
+      var Bakery_CAT2 = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: 'assets/data/ind/bakery_cat2.json'
+      });
+
+      var Cake_sides = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: 'assets/data/cake_sides.json'
+      });
+      
+      $('#SearchBar .typeahead').typeahead({
+        highlight: true,
+        hint: false,
+        minLength: 3,
+        classNames: {
+            input: 'SearchBar-input',
+            hint: 'SearchBar-hint',
+            selectable: 'SearchBar-selectable'
+          }
+      },
+      {
+        name: 'CA-CHBS',
+        // display: 'CHOCOLATE BASE',
+        // limit: 3,
+        source: Cakes_CAT1,
+        templates: {
+          header: '<div class="SearchCategoryTitle">Chocolate Base Cake</div>'
+        }
+      },
+      {
+        name: 'CA-VBS',
+        // display: 'CHOCOLATE BASE',
+        // limit: 3,
+        source: Cakes_CAT2,
+        templates: {
+          header: '<div class="SearchCategoryTitle">Vanilla Base Cake</div>'
+        }
+      },
+      {
+        name: 'CA-FSBS',
+        // display: 'CHOCOLATE BASE',
+        // limit: 3,
+        source: Cakes_CAT3,
+        templates: {
+          header: '<div class="SearchCategoryTitle">Flavoured Special Base Cake</div>'
+        }
+      },
+      {
+        name: 'CA-DBS',
+        // display: 'CHOCOLATE BASE',
+        // limit: 3,
+        source: Cakes_CAT4,
+        templates: {
+          header: '<div class="SearchCategoryTitle">Designer Base Cake</div>'
+        }
+      },
+
+      {
+        name: 'CA-S',
+        source: Cake_sides,
+        // limit: 3,
+        templates: {
+          header: '<div class="SearchCategoryTitle">Cake-Sides</div>'
+        }
+      },
+
+      {
+        name: 'BA-BR',
+        // display: 'CHOCOLATE BASE',
+        source: Bakery_CAT1,
+        // limit: 3,
+        templates: {
+          header: '<div class="SearchCategoryTitle">Breads</div>'
+        }
+      },
+      {
+        name: 'BA-SN',
+        // display: 'CHOCOLATE BASE',
+        source: Bakery_CAT2,
+        // limit: 3,
+        templates: {
+          header: '<div class="SearchCategoryTitle">Snacks</div>'
+        }
+      }
+      );
 });
 
 function getCartData(){
@@ -234,5 +362,5 @@ function getCartData(){
 
 
 
-    return Data;
+    return true;
 }

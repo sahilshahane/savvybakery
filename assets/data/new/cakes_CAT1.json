@@ -1,0 +1,75 @@
+[
+    {
+        "category": "cake",
+        "sub_category": "chocolate-base",
+        "value": "CHOCOLATE SYRUP CAKE",
+        "tokens": [
+            "CHOCOLATE",
+            "SYRUP",
+            "CAKE",
+            "chocolate-base",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "chocolate-base",
+        "value": "BLACK FOREST",
+        "tokens": [
+            "BLACK",
+            "FOREST",
+            "chocolate-base",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "chocolate-base",
+        "value": "CHOCOLATE TRUFFEL",
+        "tokens": [
+            "CHOCOLATE",
+            "TRUFFEL",
+            "chocolate-base",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "chocolate-base",
+        "value": "DUTCH CHOCOLATE",
+        "tokens": [
+            "DUTCH",
+            "CHOCOLATE",
+            "chocolate-base",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "chocolate-base",
+        "value": "GANACHE",
+        "tokens": [
+            "GANACHE",
+            "chocolate-base",
+            "cake",
+            "base"
+        ]
+    },
+    {
+        "category": "cake",
+        "sub_category": "chocolate-base",
+        "value": "CHOCOLATE CHEESE CAKE",
+        "tokens": [
+            "CHOCOLATE",
+            "CHEESE",
+            "CAKE",
+            "chocolate-base",
+            "cake",
+            "base"
+        ]
+    }
+]
