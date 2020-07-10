@@ -12,7 +12,7 @@ function download(filename, text) {
     document.body.removeChild(element);
   }
 
-function getJSONData(data,mode){
+function getJSONData(data,mode,beautify){
     if(mode==1){
     for(let DataObj of data) 
         for(let [fileIndex,MainObj] of Object.entries(DataObj)){
@@ -44,8 +44,9 @@ function getJSONData(data,mode){
 
                 JSON_ARRAY.push(obj);
             }
+        Data = beautify ? JSON.stringify(JSON_ARRAY,null, 4) : JSON.stringify(JSON_ARRAY);
 
-        download(parentCAT+"_cat"+fileIndex+".json", JSON.stringify(JSON_ARRAY,null, 4));
+        download(parentCAT+"_cat"+fileIndex+".json", Data);
          }
     }
     else if(mode==2){
@@ -68,8 +69,9 @@ function getJSONData(data,mode){
             }
             
          }
+         Data = beautify ? JSON.stringify(JSON_ARRAY,null, 4) : JSON.stringify(JSON_ARRAY);
 
-         download("SEARCH_AUTOCOMPLETE_DATA.js", "var AUTOCOMPLETE_DATA="+JSON.stringify(JSON_ARRAY));
+         download("SEARCH_AUTOCOMPLETE_DATA.js", "var AUTOCOMPLETE_DATA="+Data);
     }
 
 }

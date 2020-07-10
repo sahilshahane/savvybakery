@@ -67,12 +67,14 @@ $(document).ready(function () {
 
     var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
         if(entries[0]['isIntersecting'] === true) {
-
+            if(entries[0]['intersectionRatio'] < 0.9)
+            $("#navlogo").stop().animate({width:50}, 250 ,'linear')
+            
             if(entries[0]['intersectionRatio'] > 0.6){
+                $("#navlogo").stop().animate({width:80}, 250,'linear') 
 
                 var width = $(".nav .home").outerWidth();
                 $('#nav-line').css('width',width);
-
                 $("#nav-line").css('margin-left','0');
             }
         }
@@ -227,7 +229,6 @@ $(document).ready(function () {
         }
       });
 
-
      $('#autocomplete').autocomplete({
         lookup : AUTOCOMPLETE_DATA,
         onSelect: function (suggestion) {
@@ -235,8 +236,19 @@ $(document).ready(function () {
          },
          groupBy: 'sub_category',
          minChars:3,
-         appendTo:".nav #SearchSuggestions"
+         appendTo:".nav #SearchSuggestions",
+         showNoSuggestionNotice:true
      });
+
+     $('.product-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true,
+        prevNextButtons: true,
+        pageDots: true,
+        lazyLoad: 1,
+        hash: true
+      });
 
 });
 

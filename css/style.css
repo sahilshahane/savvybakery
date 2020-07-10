@@ -48,13 +48,17 @@ a:visited , a:hover, a:active, a{
     font-family: 'Galada', cursive;
     font-size: 1.3rem;
     user-select: none;
-    padding: 0px 20px 0px 40px;
     color: white;
     display: flex;
-    align-items: center;
     transition: all 0.3s;
     border-radius: 0px 0px 29px 0px;
     margin-right: auto;
+    color: #c12929;
+}
+#nav-text-caption{
+    font-family: 'Anton', sans-serif;
+    user-select: none;
+    color: white;
 }
 
 .navBackground{
@@ -245,7 +249,7 @@ transform: translate3d(0, 0, 0);
     background-color: white;
 }
 
-.cotm{
+#menu .cotm{
     font-family: 'Galada', cursive;
     font-size: 2rem;
     text-align: center;
@@ -389,3 +393,72 @@ padding: 20px;
     font-size: 1.3rem;
     padding: 0px 30px 0px 30px;
 }
+
+#menu .product-carousel{
+    margin: 0px 0px 50px 0px;
+}
+
+#menu .p_category{
+    color: #c12929;
+    font-size: 3rem;
+    width: 50%;
+    margin: 0 auto;
+    user-select: none;
+}
+
+#menu .subTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    user-select: none;
+}
+#menu .subTitle .sub_category{
+    background-color: white;
+    padding: 0px 10px;
+    font-family: 'Galada', cursive;
+    font-size: 1.5rem;
+    height: auto;
+    z-index: 2;
+
+}
+
+#menu .subTitle .line{
+    content: '';
+    border-bottom: #999 solid 1px;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+#menu .product{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#menu .product .prd-img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#menu .carousel-cell{
+    width: 25%; /* half-width */
+    height: auto;
+    margin-right: 10px;
+    counter-increment: carousel-cell;
+    border-radius: 10px;
+    border: #ccc7c7 solid 1px;
+}
+
+.nav-tico{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
