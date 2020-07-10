@@ -1,46 +1,37 @@
+$("#nav-line").css('width', $('.nav li.selected').outerWidth());
 
-
-
- $("#nav-line").css('width',$('.nav li.selected').outerWidth());
-
- function sumget(arr){
-     ans = [];
-     sum = 0;
-     for(item of arr){
-        sum+=$(item).outerWidth()+5;
+function sumget(arr) {
+    ans = [];
+    sum = 0;
+    for (item of arr) {
+        sum += $(item).outerWidth() + 5;
         ans.push(sum);
-     }
-     return ans;
- }
+    }
+    return ans;
+}
 
- var Ans = sumget($('.nav li'));
+var Ans = sumget($('.nav li'));
 
 
 
-$(document).ready(function () {
-    // var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    // if (isMobile) {
-        
-    // }
-    // else{
-        
-    // }
+$(document).ready(function() {
+
     // $('#review').css('padding-top',$('.nav').outerHeight()-30);
     // $('#review').css('padding-bottom',$('.nav').outerHeight()+1);
-
-    document.querySelector('#home .inner .wu').addEventListener('animationend', function(e){
-        $(this).stop().animate({letterSpacing: '0px' }, 300,'easeInOutExpo',function(){
-            setTimeout(()=>{$(this).css('letter-spacing','50px')},6000)
+    //HOME SCREEN ANIMATION
+    document.querySelector('#home .inner .wu').addEventListener('animationend', function(e) {
+        $(this).stop().animate({ letterSpacing: '0px' }, 300, 'easeInOutExpo', function() {
+            setTimeout(() => { $(this).css('letter-spacing', '50px') }, 6000)
         });
     });
 
-    $('.nav li.home').click(function(){
+    $('.nav li.home').click(function() {
         $('html, body').stop().animate({
             scrollTop: 0
         }, 1500, 'easeInOutExpo');
     });
 
-    $('.nav li.menu').click(function(){
+    $('.nav li.menu').click(function() {
         $('a.linkNav')[1].click();
     });
 
@@ -48,52 +39,52 @@ $(document).ready(function () {
     //     $('a.linkNav')[2].click();
     // });
 
-    $('.nav li.reviews').click(function(){
+    $('.nav li.reviews').click(function() {
         $('a.linkNav')[2].click();
     });
 
-    $('.nav li.contact').click(function(){
+    $('.nav li.contact').click(function() {
         $('a.linkNav')[3].click();
     });
 
 
-    $('.nav li.aboutus').click(function(){
+    $('.nav li.aboutus').click(function() {
         $('a.linkNav')[4].click();
     });
-    
-   
 
-    $(".nav").sticky({topSpacing:0,zIndex:9999999});
+
+
+    $(".nav").sticky({ topSpacing: 0, zIndex: 9999999 });
 
     var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
-        if(entries[0]['isIntersecting'] === true) {
-            if(entries[0]['intersectionRatio'] < 0.9)
-            $("#navlogo").stop().animate({width:50}, 250 ,'linear')
-            
-            if(entries[0]['intersectionRatio'] > 0.6){
-                $("#navlogo").stop().animate({width:80}, 250,'linear') 
+        if (entries[0]['isIntersecting'] === true) {
+            if (entries[0]['intersectionRatio'] < 0.99)
+                $("#navlogo").stop().animate({ width: 50 }, 200, 'linear')
+
+            if (entries[0]['intersectionRatio'] > 0.6) {
+                $("#navlogo").stop().animate({ width: 70 }, 200, 'linear')
 
                 var width = $(".nav .home").outerWidth();
-                $('#nav-line').css('width',width);
-                $("#nav-line").css('margin-left','0');
+                $('#nav-line').css('width', width);
+                $("#nav-line").css('margin-left', '0');
             }
         }
-    }, { threshold: [0,0.1,0.2,0.3,0.4,0.5,0.7, 1] }).observe(document.querySelector("#home"));
-     
+    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.99, 1] }).observe(document.querySelector("#home"));
+
     var MenuScrollobserver2 = new IntersectionObserver(function(entries) {
         // since there is a single target to be observed, there will be only one entry
-        if(entries[0]['isIntersecting'] === true) {
+        if (entries[0]['isIntersecting'] === true) {
 
-      
-            if(entries[0]['intersectionRatio'] > 0.5){
+
+            if (entries[0]['intersectionRatio'] > 0.5) {
                 var width = $(".nav .menu").outerWidth();
-                $('#nav-line').css('width',width);
-        
-                $("#nav-line").css('margin-left',Ans[0]);
+                $('#nav-line').css('width', width);
+
+                $("#nav-line").css('margin-left', Ans[0]);
             }
         }
-    }, { threshold: [0,0.1,0.2,0.3,0.4,0.5,0.7, 1] }).observe(document.querySelector("#menu"));
-    
+    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 1] }).observe(document.querySelector("#menu"));
+
     // var GalleryScrollobserver1 = new IntersectionObserver(function(entries) {
     //     if(entries[0]['isIntersecting'] === true) {
 
@@ -106,54 +97,54 @@ $(document).ready(function () {
     //         }
     //     }
     // }, { threshold: [0.5,0.7, 1] }).observe(document.querySelector("#gallery"));
-     
-    var ReviewScrollobserver1 = new IntersectionObserver(function(entries) {
-        if(entries[0]['isIntersecting'] === true) {
-            
-            if(entries[0]['intersectionRatio'] > 0.6){
-                var width = $(".nav .reviews").outerWidth();
-                $('#nav-line').css('width',width);
 
-                $("#nav-line").css('margin-left',Ans[1]);
+    var ReviewScrollobserver1 = new IntersectionObserver(function(entries) {
+        if (entries[0]['isIntersecting'] === true) {
+
+            if (entries[0]['intersectionRatio'] > 0.6) {
+                var width = $(".nav .reviews").outerWidth();
+                $('#nav-line').css('width', width);
+
+                $("#nav-line").css('margin-left', Ans[1]);
             }
         }
-    }, { threshold: [0.5,0.7, 1] }).observe(document.querySelector("#review"));
-     
+    }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#review"));
+
     var ContactScrollobserver1 = new IntersectionObserver(function(entries) {
-        if(entries[0]['isIntersecting'] === true) {
-            if(entries[0]['intersectionRatio'] > 0.6){
+        if (entries[0]['isIntersecting'] === true) {
+            if (entries[0]['intersectionRatio'] > 0.6) {
 
                 var width = $(".nav .contact").outerWidth();
-                $('#nav-line').css('width',width);
+                $('#nav-line').css('width', width);
 
 
-                $("#nav-line").css('margin-left',Ans[2]-2);
+                $("#nav-line").css('margin-left', Ans[2] - 2);
             }
         }
-    }, { threshold: [0.5,0.7, 1] }).observe(document.querySelector("#contact"));
-     
-    
+    }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#contact"));
+
+
     var AboutUsScrollobserver3 = new IntersectionObserver(function(entries) {
         // since there is a single target to be observed, there will be only one entry
-        if(entries[0]['isIntersecting'] === true) {
-            if(entries[0]['intersectionRatio'] > 0.6){
+        if (entries[0]['isIntersecting'] === true) {
+            if (entries[0]['intersectionRatio'] > 0.6) {
 
                 var width = $(".nav .aboutus").outerWidth();
-                $('#nav-line').css('width',width);
+                $('#nav-line').css('width', width);
 
-                 $("#nav-line").css('margin-left',Ans[3]-3);
+                $("#nav-line").css('margin-left', Ans[3] - 3);
             }
 
         }
-    }, { threshold: [0.5,0.7, 1] }).observe(document.querySelector("#aboutus"));
-    
+    }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#aboutus"));
 
-      var menuIsotope = $('.category-items').isotope({
+
+    var menuIsotope = $('.category-items').isotope({
         itemSelector: '.menu-item',
         layoutMode: 'fitRows'
-      });
-  
-    $("#foodcategory li").click(function(e){
+    });
+
+    $("#foodcategory li").click(function(e) {
         $("#foodcategory li").removeClass("category-selected");
         $(this).addClass('category-selected');
 
@@ -162,34 +153,32 @@ $(document).ready(function () {
         });
     });
 
-    window.addEventListener("scroll", function (event) {
+    window.addEventListener("scroll", function(event) {
         var scroll = this.scrollY;
-        if(scroll<5){
+        if (scroll < 5) {
             $('.nav').removeClass('navBackground');
 
-        }
-        else{
+        } else {
             $('.nav').addClass('navBackground');
-
         }
     });
     var scrolltoOffset = $('.nav').outerHeight();
     $('.nav a').on('click', function(e) {
-          var target = $(this.hash);
-          if (target.length) {
+        var target = $(this.hash);
+        if (target.length) {
             e.preventDefault();
 
             var scrollto = target.offset().top - scrolltoOffset;
-    
+
             $('html, body').stop().animate({
-              scrollTop: scrollto
+                scrollTop: scrollto
             }, 1500, 'easeInOutExpo');
-   
-          }
-      });
+
+        }
+    });
 
 
-    $('.nav li').click(function(e){
+    $('.nav li').click(function(e) {
         $('.nav li').removeClass("selected");
         $(this).addClass("selected");
     });
@@ -205,9 +194,9 @@ $(document).ready(function () {
         autoPlay: 5000,
         pauseAutoPlayOnHover: false,
         friction: 0.3
-      });
+    });
 
-      formcarry({
+    formcarry({
         form: "2yWXkx33Cow4",
         // id or the class name of the form element, only form element allowed
         // works with css selectors
@@ -215,32 +204,32 @@ $(document).ready(function () {
         // . <= for class
         element: "#OrderForm",
         extraData: {
-          // add whatever you want
-          Ordered_Items:getCartData(),
+            // add whatever you want
+            Ordered_Items: getCartData(),
         },
         // Success callback, you can show alert messages
         // or redirect the user in this function
-        onSuccess: function(response){
-          alert("Your Order Has Been Placed Successfully!\nWe'll Contact You within 5 hrs");
+        onSuccess: function(response) {
+            alert("Your Order Has Been Placed Successfully!\nWe'll Contact You within 5 hrs");
         },
         // Error callback, a good place to show errors 🗿
-        onError: function(error){
+        onError: function(error) {
             alert("Something Went Wrong!\nPlease Check Your Internet Connection!");
         }
-      });
+    });
 
-     $('#autocomplete').autocomplete({
-        lookup : AUTOCOMPLETE_DATA,
-        onSelect: function (suggestion) {
+    $('#autocomplete').autocomplete({
+        lookup: AUTOCOMPLETE_DATA,
+        onSelect: function(suggestion) {
             //  alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-         },
-         groupBy: 'sub_category',
-         minChars:3,
-         appendTo:".nav #SearchSuggestions",
-         showNoSuggestionNotice:true
-     });
+        },
+        groupBy: 'sub_category',
+        minChars: 3,
+        appendTo: ".nav #SearchSuggestions",
+        showNoSuggestionNotice: true
+    });
 
-     $('.product-carousel').flickity({
+    $('.product-carousel').flickity({
         // options
         cellAlign: 'left',
         contain: true,
@@ -248,12 +237,12 @@ $(document).ready(function () {
         pageDots: true,
         lazyLoad: 1,
         hash: true
-      });
+    });
 
 });
 
-function getCartData(){
-    
+function getCartData() {
+
 
 
 

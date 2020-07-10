@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,76 +20,94 @@
 
     <title>Savvy's Bakery</title>
 </head>
+
 <body>
     <div class="fixed-top">
         <div class="nav">
-          <div style="display: flex;flex-flow: row nowrap;align-items: center;">
-            <img src="assets/icon.svg" alt="" id="navlogo" srcset="" style="width: 80px;">
-            <div class="nav-tico">
-              <div id="nav-text-logo">Savvy's Bakery</div>
-              <div id="nav-text-caption"><span class="anim-text-flow">YOUR'S FRESHLY HOME BAKED</span></div>
+            <div style="display: flex;flex-flow: row nowrap;align-items: center;">
+                <img src="assets/icon.svg" alt="" id="navlogo" srcset="" style="width: 70px;">
+                <div class="nav-tico">
+                    <div id="nav-text-logo" class="tracking-in-contract-bck"><span style="color:#c12929">S</span>avvy's <span style="color:#c12929">B</span>akery</div>
+                    <div id="nav-text-caption"><span>YOUR'S FRESHLY HOME BAKED</span></div>
+                    <!-- <div id="nav-text-caption"><span class="anim-text-flow">YOUR'S FRESHLY HOME BAKED</span></div> -->
+                </div>
+
             </div>
 
-          </div>
-          
-                
+
             <!-- <div id="SearchBar">
               <input class="typeahead" type="text" placeholder="Search">
             </div> -->
             <div class="SearchBar">
                 <input type="text" name="country" class="inner" id="autocomplete" placeholder="Search" />
                 <div id="SearchSuggestions">
-            </div>
+                </div>
             </div>
 
             <ul class="inner">
-                    <li class="home selected">Home<a class="linkNav"></a></li>
-                    <li class="menu">Menu<a href="#menu" class="linkNav"></a></li>
-                    <!-- <li class="gallery">Gallery<a href="#gallery" class="linkNav"></a></li> -->
-                    <li class="reviews">Reviews<a href="#review" class="linkNav"></a></li>
-                    <li class="contact">Contact<a href="#contact" class="linkNav"></a></li>
-                    <li class="aboutus">About Us<a href="#aboutus" class="linkNav"></a></li>
-                    <hr id='nav-line'/>
-                </ul>
-            </div>
+                <li class="home selected">Home
+                    <a class="linkNav"></a>
+                </li>
+                <li class="menu">Menu
+                    <a href="#menu" class="linkNav"></a>
+                </li>
+                <!-- <li class="gallery">Gallery<a href="#gallery" class="linkNav"></a></li> -->
+                <li class="reviews">Reviews
+                    <a href="#review" class="linkNav"></a>
+                </li>
+                <li class="contact">Contact
+                    <a href="#contact" class="linkNav"></a>
+                </li>
+                <li class="aboutus">About Us
+                    <a href="#aboutus" class="linkNav"></a>
+                </li>
+                <hr id='nav-line' />
+            </ul>
         </div>
     </div>
-    
-<section id="home" style="width: 100%;height: 100%;overflow: hidden;">
+    </div>
 
-  <div id="carouselIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval=5000 data-pause=false>
-    <!-- <ol class="carousel-indicators">
+    <section id="home" style="width: 100%;height: 100%;overflow: hidden;">
+
+        <div id="carouselIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval=5000 data-pause=false>
+            <!-- <ol class="carousel-indicators">
       <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselIndicators" data-slide-to="1"></li>
       <li data-target="#carouselIndicators" data-slide-to="2"></li>
     </ol> -->
-    <div class="carousel-inner">
-          <div class="carousel-item active" style="background-image: url(assets/images/bg5.jpg);">
-            <div class="inner">
-              <div class="wu animate__animated animate__fadeInDownBig slide1">Why <span style="color: #c12929;">Us</span>?</div>
-              <div class="wur animate__animated animate__fadeInUpBig">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-            </div>
-          </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(assets/images/bg5.jpg);">
+                    <div class="inner">
+                        <div class="wu animate__animated animate__fadeInDownBig slide1">Why <span style="color: #c12929;">Us</span>?</div>
+                        <div class="wur animate__animated animate__fadeInUpBig">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    </div>
+                </div>
 
-          <div class="carousel-item" style="background-image: url(assets/images/bg2.jpg);">
-          
-            <div class="inner">
-              <div class="wu defaultSlide"><div class="animate__animated animate__fadeInLeftBig">Your</div> <div class="animate__animated animate__fadeInRightBig" style="color: #c12929;">Quote</div></div>
-              <div class="wur animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-            </div>
-            
-          </div>
+                <div class="carousel-item" style="background-image: url(assets/images/bg2.jpg);">
 
-          <div class="carousel-item" style="background-image: url(assets/images/bg3.jpg);">
-          
-            <div class="inner">
-              <div class="wu animate__animated animate__zoomInUp defaultSlide">Another <span style="color: #c12929;">Quote</span>?</div>
-              <div class="wur animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <div class="inner">
+                        <div class="wu defaultSlide">
+                            <div class="animate__animated animate__fadeInLeftBig">Your</div>
+                            <div class="animate__animated animate__fadeInRightBig" style="color: #c12929;">Quote</div>
+                        </div>
+                        <div class="wur animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item" style="background-image: url(assets/images/bg3.jpg);">
+
+                    <div class="inner">
+                        <div class="wu animate__animated animate__zoomInUp defaultSlide">Another <span style="color: #c12929;">Quote</span>?</div>
+                        <div class="wur animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    </div>
+
+                </div>
             </div>
-          
-          </div>
-    </div>
-<!-- 
+            <!-- 
     <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -97,9 +117,9 @@
       <span class="sr-only">Next</span>
     </a> -->
 
-  </div>
-</section>
-<!-- 
+        </div>
+    </section>
+    <!-- 
 <section id="menu" style="min-height: 100%">
  
     <div class="cotm">
@@ -205,210 +225,210 @@
      <br><br><br>
 </section> -->
 
-<section id="menu" style="width: 100%;height: auto;padding: 0%;background-color: white;margin: 0;">
-<div>
-  <div class="cotm p_category">Cakes</div>
-  <!-- <div class="sub_category"><span>Chocolate Base</span></div> -->
+    <section id="menu" style="width: 100%;height: auto;padding: 0%;background-color: white;margin: 0;">
+        <div>
+            <div class="cotm p_category">Cakes</div>
+            <!-- <div class="sub_category"><span>Chocolate Base</span></div> -->
 
-  <div class="subTitle">
-    <div class="sub_category"><span>Chocolate Base</span></div>
-    <div class="line"></div>
-  </div>
-  
-  <div class="product-carousel">
-
-
-          <div class=" carousel-cell" id="cc1">
-            <!--  -->
-            <div class="product">
-
-                  <img src="assets/images/products/cakes/1.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
+            <div class="subTitle">
+                <div class="sub_category"><span>Chocolate Base</span></div>
+                <div class="line"></div>
             </div>
-            <!--  -->
-          </div>
 
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
+            <div class="product-carousel">
 
-                  <img src="assets/images/products/cakes/2.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
 
+                <div class=" carousel-cell" id="cc1">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/1.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/2.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/3.jpg" class="prd-img" alt="">
+                        <div class="prd-name">CHOCOLATE SYRUP CAKE</div>
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/4.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/5.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell" id="cell6">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/7.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/8.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
+
+                <div class="carousel-cell">
+                    <!--  -->
+                    <div class="product">
+
+                        <img src="assets/images/products/cakes/10.jpg" class="prd-img" alt="">
+                        <div>CHOCOLATE SYRUP CAKE</div>
+
+                    </div>
+                    <!--  -->
+                </div>
             </div>
-            <!--  -->
-          </div>
 
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
+        </div>
 
-                  <img src="assets/images/products/cakes/3.jpg" class="prd-img" alt="">
-                  <div class="prd-name">CHOCOLATE SYRUP CAKE</div>
+
+    </section>
+
+
+
+
+
+
+    <!-- <section id="gallery" style="width: 100%;min-height: 100%"></section> -->
+    <section id="review">
+
+        <div class="review-slider" style="background-image: url(assets/images/bg4.jpg);">
+
+            <div class="slide-item carousel-cell">
+                <div class="inner">
+                    <img src="assets/images/customer-review/cr1.jpg" alt="" srcset="" style="border-radius: 100%;">
+                </div>
+                <div class="inner2">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                </div>
             </div>
-            <!--  -->
-          </div>
 
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
-
-                  <img src="assets/images/products/cakes/4.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
+            <div class="slide-item carousel-cell">
+                <div class="inner">
+                    <img src="assets/images/customer-review/cr2.jpg" alt="" srcset="" style="border-radius: 100%;">
+                </div>
+                <div class="inner2">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                </div>
             </div>
-            <!--  -->
-          </div>
 
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
 
-                  <img src="assets/images/products/cakes/5.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
+            <div class="slide-item carousel-cell">
+                <div class="inner">
+                    <img src="assets/images/customer-review/cr3.jpg" alt="" srcset="" style="border-radius: 100%;">
+                </div>
+                <div class="inner2">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                </div>
             </div>
-            <!--  -->
-          </div>
 
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
 
-                  <img src="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
+            <div class="slide-item carousel-cell">
+                <div class="inner">
+                    <img src="assets/images/customer-review/cr4.jpg" alt="" srcset="" style="border-radius: 100%;">
+                </div>
+                <div class="inner2">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                </div>
             </div>
-            <!--  -->
-          </div>
 
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
-
-                  <img src="assets/images/products/cakes/7.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
+            <div class="slide-item carousel-cell">
+                <div class="inner">
+                    <img src="assets/images/customer-review/cr5.jpg" alt="" srcset="" style="border-radius: 100%;">
+                </div>
+                <div class="inner2">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                </div>
             </div>
-            <!--  -->
-          </div>
-
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
-
-                  <img src="assets/images/products/cakes/8.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
-            </div>
-            <!--  -->
-          </div>
-
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
-
-                  <img src="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
-            </div>
-            <!--  -->
-          </div>
-          
-          <div class="carousel-cell">
-            <!--  -->
-            <div class="product">
-
-                  <img src="assets/images/products/cakes/10.jpg" class="prd-img" alt="">
-                  <div>CHOCOLATE SYRUP CAKE</div>
-
-            </div>
-            <!--  -->
-          </div>
-  </div>
-
-</div>
 
 
-</section>
+        </div>
 
 
+    </section>
 
 
+    <section id="contact" style="width: 100%;height: 100vh;">
+        <form id="OrderForm">
+            <input name="First Name" placeholder="First Name" required>
+            <input name="Last Name" placeholder="Last Name" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <input type="tel" name="Phone No." placeholder="Phone No." required>
+            <input name="Address" placeholder="Address" required>
+            <button type="submit">Submit</button>
+        </form>
 
-
-<!-- <section id="gallery" style="width: 100%;min-height: 100%"></section> -->
-<section id="review">
-
-  <div class="review-slider" style="background-image: url(assets/images/bg4.jpg);">
-
-    <div class="slide-item carousel-cell">
-          <div class="inner">
-            <img src="assets/images/customer-review/cr1.jpg" alt="" srcset="" style="border-radius: 100%;">
-          </div>
-          <div class="inner2">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          </div>
-    </div>
-
-    <div class="slide-item carousel-cell">
-          <div class="inner">
-            <img src="assets/images/customer-review/cr2.jpg" alt="" srcset="" style="border-radius: 100%;">
-          </div>
-          <div class="inner2">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-          </div>
-    </div>
-
-
-    <div class="slide-item carousel-cell">
-      <div class="inner">
-        <img src="assets/images/customer-review/cr3.jpg" alt="" srcset="" style="border-radius: 100%;">
-      </div>
-      <div class="inner2">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      </div>
-    </div>
-
-
-    <div class="slide-item carousel-cell">
-      <div class="inner">
-        <img src="assets/images/customer-review/cr4.jpg" alt="" srcset="" style="border-radius: 100%;">
-      </div>
-      <div class="inner2">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      </div>
-    </div>
-
-    <div class="slide-item carousel-cell">
-      <div class="inner">
-        <img src="assets/images/customer-review/cr5.jpg" alt="" srcset="" style="border-radius: 100%;">
-      </div>
-      <div class="inner2">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      </div>
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-<section id="contact" style="width: 100%;height: 100vh;"> 
-<form id="OrderForm">
-  <input name="First Name" placeholder="First Name" required>
-  <input name="Last Name" placeholder="Last Name" required>
-  <input type="email" name="Email" placeholder="Email" required>
-  <input type="tel" name="Phone No." placeholder="Phone No." required>
-  <input name="Address" placeholder="Address" required>
-  <button type="submit">Submit</button>
-</form>
-
-</section>
-<section id="aboutus" style="width: 100%;height: 100vh;"></section>
+    </section>
+    <section id="aboutus" style="width: 100%;height: 100vh;"></section>
 
 
 </body>
@@ -437,8 +457,10 @@
 
 <script src="assets/vendors/formCarryv1.js"></script>
 <!-- <script src="https://carrier.formcarry.com/js/v1.js"></script> -->
- 
+
+<script src="assets/vendors/rainbow-text.min.js"></script>
 <script src="js/json/SEARCH_AUTOCOMPLETE_DATA.js"></script>
 <script src="js/main.js"></script>
 <script src="js/Generate_JSON.js"></script>
+
 </html>
