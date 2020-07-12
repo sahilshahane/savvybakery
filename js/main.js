@@ -235,9 +235,23 @@ $(document).ready(function() {
         contain: true,
         prevNextButtons: true,
         pageDots: true,
-        lazyLoad: 1,
-        hash: true
+        // lazyLoad: 1,
+        hash: true,
+        friction: 0.3,
+        lazyLoad: 5
     });
+
+    $('#menu .product .inner').hover(function () {
+            $(this).children(".prd-img").addClass('prd-imgbrightness');
+            $(this).children(".img-description").fadeIn();
+
+        }, function () {
+            $(this).children(".prd-img").removeClass('prd-imgbrightness');
+            $(this).children(".img-description").hide();
+
+        }
+    );
+    
 
 });
 
