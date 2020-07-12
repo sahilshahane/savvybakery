@@ -64,9 +64,7 @@ a {
     justify-content: space-between;
 }
 
-.nav ul {
-    min-width: 39%;
-}
+
 
 #nav-text-logo {
     font-family: 'Galada', cursive;
@@ -121,7 +119,7 @@ a {
 
 #nav-line {
     height: .1rem;
-    width: none;
+    width: 50px;
     margin: 1px 0px 0px 0px;
     padding: 0;
     background: tomato;
