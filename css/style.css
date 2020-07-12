@@ -556,14 +556,14 @@ a {
     bottom: 0;
     left: 0;
     transform-origin: top right;
-    transform: skewY(0deg);
+    transform: skewY(7deg);
     border-radius: 0px 0px 10px 10px;
     transition: all 0.5s ease;
 
   }
 
   #menu .product .inner2:hover:after{
-    transform: skewY(7deg);
+    transform: skewY(0deg);
   }
 
   #menu .product .prd-name{
@@ -575,7 +575,6 @@ a {
 
   #menu .product .prd-prop{
     font-size: 0.8rem;
-    /* font-weight: bold; */
     color: rgb(48, 47, 47);
   }
 
