@@ -526,8 +526,14 @@ a {
 
 #menu .product .inner2{    
     z-index: 4;
-    background-color: #2a2a72;
-    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    background-color: #ee8c68;
+    background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);    
+
+        
+
+            
+
+
     color: #fff;
     border-radius: 0 0 10px 10px;
     position: relative;
@@ -564,8 +570,9 @@ a {
 
   #menu .product .prd-name{
     font-size: 1.2rem;
-    font-family: 'Noto Sans', sans-serif;
-    margin-bottom: 10px;
+    font-family: 'Galada', cursive;
+
+    /* margin-bottom: 10px; */
   }
 
   #menu .product .prd-prop{
