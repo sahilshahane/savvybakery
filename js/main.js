@@ -243,15 +243,34 @@ $(document).ready(function() {
 
     $('#menu .product .inner').hover(function () {
             $(this).children(".prd-img").addClass('prd-imgbrightness');
-            $(this).children(".img-description").fadeIn();
+            $(this).children(".img-description").show();
 
         }, function () {
             $(this).children(".prd-img").removeClass('prd-imgbrightness');
             $(this).children(".img-description").hide();
-
         }
     );
     
+    $("#menu .product .prd-weight div").click(function(){
+        $(this).parent().children(".selected").removeClass("selected")
+        $(this).addClass("selected");
+        // $(this).parents(".product").children(".inner2").css('background','linear-gradient(to left, #43c6ac, #191654)');
+
+    });
+
+    
+
+    $('.addToCart').change(function() {
+        if(this.checked) {
+            $(this).parent().children(".cart-ico").stop().fadeOut(()=>{$(this).parent().children(".tick-trigger").children(".trigger").toggleClass("drawn");});
+        }
+        else{
+            $(this).parent().children(".tick-trigger").children(".trigger").toggleClass("drawn");
+
+            $(this).parent().children(".cart-ico").stop().fadeIn();
+
+        }
+    });
 
 });
 

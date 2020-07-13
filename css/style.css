@@ -481,25 +481,14 @@ a {
 }
 
 #menu .product {
-    /* display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    justify-items: center;
-    align-items: center; */
-
-    /* border: #ccc7c7 solid 1px; */
     border-radius: 10px;
-
 }
 
 #menu .product .prd-img{
     width: 100%;
     height: auto;
-    transition: filter 0.4s;
-    /* border-radius: 10px 10px 0 0; */
+    transition: filter 0.2s;
     border-radius: 10px 10px 0 0;
-    
-
 }
 
 .prd-imgbrightness{
@@ -524,13 +513,8 @@ a {
 
 #menu .product .inner2{    
     z-index: 4;
-    background-color: #ee8c68;
-    background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);    
 
-        
-
-            
-
+    background: linear-gradient(to left, #2F80ED, #56CCF2);
 
     color: #fff;
     border-radius: 0 0 10px 10px;
@@ -544,6 +528,7 @@ a {
 
 }
 
+
   #menu .product .inner2:after{
     position: absolute;
     width: 100%;
@@ -556,27 +541,25 @@ a {
     bottom: 0;
     left: 0;
     transform-origin: top right;
-    transform: skewY(0deg);
+    transform: skewY(7deg);
     border-radius: 0px 0px 10px 10px;
     transition: all 0.5s ease;
 
   }
 
   #menu .product .inner2:hover:after{
-    transform: skewY(7deg);
+    transform: skewY(0deg);
   }
 
   #menu .product .prd-name{
     font-size: 1.2rem;
     font-family: 'Galada', cursive;
-
-    /* margin-bottom: 10px; */
   }
 
   #menu .product .prd-prop{
     font-size: 0.8rem;
-    /* font-weight: bold; */
     color: rgb(48, 47, 47);
+    font-weight: 600;
   }
 
   #menu .product .prd-price{
@@ -585,4 +568,59 @@ a {
 
   #menu .product .prd-weight{
     font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
   }
+
+  #menu .product .prd-weight div{
+    display: inline-block;
+    padding: 3px 6px 3px 6px;
+}
+  #menu .product .prd-weight .selected{
+    color: #000;
+    background-color: white;
+    border-radius: 50px;
+  }
+
+  #menu .product .addtoCartIcon{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    float: right;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    justify-items: center;
+}
+
+
+#menu .product .addtoCartIcon input{
+    display: none;
+}
+
+
+
+.tick{
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    transition: stroke-dashoffset 1s ease-out;
+}
+.drawn + svg .path{
+    opacity: 1;
+    stroke-dashoffset: 0;
+}
+
+svg{
+    width:100%;
+    height: auto;
+}
+
+#menu .product .inner3{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
