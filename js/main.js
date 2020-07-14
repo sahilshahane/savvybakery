@@ -139,19 +139,19 @@ $(document).ready(function() {
     }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#aboutus"));
 
 
-    var menuIsotope = $('.category-items').isotope({
-        itemSelector: '.menu-item',
-        layoutMode: 'fitRows'
-    });
+    // var menuIsotope = $('.category-items').isotope({
+    //     itemSelector: '.menu-item',
+    //     layoutMode: 'fitRows'
+    // });
 
-    $("#foodcategory li").click(function(e) {
-        $("#foodcategory li").removeClass("category-selected");
-        $(this).addClass('category-selected');
+    // $("#foodcategory li").click(function(e) {
+    //     $("#foodcategory li").removeClass("category-selected");
+    //     $(this).addClass('category-selected');
 
-        menuIsotope.isotope({
-            filter: $(this).data('filter')
-        });
-    });
+    //     menuIsotope.isotope({
+    //         filter: $(this).data('filter')
+    //     });
+    // });
 
     window.addEventListener("scroll", function(event) {
         var scroll = this.scrollY;
@@ -236,7 +236,7 @@ $(document).ready(function() {
         prevNextButtons: true,
         pageDots: true,
         // lazyLoad: 1,
-        hash: true,
+        // hash: true,
         friction: 0.3,
         lazyLoad: 5
     });
