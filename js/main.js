@@ -231,7 +231,7 @@ $(document).ready(function() {
 
     $('.product-carousel').flickity({
         // options
-        cellAlign: 'left',
+        cellAlign: 'center',
         contain: true,
         prevNextButtons: true,
         pageDots: true,
@@ -272,6 +272,7 @@ $(document).ready(function() {
         }
     });
 
+   
 });
 
 function getCartData() {
@@ -280,4 +281,15 @@ function getCartData() {
 
 
     return true;
+}
+
+function gcc(cat_str){
+    arr=[]
+    for(obj of AUTOCOMPLETE_DATA){
+        if(obj["data"]["sub_category"]==cat_str){
+            val = obj["value"].charAt(0).toUpperCase()+obj["value"].slice(1).toLowerCase();
+            arr.push(val)
+        }
+    }
+    download("product items.txt",JSON.stringify(arr,null, 4));
 }
