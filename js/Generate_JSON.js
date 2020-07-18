@@ -76,6 +76,30 @@ function getJSONData(data,mode,beautify){
 
 }
 
+
+function gcc(cat_str,download_=true){
+    arr=[]
+    for(obj of AUTOCOMPLETE_DATA){
+        if(obj["data"]["sub_category"]==cat_str){
+            val = obj["value"].charAt(0).toUpperCase()+obj["value"].slice(1).toLowerCase();
+            arr.push(val);
+        }
+    }
+
+    if(download_)
+    download("product items.txt",JSON.stringify(arr,null, 4));
+    else{
+        temp = document.createElement("div");
+        for(item of arr){
+            div = document.createElement("div");
+            div.classList.add("item");
+            div.innerText = item;
+            temp.appendChild(div);
+        }
+        console.log(temp)
+    }
+}
+
 Data = [{
     "1":{"pCAT":"Cake","subCAT":"Chocolate Base","data":["CHOCOLATE SYRUP CAKE","BLACK FOREST","CHOCOLATE TRUFFEL","DUTCH CHOCOLATE","GANACHE","CHOCOLATE CHEESE CAKE"],"extraToken":["base"]},
     "2":{"pCAT":"Cake","subCAT":"Vanilla Base","data":["PINEAPPLE","BUTTER SCOTCH","STRAWBERRY"],"extraToken":["base"]},

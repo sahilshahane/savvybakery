@@ -5,6 +5,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     height: 100%;
     width: 100%;
+    -ms-overflow-style: none;scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
@@ -17,6 +18,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; */
+    
 }
 
 * {
@@ -64,7 +66,9 @@ a {
     justify-content: space-between;
 }
 
-
+#navlogo{
+    width:55px;
+}
 
 #nav-text-logo {
     font-family: 'Galada', cursive;
@@ -94,29 +98,6 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.nav .inner {
-    list-style: none;
-    margin-block-start: 0em;
-    margin-block-end: 0.5em;
-}
-
-.nav .inner li {
-    display: inline-block;
-    text-align: center;
-    user-select: none;
-    padding: 20px;
-    color: white;
-    margin: 0;
-    cursor: pointer;
-    transition: color 0.5s;
-    font-weight: 500;
-}
-
-.nav .inner li:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #c12929;
-}
-
 #nav-line {
     height: .1rem;
     width: 50px;
@@ -127,8 +108,16 @@ a {
     transition: .2s ease-in-out;
 }
 
+.nav .logo{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
 .nav .SearchBar {
-    width: 30%;
+    width: 40%;
+    margin-left: -10%;
+    /* margin: 0 auto; */
 }
 
 .nav .SearchBar .inner {
@@ -137,6 +126,10 @@ a {
     border: none;
     border-radius: 50px;
     text-align: center;
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    vertical-align: center;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .autocomplete-suggestions {
@@ -249,7 +242,7 @@ a {
 
 #home .carousel-item {
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -622,3 +615,108 @@ svg{
     flex-flow: row wrap;
     justify-content: space-between;
 }
+
+
+@media (min-width: 1281px){
+
+
+}
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+}
+
+
+@media (min-width: 321px) and (max-width: 480px) {
+
+}
+
+@media (max-width: 320px) {
+
+
+}
+
+.hamburger-menu{
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    /* width: 23%; */
+    
+    max-width: 100vw;
+    transform: translate(100%);
+    transition: all 0.4s;
+    user-select: none;
+}
+
+.hamburger-menu:focus-visible{
+    display: inline;
+}
+
+#hamburger{
+    width:36px;
+    height:36px;
+    user-select: none;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.hamburger-menu .item{
+    padding: 10px 20px 10px 20px;
+    margin:0 auto;
+    transition: all 0.4s;
+}
+
+.hamburger-menu .product-slide{
+    display: none;
+}
+
+.hamburger-menu .back{
+    width:30px;
+    height:30px;
+    margin: 5px 5px 5px 20px;
+    border-radius: 50%;
+}
+
+.hamburger-menu .slide{
+    position: absolute; 
+    visibility: hidden;
+    transform: translate(200%);
+}
+
+.hamburger-menu .active{
+    transform: translate(0%);
+    transition: transform 0.4s;
+    /* display: block; */
+    position: relative; 
+    visibility: visible;
+    opacity: 1;
+}
+
+.hamburger-menu .item-view{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+.hamburger-menu .hide-view{
+    transform: translate(100%);
+}
+
+.hamburger-menu .show-view{
+    transform: translate(0%);
+}
+

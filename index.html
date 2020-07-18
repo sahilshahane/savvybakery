@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href ="assets/icon.svg" type = "image/x-icon"> 
     <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
@@ -23,59 +25,148 @@
 
 <body>
     <div class="fixed-top">
+
+        <div class="hamburger-menu">
+            <div class="back">
+                <img src="assets/back.svg" alt="Back">
+            </div>
+            <div class="item-view">
+                <div id="landing" class="slide active" data-nav-from="exit">
+                    <div class="home item">Home<a class="linkNav"></a></div>
+                    <div class="menu item nav-true" data-nav-to="products">Products<!--<a href="#menu" class="linkNav"></a>--></div>
+                    <div class="contact item">Contact<a href="#contact" class="linkNav"></a></div>
+                    <div class="aboutus item">About Us<a href="#aboutus" class="linkNav"></a></div>        
+                    <div class="cart item">Cart<a href="#cart" class="linkNav"></a></div>
+                </div>
+                
+                <div id="products" class="slide" data-nav-from="landing">
+                    <div class="item nav-true" data-nav-to="cake-submenu">Cakes</div>
+                    <div class="item nav-true" data-nav-to="cside-menu">Cakes Sides</div>
+                    <div class="item nav-true" data-nav-to="bakery-submenu">Bakery</div>
+                </div>
+    
+                <div id="cake-submenu" class="slide" data-nav-from="products">
+                    <div class="item nav-true" data-nav-to="cake-cb-menu">Chocolate Base</div>
+                    <div class="item nav-true" data-nav-to="cake-vb-menu">Vanilla Base</div>     
+                    <div class="item nav-true" data-nav-to="cake-fs-menu">Flavoured Special</div>
+                    <div class="item nav-true" data-nav-to="cake-d-menu">Designer</div>
+                </div>
+    
+                <div id="cside-menu" class="slide" data-nav-from="landing">
+                    <div class="item">Cake pops</div>
+                    <div class="item">Cakesical</div>
+                    <div class="item">Brownie</div>
+                    <div class="item">Tea time cake</div>
+                    <div class="item">Trooty frooty bread</div>
+                    <div class="item">Plum cake</div>
+                    <div class="item">Muffins</div>
+                    <div class="item">Cup cakes</div>
+                    <div class="item">Bake donut</div>
+                    <div class="item">Fried donut</div>
+                    <div class="item">Cinnamon roll</div>
+                    <div class="item">Sweet bread</div>
+                </div>
+
+                <div id="bakery-submenu" class="slide" data-nav-from="landing">
+                    <div class="item nav-true" data-nav-to="b-br-menu">Breads</div>
+                    <div class="item nav-true" data-nav-to="b-sn-menu">Snacks</div>
+                </div>
+
+                <div id="cake-cb-menu" class="slide" data-nav-from="cake-submenu">
+                    <div class="item">Chocolate syrup cake</div>
+                    <div class="item">Black forest</div>
+                    <div class="item">Chocolate truffel</div>
+                    <div class="item">Dutch chocolate</div>
+                    <div class="item">Ganache</div>
+                    <div class="item">Chocolate cheese cake</div>
+                </div>
+    
+                <div id="cake-vb-menu" class="slide" data-nav-from="cake-submenu">
+                        <div class="item">Pineapple</div>
+                        <div class="item">Butter scotch</div>
+                        <div class="item">Strawberry</div>
+                </div>
+    
+                <div id="cake-fs-menu" class="slide" data-nav-from="cake-submenu">
+                        <div class="item">Pinacolada(tender coconut)</div>
+                        <div class="item">Rasmalai</div>
+                        <div class="item">Kulfi falooda</div>
+                        <div class="item">Blue berry</div>
+                        <div class="item">Paan</div>
+                        <div class="item">Mango</div>
+                        <div class="item">Orange</div>
+                        <div class="item">Paani puri</div>
+                        <div class="item">Merry berry</div>
+                        <div class="item">Gulab jamun</div>
+                        <div class="item">Honey cake</div>
+                        <div class="item">Zebra marvel</div>
+                        <div class="item">Red velvet</div>
+                        <div class="item">Tiger cream cake</div>
+                        <div class="item">Date cake (speciality)</div>
+                        <div class="item">Plum cake (speciality)</div>
+                        <div class="item">Marble</div>
+                        <div class="item">Wine cake</div>
+                        <div class="item">Sponge</div>
+                        <div class="item">Mix fruit cake</div>
+                        <div class="item">Trooty frooty cake</div>
+                </div>
+    
+                <div id="cake-d-menu" class="slide" data-nav-from="cake-submenu">
+                        <div class="item">Christmas cake</div>
+                        <div class="item">Carwheel cake</div>
+                        <div class="item">Doll cake</div>
+                        <div class="item">Marble</div>
+                </div>
+    
+                <div id="b-br-menu" class="slide" data-nav-from="bakery-submenu">
+                    <div class="item">Bread</div>
+                    <div class="item">Ladi pav</div>
+                    <div class="item">Brown bread</div>
+                    <div class="item">Garlic bread</div>
+                    <div class="item">Braided bread</div>
+                    <div class="item">Pizza base</div>
+                    <div class="item">Whole wheat pizza base</div>
+                    <div class="item">Burger bun</div>
+                    <div class="item">Whole wheat burger bun</div>
+                </div>
+    
+                <div id="b-sn-menu" class="slide" data-nav-from="bakery-submenu">
+                    <div class="item">Stuffed garlic bread</div>
+                    <div class="item">Pizza</div>
+                    <div class="item">Vegiee chesse</div>
+                    <div class="item">Paneery cheese</div>
+                    <div class="item">Soya cheese</div>
+                    <div class="item">Foccasia</div>
+                    <div class="item">Stuffed braided bread</div>
+                </div>
+
+            </div>
+        </div>
         <div class="nav">
-            <div style="display: flex;flex-flow: row nowrap;align-items: center;">
-                <img src="assets/icon.svg" alt="" id="navlogo" srcset="" style="width: 70px;">
+            <div class="logo">
+                <img src="assets/icon.svg" alt="" id="navlogo">
                 <div class="nav-tico">
-                    <!-- <div id="nav-text-logo" class="tracking-in-contract-bck"><span style="color:#c12929">S</span>avvy's <span style="color:#c12929">B</span>akery</div> -->
                     <div id="nav-text-logo"><span style="color:#c12929">S</span>avvy's <span style="color:#c12929">B</span>akery</div>
                     <div id="nav-text-caption"><span class="anim-text-flow">YOUR'S FRESHLY HOME BAKED</span></div>
-                    <!-- <div id="nav-text-caption"><span class="anim-text-flow">YOUR'S FRESHLY HOME BAKED</span></div> -->
                 </div>
-
             </div>
 
-
-            <!-- <div id="SearchBar">
-              <input class="typeahead" type="text" placeholder="Search">
-            </div> -->
             <div class="SearchBar">
-                <input type="text" name="country" class="inner" id="autocomplete" placeholder="Search" />
-                <div id="SearchSuggestions">
-                </div>
+                <input type="text" name="country" class="inner" id="autocomplete" placeholder="&#xf002; Search"/>
+                <div id="SearchSuggestions"></div>
             </div>
 
-            <ul id="nav-items" class="inner">
-                <li class="home selected">Home
-                    <a class="linkNav"></a>
-                </li>
-                <li class="menu">Products
-                    <a href="#menu" class="linkNav"></a>
-                </li>
-                <!-- <li class="gallery">Gallery<a href="#gallery" class="linkNav"></a></li> -->
-                <li class="reviews">Reviews
-                    <a href="#review" class="linkNav"></a>
-                </li>
-                <li class="contact">Contact
-                    <a href="#contact" class="linkNav"></a>
-                </li>
-                <li class="aboutus">About Us
-                    <a href="#aboutus" class="linkNav"></a>
-                </li>
-                <hr id='nav-line' />
-            </ul>
+            <img src="assets/hamburger.svg" alt="Menu" id="hamburger">
         </div>
-    </div>
+        
     </div>
 
-    <section id="home" style="width: 100%;height: 100%;">
+   
+    </div>
+
+    <section id="home" style="width: 100%;height: auto;">
 
         <div id="carouselIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval=5000 data-pause=false>
-            <!-- <ol class="carousel-indicators">
-      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselIndicators" data-slide-to="2"></li>
-    </ol> -->
             <div class="carousel-inner">
                 <div class="carousel-item active" style="background-image: url(assets/images/bg5.jpg);">
                     <div class="inner">
@@ -108,15 +199,6 @@
 
                 </div>
             </div>
-            <!-- 
-    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a> -->
         </div>
     </section>
     <!-- 
@@ -239,8 +321,8 @@
                 <div class="carousel-cell">
                     <div class="product">
                         <div class="inner">
-                            <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                            <img data-flickity-lazyload="assets/images/products/cakes/1.jpg" class="prd-img" alt="">
+                            <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                            <img src="assets/images/products/cakes/1.jpg" class="prd-img" alt="">
                         </div>
 
                             <div class="inner2">
@@ -273,8 +355,8 @@
                 <div class="carousel-cell">
                     <div class="product">
                         <div class="inner">
-                            <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                            <img data-flickity-lazyload="assets/images/products/cakes/2.jpg" class="prd-img" alt="">
+                            <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                            <img src="assets/images/products/cakes/2.jpg" class="prd-img" alt="">
                         </div>
 
                             <div class="inner2">
@@ -307,8 +389,8 @@
                 <div class="carousel-cell">
                     <div class="product">
                         <div class="inner">
-                            <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                            <img data-flickity-lazyload="assets/images/products/cakes/3.jpg" class="prd-img" alt="">
+                            <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                            <img src="assets/images/products/cakes/3.jpg" class="prd-img" alt="">
                         </div>
 
                             <div class="inner2">
@@ -342,8 +424,8 @@
                 <div class="carousel-cell">
                     <div class="product">
                         <div class="inner">
-                            <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                            <img data-flickity-lazyload="assets/images/products/cakes/4.jpg" class="prd-img" alt="">
+                            <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                            <img src="assets/images/products/cakes/4.jpg" class="prd-img" alt="">
                         </div>
 
                             <div class="inner2">
@@ -361,7 +443,7 @@
                                     </div>
 
                                     <label class="addtoCartIcon">
-                                        <img class="cart-ico" src="assets/shoping-cart.svg" alt="" srcset="" style="width: 100%;">
+                                        <img class="cart-ico" src="assets/shoping-cart.svg" alt="" style="width: 100%;">
                                         <div class="tick-trigger" style="display: flex;"><div class="trigger"></div><svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve"><polyline class="tick path" style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="11.6,20 15.9,24.2 26.4,13.8 "/></svg></div>
                                         <input type="checkbox" class="addToCart">
                                     </label>
@@ -377,8 +459,8 @@
                 <div class="carousel-cell">
                     <div class="product">
                         <div class="inner">
-                            <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                            <img data-flickity-lazyload="assets/images/products/cakes/5.jpg" class="prd-img" alt="">
+                            <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                            <img src="assets/images/products/cakes/5.jpg" class="prd-img" alt="">
                         </div>
 
                             <div class="inner2">
@@ -412,8 +494,8 @@
                 <div class="carousel-cell">
                     <div class="product">
                         <div class="inner">
-                            <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                            <img data-flickity-lazyload="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
+                            <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                            <img src="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
                         </div>
 
                             <div class="inner2">
@@ -456,8 +538,8 @@
             <div class="carousel-cell">
                 <div class="product">
                     <div class="inner">
-                        <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                        <img data-flickity-lazyload="assets/images/products/cakes/16.jpg" class="prd-img" alt="">
+                        <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                        <img src="assets/images/products/cakes/16.jpg" class="prd-img" alt="">
                     </div>
 
                         <div class="inner2">
@@ -490,8 +572,8 @@
             <div class="carousel-cell">
                 <div class="product">
                     <div class="inner">
-                        <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                        <img data-flickity-lazyload="assets/images/products/cakes/14.jpg" class="prd-img" alt="">
+                        <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->
+                        <img src="assets/images/products/cakes/14.jpg" class="prd-img" alt="">
                     </div>
 
                         <div class="inner2">
@@ -524,8 +606,7 @@
             <div class="carousel-cell">
                 <div class="product">
                     <div class="inner">
-                        <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                        <img data-flickity-lazyload="assets/images/products/cakes/20.jpg" class="prd-img" alt="">
+                        <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                        <img src="assets/images/products/cakes/20.jpg" class="prd-img" alt="">
                     </div>
 
                         <div class="inner2">
@@ -566,8 +647,7 @@
         <div class="carousel-cell">
         <div class="product">
             <div class="inner">
-                <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                <img data-flickity-lazyload="assets/images/products/cakes/12.jpg" class="prd-img" alt="">
+                <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                <img src="assets/images/products/cakes/12.jpg" class="prd-img" alt="">
             </div>
 
                 <div class="inner2">
@@ -600,8 +680,7 @@
         <div class="carousel-cell">
         <div class="product">
             <div class="inner">
-                <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                <img data-flickity-lazyload="assets/images/products/cakes/13.jpg" class="prd-img" alt="">
+                <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                <img src="assets/images/products/cakes/13.jpg" class="prd-img" alt="">
             </div>
 
                 <div class="inner2">
@@ -634,8 +713,7 @@
         <div class="carousel-cell">
         <div class="product">
             <div class="inner">
-                <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                <img data-flickity-lazyload="assets/images/products/cakes/19.jpg" class="prd-img" alt="">
+                <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                <img src="assets/images/products/cakes/19.jpg" class="prd-img" alt="">
             </div>
 
                 <div class="inner2">
@@ -668,8 +746,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -703,8 +780,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/21.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/21.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -738,8 +814,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -773,8 +848,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/7.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/7.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -808,8 +882,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/8.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/8.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -843,8 +916,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -878,8 +950,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/10.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/10.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -913,8 +984,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/11.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/11.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -948,8 +1018,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/12.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/12.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -983,8 +1052,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/13.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/13.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1018,8 +1086,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/14.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/14.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1053,8 +1120,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/15.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/15.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1088,8 +1154,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/16.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/16.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1123,8 +1188,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/17.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/17.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1158,8 +1222,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/18.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/18.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1193,8 +1256,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/19.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/19.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1228,8 +1290,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/20.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/20.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1263,8 +1324,7 @@
         <div class="carousel-cell">
             <div class="product">
                 <div class="inner">
-                    <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                    <img data-flickity-lazyload="assets/images/products/cakes/21.jpg" class="prd-img" alt="">
+                    <!-- <div class="img-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div> -->                    <img src="assets/images/products/cakes/21.jpg" class="prd-img" alt="">
                 </div>
             
                     <div class="inner2">
@@ -1302,11 +1362,6 @@
         </div>
 
     </section>
-
-
-
-
-
 
     <!-- <section id="gallery" style="width: 100%;min-height: 100%"></section> -->
     <section id="review">
@@ -1379,6 +1434,7 @@
 
     </section>
     <section id="aboutus" style="width: 100%;height: 100vh;"></section>
+    <section id="cart" style="width: 100%;height: 100vh;"></section>
 
 
 </body>
@@ -1409,6 +1465,9 @@
 
 <script src="assets/vendors/formCarryv1.js"></script>
 <!-- <script src="https://carrier.formcarry.com/js/v1.js"></script> -->
+
+<!-- <script src="assets/vendors/font-awesome.js" crossorigin="anonymous"></script> -->
+<!-- <script src="https://kit.fontawesome.com/148bdf63ed.js" crossorigin="anonymous"></script> -->
 
 
 <script src="assets/vendors/rainbow-text.min.js"></script>
