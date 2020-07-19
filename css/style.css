@@ -655,17 +655,11 @@ svg{
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
     height: 100vh;
-    /* width: 23%; */
-    
-    max-width: 100vw;
-    transform: translate(100%);
     transition: all 0.4s;
+    transform: translate(100%);
     user-select: none;
 }
 
-.hamburger-menu:focus-visible{
-    display: inline;
-}
 
 #hamburger{
     width:36px;
@@ -678,11 +672,6 @@ svg{
 .hamburger-menu .item{
     padding: 10px 20px 10px 20px;
     margin:0 auto;
-    transition: all 0.4s;
-}
-
-.hamburger-menu .product-slide{
-    display: none;
 }
 
 .hamburger-menu .back{
@@ -695,28 +684,25 @@ svg{
 .hamburger-menu .slide{
     position: absolute; 
     visibility: hidden;
-    transform: translate(200%);
+    transform: translate(150%);
 }
 
 .hamburger-menu .active{
     transform: translate(0%);
     transition: transform 0.4s;
-    /* display: block; */
+    display: block;
     position: relative; 
     visibility: visible;
-    opacity: 1;
+    width: 100%;
 }
 
 .hamburger-menu .item-view{
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
-}
-.hamburger-menu .hide-view{
-    transform: translate(100%);
+    width: auto;
+    max-width: 100vw;
+    transition: all 0.4s;
 }
 
-.hamburger-menu .show-view{
-    transform: translate(0%);
-}
 

@@ -15,11 +15,7 @@ $(document).ready(function() {
             scrollTop: 0
         }, 1500, 'easeInOutExpo');
     });
-
-    // $('.hamburger-menu .menu').click(function() {
-    //     $('a.linkNav')[1].click();
-    // });
-
+    
     $('.hamburger-menu .contact').click(function() {
         $('a.linkNav')[2].click();
     });
@@ -38,14 +34,9 @@ $(document).ready(function() {
     var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
         if (entries[0]['isIntersecting'] === true) {
             if (entries[0]['intersectionRatio'] < 0.99)
-                // $("#navlogo").stop().animate({ width: 50 }, 200, 'linear')
 
             if (entries[0]['intersectionRatio'] > 0.8) {
-                // $("#navlogo").stop().animate({ width: 70 }, 200, 'linear')
 
-                // var width = $(".nav .home").outerWidth();
-                // $('#nav-line').css('width', width);
-                // $("#nav-line").css('margin-left', '0');
                 $('.nav .home').css('border-bottom',"2px solid tomato");
 
             }
@@ -60,36 +51,16 @@ $(document).ready(function() {
 
 
             if (entries[0]['intersectionRatio'] > 0.2) {
-                // var width = $(".nav .menu").outerWidth();
-                // $('#nav-line').css('width', width);
-
-                // $("#nav-line").css('margin-left', Ans[0]);
 
             }
         }
     }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 1] }).observe(document.querySelector("#menu"));
 
-    // var ReviewScrollobserver1 = new IntersectionObserver(function(entries) {
-    //     if (entries[0]['isIntersecting'] === true) {
-
-    //         if (entries[0]['intersectionRatio'] > 0.6) {
-    //             var width = $(".nav .reviews").outerWidth();
-    //             $('#nav-line').css('width', width);
-
-    //             $("#nav-line").css('margin-left', Ans[1]);
-    //         }
-    //     }
-    // }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#review"));
-
     var ContactScrollobserver1 = new IntersectionObserver(function(entries) {
         if (entries[0]['isIntersecting'] === true) {
             if (entries[0]['intersectionRatio'] > 0.4) {
 
-                var width = $(".nav .contact").outerWidth();
-                $('#nav-line').css('width', width);
 
-
-                $("#nav-line").css('margin-left', Ans[1] - 2);
             }
         }
     }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#contact"));
@@ -100,10 +71,7 @@ $(document).ready(function() {
         if (entries[0]['isIntersecting'] === true) {
             if (entries[0]['intersectionRatio'] > 0.4) {
 
-                var width = $(".nav .aboutus").outerWidth();
-                $('#nav-line').css('width', width);
 
-                $("#nav-line").css('margin-left', Ans[2] - 3);
             }
 
         }
@@ -265,23 +233,31 @@ $(".hamburger-menu .nav-true").click(function(e){
     sidenav(from_element,to_element);
 });
 
-
 function sidenav(from_element,to_element,back_nav=false,animation_time=100){
     var display_area = $('.hamburger-menu .item-view');
     var parent_element = from_element.parent();
-
+    var menu = $('.hamburger-menu');
     if(back_nav){
-    display_area.stop().animate({opacity: 0},animation_time,function(){
-
-        from_element.removeClass("active");
-        to_element.addClass("active");
-        display_area.css('opacity',1);
-
-    });}
+    from_element.removeClass("active");
+    to_element.addClass("active");
+}
     else{
+        // var bW = menu.width();
         parent_element.removeClass("active");
         to_element.addClass("active");
-        display_area.css('opacity',1);
+        // var aW = menu.width();
+        // to_element.toggleClass("active");
+
+        // menu.animate({width:aW},500,()=>{
+        //     to_element.toggleClass("active");
+
+        // });
+
+       
+        menu.width(bW);
+
+        
+
     }
 
 }
