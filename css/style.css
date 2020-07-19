@@ -12,15 +12,6 @@ body {
     display: none;
 }
 
-body {
-    /* background-image: url('../assets/images/bg5.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; */
-    
-}
-
 * {
     box-sizing: border-box;
     outline: none;
@@ -653,9 +644,9 @@ svg{
         height: 40px;
     }
 
-    #home .carousel-item {
+    /* #home .carousel-item {
         
-    }
+    } */
 
     #home .carousel .inner .wu {
         font-size: 3.4rem;
@@ -746,9 +737,9 @@ svg{
         font-size: 0.87rem;
     }
 
-    #home .carousel-item {
+    /* #home .carousel-item {
         
-    }
+    } */
 
     #home .carousel .inner .wu {
         font-size: 3.2rem;
