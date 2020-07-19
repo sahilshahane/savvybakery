@@ -155,7 +155,7 @@ $(document).ready(function() {
         cellAlign: 'center',
         contain: true,
         prevNextButtons: true,
-        pageDots: true,
+        pageDots: false,
         // lazyLoad: 1,
         // hash: true,
         friction: 0.3,
@@ -217,12 +217,13 @@ $(document).ready(function() {
 
 $(".hamburger-menu").focusin(function(){
     $(this).css('transform',"translate(0%)");
-    $('#hamburger').stop().animate({opacity: 0},100);
+    $('.nav .hamburger-ico').stop().animate({opacity: 0},200);
 });
 
 $(".hamburger-menu").focusout(function(){
+    $('.nav #hamburger').removeClass('is-active');
     $(this).css('transform',"translate(100%)");
-    $('#hamburger').stop().animate({opacity: 1},100);
+    $('.nav .hamburger-ico').stop().animate({opacity: 1},100);
 });
 
 
@@ -237,32 +238,47 @@ function sidenav(from_element,to_element,back_nav=false,animation_time=100){
     var display_area = $('.hamburger-menu .item-view');
     var parent_element = from_element.parent();
     var menu = $('.hamburger-menu');
+    var bW = menu.width();
+
     if(back_nav){
-    from_element.removeClass("active");
-    to_element.addClass("active");
+        // from_element.removeClass("active");
+        // to_element.addClass("active");
+        // var aW = menu.width();
+        // to_element.removeClass("active");
+        // menu.width(bW);
+        // menu.animate({
+        //     width:aW,
+        // },40,'easeInOutExpo',function(){
+        //     to_element.addClass("active");
+        //     menu.css("width",'auto');
+        // });
+        from_element.removeClass("active");
+        to_element.addClass("active");
 }
     else{
-        // var bW = menu.width();
-        parent_element.removeClass("active");
-        to_element.addClass("active");
+        // parent_element.removeClass("active");
+        // to_element.addClass("active");
         // var aW = menu.width();
-        // to_element.toggleClass("active");
-
-        // menu.animate({width:aW},500,()=>{
-        //     to_element.toggleClass("active");
-
+        // to_element.removeClass("active");
+        // menu.width(bW);
+        // menu.animate({
+        //     width:aW,
+        // },100,'easeInOutExpo',function(){
+        //     to_element.addClass("active");
+        //     menu.css("width",'auto');
         // });
 
-       
-        menu.width(bW);
-
-        
+        parent_element.removeClass("active");
+        to_element.addClass("active");
 
     }
 
 }
 
 
+$('.nav #hamburger').click(function(){
+    $(this).addClass('is-active');
+});
 
 
 

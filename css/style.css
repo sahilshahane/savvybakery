@@ -116,8 +116,8 @@ a {
 
 .nav .SearchBar {
     width: 40%;
-    margin-left: -10%;
-    /* margin: 0 auto; */
+    /* margin-left: -10%; */
+    margin: 0 auto;
 }
 
 .nav .SearchBar .inner {
@@ -131,6 +131,98 @@ a {
     font-style: normal;
     font-weight: normal;
 }
+
+
+.hamburger-menu{
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: auto;
+    transition: all 0.4s;
+    transform: translate(100%);
+    user-select: none;
+    z-index: 2;
+    font-size: 1rem;
+}
+
+
+
+.hamburger-menu .item{
+    padding: 10px 20px 10px 20px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.hamburger-menu .back{
+    width:30px;
+    height:30px;
+    margin: 5px 5px 5px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.hamburger-menu .slide{
+    position: absolute; 
+    visibility: hidden;
+    transform: translate(150%);
+}
+
+.hamburger-menu .active{
+    transform: translate(0%);
+    transition: transform 0.4s;
+    display: block;
+    position: relative; 
+    visibility: visible;
+    
+}
+
+.hamburger-menu .item-view{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.nav .hamburger-btn{
+    background-color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.nav .hamburger-btn button{
+    width: 100%;
+    height: 100%;
+}
+
+.nav .hamburger-ico{
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    z-index: 1;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#hamburger{
+    width:100%;
+    height:100%;
+    user-select: none;
+    padding: 23%;
+   
+}
+
 
 .autocomplete-suggestions {
     border: 1px solid #999;
@@ -289,143 +381,6 @@ a {
 }
 
 
-#foodcategory {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-left: -60px;
-    padding: 20px;
-}
-
-#foodcategory ul {
-    list-style: none;
-}
-
-#foodcategory ul li {
-    cursor: pointer;
-    user-select: none;
-    display: inline-block;
-    padding: 8px 16px 10px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    color: #444444;
-    margin: 0 3px 10px 3px;
-    transition: all ease-in-out 0.3s;
-    background: #fff;
-    /* border: 2px solid #ffb03b; */
-    border: 2px solid #c12929;
-    border-radius: 50px;
-    text-align: center;
-}
-
-#foodcategory li:hover,
-#foodcategory li.category-selected {
-    color: #fff;
-    /* background: #ffb03b; */
-    background: #c12929;
-}
-
-.category-items {
-    columns: 2;
-}
-
-.category-items .menu-content {
-    margin-top: 30px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
-.category-items .menu-content::after {
-    content: "......................................................................" "...................................................................." "....................................................................";
-    position: absolute;
-    left: 20px;
-    right: 0;
-    top: -4px;
-    z-index: 1;
-    color: #dad8d4;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-.category-items .menu-content a {
-    padding-right: 10px;
-    position: relative;
-    z-index: 3;
-    font-weight: 700;
-    /* color: #ff9b08; */
-    color: #c12929;
-    background-color: #fff;
-}
-
-.category-items .menu-content span {
-    position: relative;
-    z-index: 3;
-    padding: 0 10px;
-    font-weight: 600;
-    background-color: #fff;
-}
-
-.category-items .menu-ingredients {
-    font-style: italic;
-    font-size: 14px;
-    font-family: "Comic Neue", sans-serif;
-    color: #948c81;
-}
-
-
-/* REVIEWS */
-
-#review {
-    width: 100%;
-    height: auto;
-}
-
-#review .review-slider {
-    width: 100%;
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* overflow: hidden; */
-}
-
-#review .review-slider .slide-item {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    text-align: center;
-    color: white;
-    align-items: center;
-    justify-content: space-evenly;
-    justify-items: center;
-    user-select: none;
-}
-
-#review .review-slider::before {
-    content: '';
-    background-color: rgba(12, 11, 10, 0.5);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-#review .review-slider .slide-item .inner img {
-    max-width: 60%;
-    border: white 3px solid;
-}
-
-#review .review-slider .slide-item .inner2 {
-    font-size: 1.3rem;
-    padding: 0px 30px 0px 30px;
-}
-
 #menu .product-carousel {
     margin: 0px 0px 50px 0px;
 }
@@ -484,7 +439,7 @@ a {
     border-radius: 10px 10px 0 0;
 }
 
-.prd-imgbrightness{
+/* .prd-imgbrightness{
     filter: brightness(10%);
 }
 
@@ -496,7 +451,7 @@ a {
     display: none;
     overflow-y: scroll;
     font-size: 0.9rem;
-}
+} */
 
 #menu .product .inner{
     position: relative;
@@ -506,9 +461,7 @@ a {
 
 #menu .product .inner2{    
     z-index: 4;
-
     background: linear-gradient(to left, #2F80ED, #56CCF2);
-
     color: #fff;
     border-radius: 0 0 10px 10px;
     position: relative;
@@ -616,6 +569,56 @@ svg{
     justify-content: space-between;
 }
 
+/* REVIEWS */
+
+#review {
+    width: 100%;
+    height: auto;
+}
+
+#review .review-slider {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* overflow: hidden; */
+}
+
+#review .review-slider .slide-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    user-select: none;
+}
+
+#review .review-slider::before {
+    content: '';
+    background-color: rgba(12, 11, 10, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#review .review-slider .slide-item .inner img {
+    max-width: 50%;
+    border: white 3px solid;
+}
+
+#review .review-slider .slide-item .inner2 {
+    font-size: 1.3rem;
+    padding: 0px 30px 0px 30px;
+}
 
 @media (min-width: 1281px){
 
@@ -625,84 +628,373 @@ svg{
 
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+    .hamburger-menu{
+        font-size: 0.9rem;
+    }
+
+    #navlogo{
+        width:50px;
+    }
     
+    #nav-text-logo {
+        font-size: 1.2rem;
+    }
+    
+    #nav-text-caption {
+        font-size: 0.85rem;
+    }
+
+    .nav .SearchBar{
+        width: 60%;
+        font-size: 0.8rem;
+    }
+    .nav .hamburger-ico{
+        width: 40px;
+        height: 40px;
+    }
+
+    #home .carousel-item {
+        
+    }
+
+    #home .carousel .inner .wu {
+        font-size: 3.4rem;
+    }
+
+    #home .carousel .inner .wur {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+
+    #menu .p_category {
+        font-size: 2.9rem;
+    }
+
+    #menu .subTitle .sub_category {
+        font-size: 1.4rem;
+    }
+
+    #menu .subTitle .line {
+        width: 75%;
+    }
+    
+    #menu .carousel-cell {
+        width: 22%;
+        margin-right: 8px;
+    }
+
+    #menu .product .prd-name{
+        font-size: 1.2rem;
+        font-family: 'Galada', cursive;
+    }
+
+    #menu .product .prd-prop{
+        font-size: 0.8rem;
+        color: rgb(48, 47, 47);
+        font-weight: 600;
+    }
+
+    #menu .product .prd-price{
+        font-size: 1rem;        
+    }
+
+    #menu .product .prd-weight{
+        font-weight: bold;
+        font-size: 0.89rem;
+        cursor: pointer;
+    }
+
+    #review .review-slider {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #review .review-slider .slide-item .inner img {
+        max-width: 50%;
+    }
+
+    #review .review-slider .slide-item .inner2 {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    
+    #navlogo{
+        width:45px;
+    }
+    
+    #nav-text-logo {
+        font-size: 1.1rem;
+    }
+    
+    #nav-text-caption {
+        font-size: 0.8rem;
+    }
 
+    .nav .SearchBar{
+        width: 62%;
+        font-size: 0.8rem;
+    }
+    .nav .hamburger-ico{
+        width: 38px;
+        height: 38px;
+    }
+    
+    .hamburger-menu{
+        font-size: 0.87rem;
+    }
+
+    #home .carousel-item {
+        
+    }
+
+    #home .carousel .inner .wu {
+        font-size: 3.2rem;
+    }
+
+    #home .carousel .inner .wur {
+        font-size: 1.05rem;
+        width: 90%;
+    }
+
+    #menu .p_category {
+        font-size: 2.9rem;
+    }
+
+    #menu .subTitle .sub_category {
+        font-size: 1.4rem;
+    }
+
+    #menu .subTitle .line {
+        width: 75%;
+    }
+    
+    #menu .carousel-cell {
+        width: 25%;
+        margin-right: 8px;
+    }
+
+    #menu .product .prd-name{
+        font-size: 1.2rem;
+        font-family: 'Galada', cursive;
+    }
+
+    #menu .product .prd-prop{
+        font-size: 0.8rem;
+        color: rgb(48, 47, 47);
+        font-weight: 600;
+    }
+
+    #menu .product .prd-price{
+        font-size: 1rem;        
+    }
+
+    #menu .product .prd-weight{
+        font-weight: bold;
+        font-size: 0.89rem;
+        cursor: pointer;
+    }
+
+    #review .review-slider {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #review .review-slider .slide-item .inner img {
+        max-width: 45%;
+    }
+
+    #review .review-slider .slide-item .inner2 {
+        font-size: 1.1rem;
+    }
 }
 
 
 @media (min-width: 481px) and (max-width: 767px) {
-  
+    #navlogo{
+        width:40px;
+    }
+    
+    #nav-text-logo {
+        font-size: 1.1rem;
+    }
+    
+    #nav-text-caption {
+        font-size: 0.7rem;
+        display: none;
+    }
+
+    .nav .SearchBar{
+        width: 59%;
+        font-size: 0.8rem;
+    }
+
+    .nav .hamburger-ico{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .hamburger-menu{
+        font-size: 0.8rem;
+    }
+    #home .carousel-item {
+        height: 55vh;
+    }
+    #home .carousel .inner .wu {
+        font-size: 2.8rem;
+    }
+
+    #home .carousel .inner .wur {
+        font-size: 0.9rem;
+        width: 90%;
+        line-height: 1.1rem;
+    }
+
+    #menu .p_category {
+        font-size: 2.5rem;
+    }
+
+    #menu .subTitle .sub_category {
+        font-size: 1.1rem;
+    }
+
+    #menu .subTitle .line {
+        width: 75%;
+    }
+    
+    #menu .carousel-cell {
+        width: 40%;
+        margin-right: 4px;
+    }
+
+    #menu .product .prd-prop{
+        font-size: 0.7rem;
+        color: rgb(48, 47, 47);
+        font-weight: 600;
+    }
+
+    #menu .product .prd-name{
+        font-size: 1rem;
+        font-family: 'Galada', cursive;
+    }
+
+    #menu .product .prd-weight{
+        font-weight: bold;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+    #menu .product .prd-price{
+        font-size: 0.9rem;        
+    }
+
+    #review .review-slider {
+        height: 40vh;
+    }
+
+    #review .review-slider .slide-item .inner img {
+        max-width: 30%;
+    }
+
+    #review .review-slider .slide-item .inner2 {
+        font-size: 0.8rem;
+    }
 }
 
 
 @media (min-width: 321px) and (max-width: 480px) {
+    #navlogo{
+        width:30px;
+    }
+    
+    #nav-text-logo {
+        font-size: 1rem;
+    }
+    
+    #nav-text-caption {
+        font-size: 0.7rem;
+        display: none;
+    }
 
+    .nav .SearchBar{
+        width: 50%;
+        font-size: 0.8rem;
+    }
+
+    .nav .hamburger-ico{
+        width: 27px;
+        height: 27px;
+    }
+    
+    .hamburger-menu{
+        font-size: 0.8rem;
+    }
+
+    #home .carousel-item {
+        height: 45vh;
+    }
+    #home .carousel .inner .wu {
+        font-size: 2rem;
+    }
+
+    #home .carousel .inner .wur {
+        font-size: 0.7rem;
+        width: 90%;
+        line-height: 0.8rem;
+    }
+
+    #menu .p_category {
+        font-size: 2rem;
+    }
+
+    #menu .subTitle .sub_category {
+        font-size: 1rem;
+    }
+
+    #menu .subTitle .line {
+        width: 85%;
+    }
+    
+    #menu .carousel-cell {
+        width: 60%;
+        margin-right: 4px;
+    }
+
+    #menu .product .prd-prop{
+        font-size: 0.7rem;
+        color: rgb(48, 47, 47);
+        font-weight: 600;
+    }
+
+    #menu .product .prd-name{
+        font-size: 1rem;
+        font-family: 'Galada', cursive;
+    }
+
+    #menu .product .prd-weight{
+        font-weight: bold;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+    #menu .product .prd-price{
+        font-size: 0.9rem;        
+    }
+
+    #review .review-slider {
+        height: 40vh;
+    }
+
+    #review .review-slider .slide-item .inner img {
+        max-width: 30%;
+    }
+
+    #review .review-slider .slide-item .inner2 {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 320px) {
-
+   
 
 }
-
-.hamburger-menu{
-    position: absolute;
-    display: flex;
-    flex-flow: column nowrap;
-    color: white;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    height: 100vh;
-    transition: all 0.4s;
-    transform: translate(100%);
-    user-select: none;
-}
-
-
-#hamburger{
-    width:36px;
-    height:36px;
-    user-select: none;
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
-
-.hamburger-menu .item{
-    padding: 10px 20px 10px 20px;
-    margin:0 auto;
-}
-
-.hamburger-menu .back{
-    width:30px;
-    height:30px;
-    margin: 5px 5px 5px 20px;
-    border-radius: 50%;
-}
-
-.hamburger-menu .slide{
-    position: absolute; 
-    visibility: hidden;
-    transform: translate(150%);
-}
-
-.hamburger-menu .active{
-    transform: translate(0%);
-    transition: transform 0.4s;
-    display: block;
-    position: relative; 
-    visibility: visible;
-    width: 100%;
-}
-
-.hamburger-menu .item-view{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    width: auto;
-    max-width: 100vw;
-    transition: all 0.4s;
-}
-
-
