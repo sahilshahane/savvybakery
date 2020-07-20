@@ -6,6 +6,7 @@ body {
     height: 100%;
     width: 100%;
     -ms-overflow-style: none;scrollbar-width: none;
+    font-size: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -896,10 +897,11 @@ svg{
 
 @media (min-width: 321px) and (max-width: 480px) {
     #navlogo{
-        width:30px;
+        width:12vw;
     }
     
     #nav-text-logo {
+        display: none;
         font-size: 1rem;
     }
     
@@ -909,42 +911,42 @@ svg{
     }
 
     .nav .SearchBar{
-        width: 50%;
-        font-size: 0.8rem;
+        width: 70%;
+        font-size: 1rem;
     }
 
     .nav .hamburger-ico{
-        width: 27px;
-        height: 27px;
+        width: 11vw;
+        height: 11vw;
     }
     
     .hamburger-menu{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     #home .carousel-item {
         height: 45vh;
     }
     #home .carousel .inner .wu {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     #home .carousel .inner .wur {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         width: 90%;
-        line-height: 0.8rem;
+        line-height: 1rem;
     }
 
     #menu .p_category {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     #menu .subTitle .sub_category {
-        font-size: 1rem;
+        font-size: 1.9rem;
     }
 
     #menu .subTitle .line {
-        width: 85%;
+        width: 90%;
     }
     
     #menu .carousel-cell {
@@ -953,23 +955,23 @@ svg{
     }
 
     #menu .product .prd-prop{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
 
     #menu .product .prd-name{
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-family: 'Galada', cursive;
     }
 
     #menu .product .prd-weight{
         font-weight: bold;
-        font-size: 0.8rem;
+        font-size: 1rem;
         cursor: pointer;
     }
     #menu .product .prd-price{
-        font-size: 0.9rem;        
+        font-size: 1rem;        
     }
 
     #review .review-slider {
@@ -977,11 +979,11 @@ svg{
     }
 
     #review .review-slider .slide-item .inner img {
-        max-width: 30%;
+        max-width: 45%;
     }
 
     #review .review-slider .slide-item .inner2 {
-        font-size: 0.8rem;
+        font-size: 0.98rem;
     }
 }
 
