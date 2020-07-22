@@ -100,6 +100,28 @@ function gcc(cat_str,download_=true){
     }
 }
 
+
+function dataLOL(data){
+    JSON_ARRAY = []
+
+    for(let DataObj of data) 
+        for(let [fileIndex,MainObj] of Object.entries(DataObj)){
+            parentCAT = MainObj["pCAT"]
+            Data_Array = MainObj["data"]
+
+
+            for(item of Data_Array){
+                obj = {}
+                obj["category"] = parentCAT;
+                item = item.charAt(0).toUpperCase()+item.slice(1).toLowerCase();
+                obj["title"] = item;
+                JSON_ARRAY.push(obj);
+            }
+    }
+    Data = false ? JSON.stringify(JSON_ARRAY,null, 4) : JSON.stringify(JSON_ARRAY);
+    download("category.json", Data);
+}
+
 Data = [{
     "1":{"pCAT":"Cake","subCAT":"Chocolate Base","data":["CHOCOLATE SYRUP CAKE","BLACK FOREST","CHOCOLATE TRUFFEL","DUTCH CHOCOLATE","GANACHE","CHOCOLATE CHEESE CAKE"],"extraToken":["base"]},
     "2":{"pCAT":"Cake","subCAT":"Vanilla Base","data":["PINEAPPLE","BUTTER SCOTCH","STRAWBERRY"],"extraToken":["base"]},

@@ -53,14 +53,13 @@ a {
     flex-flow: row nowrap;
     transition: background-color 0.4s;
     background-color: rgba(0, 0, 0, 0);
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
+    height: 9vh;
     justify-content: space-between;
+
 }
 
-#navlogo{
-    width:55px;
-}
 
 #nav-text-logo {
     font-family: 'Galada', cursive;
@@ -77,6 +76,16 @@ a {
     letter-spacing: 1.14px;
 }
 
+.navBackground {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav .logo{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
 .nav-tico {
     display: flex;
     flex-flow: column nowrap;
@@ -84,26 +93,8 @@ a {
     line-height: 1.4rem;
 }
 
-
-
-.navBackground {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#nav-line {
-    height: .1rem;
-    width: 50px;
-    margin: 1px 0px 0px 0px;
-    padding: 0;
-    background: tomato;
-    border: none;
-    transition: .2s ease-in-out;
-}
-
-.nav .logo{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+#navlogo{
+    width:55px;
 }
 
 .nav .SearchBar {
@@ -141,8 +132,6 @@ a {
     font-size: 1rem;
 }
 
-
-
 .hamburger-menu .item{
     padding: 10px 20px 10px 20px;
     white-space: nowrap;
@@ -178,32 +167,15 @@ a {
     scrollbar-width: none;
 }
 
-.nav .hamburger-btn{
-    background-color: white;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-
-.nav .hamburger-btn button{
-    width: 100%;
-    height: 100%;
-}
-
 .nav .hamburger-ico{
     background-color: white;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     position: relative;
     display: flex;
-    width: 45px;
-    height: 45px;
+    width: 4vw;
+    height: 100%;
     overflow: hidden;
     z-index: 1;
-    margin-right: 5px;
     cursor: pointer;
 }
 

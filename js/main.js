@@ -276,12 +276,32 @@ function sidenav(from_element,to_element,back_nav=false,animation_time=100){
 }
 
 
-$('.nav #hamburger').click(function(){
+$('.nav .hamburger-ico').click(function(){
     $(this).addClass('is-active');
+
+    $('.side-menu').sidebar({
+        dimPage:false,
+        transition:'overlay',
+        mobileTransition:'overlay',
+    }).sidebar('toggle');
 });
 
+$('.ui.side-menu').accordion();
 
 
+
+categoryContent=[{"category":"Cake","title":"Chocolate syrup cake"},{"category":"Cake","title":"Black forest"},{"category":"Cake","title":"Chocolate truffel"},{"category":"Cake","title":"Dutch chocolate"},{"category":"Cake","title":"Ganache"},{"category":"Cake","title":"Chocolate cheese cake"},{"category":"Cake","title":"Pineapple"},{"category":"Cake","title":"Butter scotch"},{"category":"Cake","title":"Strawberry"},{"category":"Cake","title":"Pinacolada(tender coconut)"},{"category":"Cake","title":"Rasmalai"},{"category":"Cake","title":"Kulfi falooda"},{"category":"Cake","title":"Blue berry"},{"category":"Cake","title":"Paan"},{"category":"Cake","title":"Mango"},{"category":"Cake","title":"Orange"},{"category":"Cake","title":"Paani puri"},{"category":"Cake","title":"Merry berry"},{"category":"Cake","title":"Gulab jamun"},{"category":"Cake","title":"Honey cake"},{"category":"Cake","title":"Zebra marvel"},{"category":"Cake","title":"Red velvet"},{"category":"Cake","title":"Tiger cream cake"},{"category":"Cake","title":"Date cake (speciality)"},{"category":"Cake","title":"Plum cake (speciality)"},{"category":"Cake","title":"Marble"},{"category":"Cake","title":"Wine cake"},{"category":"Cake","title":"Sponge"},{"category":"Cake","title":"Mix fruit cake"},{"category":"Cake","title":"Trooty frooty cake"},{"category":"Cake","title":"Christmas cake"},{"category":"Cake","title":"Carwheel cake"},{"category":"Cake","title":"Doll cake"},{"category":"Cake","title":"Marble"},{"category":"Cake Sides","title":"Cake pops"},{"category":"Cake Sides","title":"Cakesical"},{"category":"Cake Sides","title":"Brownie"},{"category":"Cake Sides","title":"Tea time cake"},{"category":"Cake Sides","title":"Trooty frooty bread"},{"category":"Cake Sides","title":"Plum cake"},{"category":"Cake Sides","title":"Muffins"},{"category":"Cake Sides","title":"Cup cakes"},{"category":"Cake Sides","title":"Bake donut"},{"category":"Cake Sides","title":"Fried donut"},{"category":"Cake Sides","title":"Cinnamon roll"},{"category":"Cake Sides","title":"Sweet bread"},{"category":"Bakery","title":"Bread"},{"category":"Bakery","title":"Ladi pav"},{"category":"Bakery","title":"Brown bread"},{"category":"Bakery","title":"Garlic bread"},{"category":"Bakery","title":"Braided bread"},{"category":"Bakery","title":"Pizza base"},{"category":"Bakery","title":"Whole wheat pizza base"},{"category":"Bakery","title":"Burger bun"},{"category":"Bakery","title":"Whole wheat burger bun"},{"category":"Bakery","title":"Stuffed garlic bread"},{"category":"Bakery","title":"Pizza"},{"category":"Bakery","title":"Vegiee chesse"},{"category":"Bakery","title":"Paneery cheese"},{"category":"Bakery","title":"Soya cheese"},{"category":"Bakery","title":"Foccasia"},{"category":"Bakery","title":"Stuffed braided bread"}]
+
+$('.ui.search')
+  .search({
+    type: 'category',
+    source: categoryContent,
+    searchFields   : [
+        'title',
+        'category'
+      ]
+  })
+;
 
 
 
