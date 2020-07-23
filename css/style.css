@@ -53,13 +53,17 @@ a {
     flex-flow: row nowrap;
     transition: background-color 0.4s;
     background-color: rgba(0, 0, 0, 0);
-    /* align-items: center; */
+    align-items: center;
     width: 100%;
-    height: 9vh;
+    height: auto;
+    /* overflow: hidden; */
     justify-content: space-between;
 
 }
 
+.navBackground {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 #nav-text-logo {
     font-family: 'Galada', cursive;
@@ -76,9 +80,7 @@ a {
     letter-spacing: 1.14px;
 }
 
-.navBackground {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+
 
 .nav .logo{
     display: flex;
@@ -97,24 +99,9 @@ a {
     width:55px;
 }
 
-.nav .SearchBar {
-    width: 40%;
-    /* margin-left: -10%; */
-    margin: 0 auto;
-}
+.nav .search{
 
-.nav .SearchBar .inner {
-    width: 100%;
-    outline: none;
-    border: none;
-    border-radius: 50px;
-    text-align: center;
-    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
-    vertical-align: center;
-    font-style: normal;
-    font-weight: normal;
 }
-
 
 .hamburger-menu{
     position: absolute;
@@ -168,24 +155,27 @@ a {
 }
 
 .nav .hamburger-ico{
-    background-color: white;
-    /* border-radius: 100%; */
-    position: relative;
+    /* background-color: white; */
     display: flex;
-    width: 4vw;
-    height: 100%;
-    overflow: hidden;
     z-index: 1;
     cursor: pointer;
+    border-radius: 0%;
+    transition: all 0.3s;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 100%;
+    margin-bottom: 2px;
 }
 
 #hamburger{
-    width:100%;
-    height:100%;
     user-select: none;
-    padding: 23%;
-   
 }
+
+.nav .hamburger-ico:hover{
+    background-color: white;
+}
+
 
 
 .autocomplete-suggestions {
@@ -613,8 +603,8 @@ svg{
         font-size: 0.8rem;
     }
     .nav .hamburger-ico{
-        width: 40px;
-        height: 40px;
+        /* width: 40px;
+        height: 200%; */
     }
 
     /* #home .carousel-item {
@@ -702,8 +692,8 @@ svg{
         font-size: 0.8rem;
     }
     .nav .hamburger-ico{
-        width: 38px;
-        height: 38px;
+        /* width: 38px;
+        height: 38px; */
     }
     
     .hamburger-menu{
@@ -796,8 +786,8 @@ svg{
     }
 
     .nav .hamburger-ico{
-        width: 30px;
-        height: 30px;
+        /* width: 30px;
+        height: 30px; */
     }
     
     .hamburger-menu{
@@ -888,8 +878,8 @@ svg{
     }
 
     .nav .hamburger-ico{
-        width: 11vw;
-        height: 11vw;
+        /* width: 11vw;
+        height: 11vw; */
     }
     
     .hamburger-menu{
