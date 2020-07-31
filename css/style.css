@@ -5,7 +5,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     height: 100%;
     width: 100%;
-    -ms-overflow-style: none;scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     font-size: 100%;
 }
 
@@ -58,7 +59,6 @@ a {
     height: auto;
     /* overflow: hidden; */
     justify-content: space-between;
-
 }
 
 .navBackground {
@@ -80,9 +80,7 @@ a {
     letter-spacing: 1.14px;
 }
 
-
-
-.nav .logo{
+.nav .logo {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -95,15 +93,12 @@ a {
     line-height: 1.4rem;
 }
 
-#navlogo{
-    width:55px;
+#navlogo {
+    width: 55px;
 }
 
-.nav .search{
 
-}
-
-.hamburger-menu{
+.hamburger-menu {
     position: absolute;
     display: flex;
     flex-flow: column nowrap;
@@ -119,42 +114,41 @@ a {
     font-size: 1rem;
 }
 
-.hamburger-menu .item{
+.hamburger-menu .item {
     padding: 10px 20px 10px 20px;
     white-space: nowrap;
     cursor: pointer;
 }
 
-.hamburger-menu .back{
-    width:30px;
-    height:30px;
+.hamburger-menu .back {
+    width: 30px;
+    height: 30px;
     margin: 5px 5px 5px 20px;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.hamburger-menu .slide{
-    position: absolute; 
+.hamburger-menu .slide {
+    position: absolute;
     visibility: hidden;
     transform: translate(150%);
 }
 
-.hamburger-menu .active{
+.hamburger-menu .active {
     transform: translate(0%);
     transition: transform 0.4s;
     display: block;
-    position: relative; 
+    position: relative;
     visibility: visible;
-    
 }
 
-.hamburger-menu .item-view{
+.hamburger-menu .item-view {
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
 }
 
-.nav .hamburger-ico{
+.nav .hamburger-ico {
     /* background-color: white; */
     display: flex;
     z-index: 1;
@@ -168,15 +162,13 @@ a {
     margin-bottom: 2px;
 }
 
-#hamburger{
+#hamburger {
     user-select: none;
 }
 
-.nav .hamburger-ico:hover{
+.nav .hamburger-ico:hover {
     background-color: white;
 }
-
-
 
 .autocomplete-suggestions {
     border: 1px solid #999;
@@ -226,30 +218,22 @@ a {
 
 /* HOME */
 
-.carousel-fade .carousel-inner .carousel-item {
-    transition-property: opacity;
-    background-position: center top;
+#home .carousel-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
-.carousel-fade .carousel-inner .carousel-item,
-.carousel-fade .carousel-inner .active.carousel-item-left,
-.carousel-fade .carousel-inner .active.carousel-item-right {
-    opacity: 0;
-}
-
-.carousel-fade .carousel-inner .active,
-.carousel-fade .carousel-inner .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
-    opacity: 1;
-    transition: 0.35s;
-}
-
-.carousel-fade .carousel-inner .carousel-item-next,
-.carousel-fade .carousel-inner .carousel-item-prev,
-.carousel-fade .carousel-inner .active.carousel-item-left,
-.carousel-fade .carousel-inner .active.carousel-item-right {
+#home .carousel-item::before {
+    content: '';
+    background-color: rgba(12, 11, 10, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
     left: 0;
-    transform: translate3d(0, 0, 0);
+    bottom: 0;
+    z-index: -1;
 }
 
 #home .carousel .inner {
@@ -267,11 +251,6 @@ a {
 #home .carousel .inner .wu {
     font-size: 3.5rem;
     font-family: 'El Messiri', sans-serif;
-    letter-spacing: 50px;
-}
-
-#home .carousel .inner .wu div {
-    display: inline-block;
 }
 
 #home .carousel .inner .wur {
@@ -282,28 +261,6 @@ a {
     letter-spacing: 1px;
 }
 
-#home .carousel .inner .defaultSlide {
-    letter-spacing: 0px;
-}
-
-#home .carousel-item {
-    width: 100%;
-    height: 75vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#home .carousel-item::before {
-    content: '';
-    background-color: rgba(12, 11, 10, 0.5);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-}
 
 #home .homeslide {
     overflow: hidden;
@@ -334,9 +291,9 @@ a {
     border-radius: 10px;
 }
 
-
 #menu .product-carousel {
     margin: 0px 0px 50px 0px;
+    user-select: none;
 }
 
 #menu .p_category {
@@ -386,34 +343,20 @@ a {
     border-radius: 10px;
 }
 
-#menu .product .prd-img{
+#menu .product .prd-img {
     width: 100%;
     height: auto;
     transition: filter 0.2s;
     border-radius: 10px 10px 0 0;
 }
 
-/* .prd-imgbrightness{
-    filter: brightness(10%);
-}
-
-#menu .product .img-description{
-    position: absolute;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    display: none;
-    overflow-y: scroll;
-    font-size: 0.9rem;
-} */
-
-#menu .product .inner{
+#menu .product .inner {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-#menu .product .inner2{    
+#menu .product .inner2 {
     z-index: 4;
     background: linear-gradient(to left, #2F80ED, #56CCF2);
     color: #fff;
@@ -425,11 +368,9 @@ a {
     flex-flow: column nowrap;
     margin-top: -10%;
     padding: 10px 10px 0px 10px;
-
 }
 
-
-  #menu .product .inner2:after{
+#menu .product .inner2:after {
     position: absolute;
     content: '';
     background: inherit;
@@ -442,45 +383,46 @@ a {
     transform: skewY(7deg);
     border-radius: 0px 0px 10px 10px;
     transition: all 0.5s ease;
+}
 
-  }
 
-  #menu .product .inner2:hover:after{
+/* #menu .product .inner2:hover:after{
     transform: skewY(0deg);
-  }
+  } */
 
-  #menu .product .prd-name{
+#menu .product .prd-name {
     font-size: 1.2rem;
     font-family: 'Galada', cursive;
-  }
+}
 
-  #menu .product .prd-prop{
+#menu .product .prd-prop {
     font-size: 0.8rem;
     color: rgb(48, 47, 47);
     font-weight: 600;
-  }
+}
 
-  #menu .product .prd-price{
+#menu .product .prd-price {
     font-weight: bold;
-  }
+}
 
-  #menu .product .prd-weight{
+#menu .product .prd-weight {
     font-weight: bold;
     font-size: 0.9rem;
     cursor: pointer;
-  }
+}
 
-  #menu .product .prd-weight div{
+#menu .product .prd-weight div {
     display: inline-block;
     padding: 3px 6px 3px 6px;
 }
-  #menu .product .prd-weight .selected{
+
+#menu .product .prd-weight .selected {
     color: #000;
     background-color: white;
     border-radius: 50px;
-  }
+}
 
-  #menu .product .addtoCartIcon{
+#menu .product .addtoCartIcon {
     width: 50px;
     height: 50px;
     background-color: white;
@@ -495,461 +437,380 @@ a {
     justify-items: center;
 }
 
-
-#menu .product .addtoCartIcon input{
+#menu .product .addtoCartIcon input {
     display: none;
 }
 
-
-
-.tick{
+.tick {
     stroke-dasharray: 50;
     stroke-dashoffset: 50;
     transition: stroke-dashoffset 1s ease-out;
 }
-.drawn + svg .path{
+
+.drawn+svg .path {
     opacity: 1;
     stroke-dashoffset: 0;
 }
 
-svg{
-    width:100%;
+svg {
+    width: 100%;
     height: auto;
 }
 
-#menu .product .inner3{
+#menu .product .inner3 {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
+.tns-nav {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.tns-nav>[aria-controls] {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 0;
+    outline: none;
+}
+
+.tns-nav>.tns-nav-active {
+    background: #999;
+}
+
+
 /* REVIEWS */
 
 #review {
     width: 100%;
-    height: auto;
-}
-
-#review .review-slider {
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
+    /* background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* overflow: hidden; */
+    background-attachment: fixed; */
+}
+
+#review::before{
+    background-image: url('../assets/images/bg4.jpg');
+}
+
+.fixedbg::before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    will-change: transform;
+    z-index: -99;
 }
 
 #review .review-slider .slide-item {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
     text-align: center;
     color: white;
-    align-items: center;
-    justify-content: space-evenly;
-    justify-items: center;
     user-select: none;
 }
 
-#review .review-slider::before {
-    content: '';
-    background-color: rgba(12, 11, 10, 0.5);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
 #review .review-slider .slide-item .inner img {
-    max-width: 50%;
+    margin: 1rem;
+    max-width: 15%;
     border: white 3px solid;
 }
 
 #review .review-slider .slide-item .inner2 {
     font-size: 1.3rem;
-    padding: 0px 30px 0px 30px;
 }
 
-@media (min-width: 1281px){
-
-
-}
-
-
+@media (min-width: 1281px) {}
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .hamburger-menu{
+
+    .hamburger-menu {
         font-size: 0.9rem;
     }
-
-    #navlogo{
-        width:50px;
+    #navlogo {
+        width: 50px;
     }
-    
     #nav-text-logo {
         font-size: 1.2rem;
     }
-    
     #nav-text-caption {
         font-size: 0.85rem;
     }
-
-    .nav .SearchBar{
+    .nav .SearchBar {
         width: 60%;
         font-size: 0.8rem;
     }
-    .nav .hamburger-ico{
+    .nav .hamburger-ico {
         /* width: 40px;
         height: 200%; */
     }
-
-    /* #home .carousel-item {
-        
-    } */
-
     #home .carousel .inner .wu {
         font-size: 3.4rem;
     }
-
     #home .carousel .inner .wur {
         font-size: 1.1rem;
         width: 90%;
     }
-
     #menu .p_category {
         font-size: 2.9rem;
     }
-
     #menu .subTitle .sub_category {
         font-size: 1.4rem;
     }
-
     #menu .subTitle .line {
         width: 75%;
     }
-    
     #menu .carousel-cell {
         width: 22%;
         margin-right: 8px;
     }
-
-    #menu .product .prd-name{
+    #menu .product .prd-name {
         font-size: 1.2rem;
         font-family: 'Galada', cursive;
     }
-
-    #menu .product .prd-prop{
+    #menu .product .prd-prop {
         font-size: 0.8rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
-
-    #menu .product .prd-price{
-        font-size: 1rem;        
+    #menu .product .prd-price {
+        font-size: 1rem;
     }
-
-    #menu .product .prd-weight{
+    #menu .product .prd-weight {
         font-weight: bold;
         font-size: 0.89rem;
         cursor: pointer;
     }
-
     #review .review-slider {
         width: 100%;
         height: 50vh;
     }
-
     #review .review-slider .slide-item .inner img {
         max-width: 50%;
     }
-
     #review .review-slider .slide-item .inner2 {
         font-size: 1.3rem;
     }
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    
-    #navlogo{
-        width:45px;
+
+    #navlogo {
+        width: 45px;
     }
-    
     #nav-text-logo {
         font-size: 1.1rem;
     }
-    
     #nav-text-caption {
         font-size: 0.8rem;
     }
-
-    .nav .SearchBar{
+    .nav .SearchBar {
         width: 62%;
         font-size: 0.8rem;
     }
-    .nav .hamburger-ico{
+    .nav .hamburger-ico {
         /* width: 38px;
         height: 38px; */
     }
-    
-    .hamburger-menu{
+    .hamburger-menu {
         font-size: 0.87rem;
     }
-
-    /* #home .carousel-item {
-        
-    } */
-
     #home .carousel .inner .wu {
         font-size: 3.2rem;
     }
-
     #home .carousel .inner .wur {
         font-size: 1.05rem;
         width: 90%;
     }
-
     #menu .p_category {
         font-size: 2.9rem;
     }
-
     #menu .subTitle .sub_category {
         font-size: 1.4rem;
     }
-
     #menu .subTitle .line {
         width: 75%;
     }
-    
     #menu .carousel-cell {
         width: 25%;
         margin-right: 8px;
     }
-
-    #menu .product .prd-name{
+    #menu .product .prd-name {
         font-size: 1.2rem;
         font-family: 'Galada', cursive;
     }
-
-    #menu .product .prd-prop{
+    #menu .product .prd-prop {
         font-size: 0.8rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
-
-    #menu .product .prd-price{
-        font-size: 1rem;        
+    #menu .product .prd-price {
+        font-size: 1rem;
     }
-
-    #menu .product .prd-weight{
+    #menu .product .prd-weight {
         font-weight: bold;
         font-size: 0.89rem;
         cursor: pointer;
     }
-
-    #review .review-slider {
-        width: 100%;
-        height: 50vh;
-    }
-
+  
     #review .review-slider .slide-item .inner img {
-        max-width: 45%;
+        width: 50%;
     }
-
     #review .review-slider .slide-item .inner2 {
         font-size: 1.1rem;
     }
 }
 
-
 @media (min-width: 481px) and (max-width: 767px) {
-    #navlogo{
-        width:40px;
+    #navlogo {
+        width: 40px;
     }
-    
     #nav-text-logo {
         font-size: 1.1rem;
     }
-    
     #nav-text-caption {
         font-size: 0.7rem;
         display: none;
     }
-
-    .nav .SearchBar{
+    .nav .SearchBar {
         width: 59%;
         font-size: 0.8rem;
     }
-
-    .nav .hamburger-ico{
+    .nav .hamburger-ico {
         /* width: 30px;
         height: 30px; */
     }
-    
-    .hamburger-menu{
+    .hamburger-menu {
         font-size: 0.8rem;
-    }
-    #home .carousel-item {
-        height: 55vh;
     }
     #home .carousel .inner .wu {
         font-size: 2.8rem;
     }
-
     #home .carousel .inner .wur {
         font-size: 0.9rem;
         width: 90%;
         line-height: 1.1rem;
     }
-
     #menu .p_category {
         font-size: 2.5rem;
     }
-
     #menu .subTitle .sub_category {
         font-size: 1.1rem;
     }
-
     #menu .subTitle .line {
         width: 75%;
     }
-    
     #menu .carousel-cell {
         width: 40%;
         margin-right: 4px;
     }
-
-    #menu .product .prd-prop{
+    #menu .product .prd-prop {
         font-size: 0.7rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
-
-    #menu .product .prd-name{
+    #menu .product .prd-name {
         font-size: 1rem;
         font-family: 'Galada', cursive;
     }
-
-    #menu .product .prd-weight{
+    #menu .product .prd-weight {
         font-weight: bold;
         font-size: 0.8rem;
         cursor: pointer;
     }
-    #menu .product .prd-price{
-        font-size: 0.9rem;        
+    #menu .product .prd-price {
+        font-size: 0.9rem;
     }
-
     #review .review-slider {
         height: 40vh;
     }
-
     #review .review-slider .slide-item .inner img {
         max-width: 30%;
     }
-
     #review .review-slider .slide-item .inner2 {
         font-size: 0.8rem;
     }
 }
 
-
 @media (min-width: 321px) and (max-width: 480px) {
-    #navlogo{
-        width:12vw;
+    #navlogo {
+        width: 12vw;
     }
-    
     #nav-text-logo {
         display: none;
         font-size: 1rem;
     }
-    
     #nav-text-caption {
-        font-size: 0.7rem;
+        font-size: 1rem;
         display: none;
     }
-
-    .nav .SearchBar{
-        width: 70%;
+    .nav .SearchBar {
+        width: 30%;
         font-size: 1rem;
     }
-
-    .nav .hamburger-ico{
+    .nav .hamburger-ico {
         /* width: 11vw;
         height: 11vw; */
     }
-    
-    .hamburger-menu{
+    .hamburger-menu {
         font-size: 1rem;
-    }
-
-    #home .carousel-item {
-        height: 45vh;
     }
     #home .carousel .inner .wu {
         font-size: 3rem;
     }
-
     #home .carousel .inner .wur {
-        font-size: 0.9rem;
-        width: 90%;
+        font-size: 1rem;
+        width: 93%;
         line-height: 1rem;
     }
-
     #menu .p_category {
         font-size: 3rem;
     }
-
     #menu .subTitle .sub_category {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
-
     #menu .subTitle .line {
         width: 90%;
     }
-    
     #menu .carousel-cell {
         width: 60%;
         margin-right: 4px;
     }
-
-    #menu .product .prd-prop{
+    #menu .product .prd-prop {
         font-size: 0.8rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
-
-    #menu .product .prd-name{
-        font-size: 1.4rem;
+    #menu .product .prd-name {
+        font-size: 1.2rem;
         font-family: 'Galada', cursive;
     }
-
-    #menu .product .prd-weight{
+    #menu .product .prd-weight {
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 0.89rem;
         cursor: pointer;
     }
-    #menu .product .prd-price{
-        font-size: 1rem;        
+    #menu .product .prd-price {
+        font-size: 1rem;
     }
-
     #review .review-slider {
         height: 40vh;
     }
-
     #review .review-slider .slide-item .inner img {
-        max-width: 45%;
+        max-width: 30%;
     }
-
     #review .review-slider .slide-item .inner2 {
         font-size: 0.98rem;
     }
 }
 
-@media (max-width: 320px) {
-   
-
-}
+@media (max-width: 320px) {}
