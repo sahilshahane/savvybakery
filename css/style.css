@@ -38,14 +38,20 @@ body {
     }
 }
 
-a:visited,
-a:hover,
-a:active,
-a {
+a:visited,a:hover,a:active,a {
     color: white;
     text-decoration: none;
 }
 
+.title-header{
+    color: #c12929;
+    font-size: 3rem;
+    width: 50%;
+    margin: 0 auto;
+    user-select: none;
+    font-family: 'Galada', cursive;
+    text-align: center;
+}
 
 /* NAVIGATION */
 
@@ -96,7 +102,6 @@ a {
 #navlogo {
     width: 55px;
 }
-
 
 .hamburger-menu {
     position: absolute;
@@ -215,7 +220,6 @@ a {
     border-bottom: 1px solid #000;
 }
 
-
 /* HOME */
 
 #home .carousel-item {
@@ -276,12 +280,6 @@ a {
     background-color: white;
 }
 
-#menu .cotm {
-    font-family: 'Galada', cursive;
-    font-size: 2rem;
-    text-align: center;
-}
-
 #menu .carousel-cell {
     width: 25%;
     /* half-width */
@@ -296,13 +294,6 @@ a {
     user-select: none;
 }
 
-#menu .p_category {
-    color: #c12929;
-    font-size: 3rem;
-    width: 50%;
-    margin: 0 auto;
-    user-select: none;
-}
 
 #menu .subTitle {
     display: flex;
@@ -339,8 +330,9 @@ a {
     border-radius: 10px;
 }
 
-#menu .product {
+#menu .product.splide__slide {
     border-radius: 10px;
+    /* transform: translateX(20%); */
 }
 
 #menu .product .prd-img {
@@ -384,11 +376,6 @@ a {
     border-radius: 0px 0px 10px 10px;
     transition: all 0.5s ease;
 }
-
-
-/* #menu .product .inner2:hover:after{
-    transform: skewY(0deg);
-  } */
 
 #menu .product .prd-name {
     font-size: 1.2rem;
@@ -488,10 +475,10 @@ svg {
 
 #review {
     width: 100%;
-    /* background-size: cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; */
+    /* background-attachment: fixed; */
 }
 
 #review::before{
@@ -528,6 +515,38 @@ svg {
 #review .review-slider .slide-item .inner2 {
     font-size: 1.3rem;
 }
+
+/* CONTACT SECTION */
+#contact{
+    margin-top: 20px;
+}
+
+
+#contact .info{
+    width: 50%;
+}
+
+#contact .info > div{
+    margin: 10px;
+}
+
+
+#contact .info .main{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 1281px) {}
 
@@ -785,22 +804,23 @@ svg {
         width: 60%;
         margin-right: 4px;
     }
+
     #menu .product .prd-prop {
         font-size: 0.8rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
     #menu .product .prd-name {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-family: 'Galada', cursive;
     }
     #menu .product .prd-weight {
         font-weight: bold;
-        font-size: 0.89rem;
+        font-size: 1rem;
         cursor: pointer;
     }
     #menu .product .prd-price {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     #review .review-slider {
         height: 40vh;

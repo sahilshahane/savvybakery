@@ -2,73 +2,23 @@ $(".nav .ui.search").css('width', $(".nav").outerWidth() - $(".nav .logo").outer
 
 $(document).ready(function() {
 
-    $('.hamburger-menu .home').click(function() {
-        $(".hamburger-menu").focusout();
-        $('html, body').stop().animate({
-            scrollTop: 0
-        }, 1500, 'easeInOutExpo');
-    });
-
-    $('.hamburger-menu .contact').click(function() {
-        $('a.linkNav')[2].click();
-    });
-
-
-    $('.hamburger-menu .aboutus').click(function() {
-        $('a.linkNav')[3].click();
-    });
-
-    var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
-        if (entries[0]['isIntersecting'] === true) {
-            if (entries[0]['intersectionRatio'] < 0.99)
-                console.log('99')
-                if (entries[0]['intersectionRatio'] > 0.8) {
-                    console.log('.8')
+    // var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
+    //     if (entries[0]['isIntersecting'] === true) {
 
 
 
-            } else if (entries[0]['intersectionRatio'] < 0.7) {
-                var scrollpos = localStorage.getItem('scrollpos');
-                if (scrollpos < 5)
-                document.getElementsByClassName("nav")[0].classList.remove('navBackground');
-                else
-                document.getElementsByClassName('nav')[0].classList.add('navBackground');
-            }
+    //             if (entries[0]['intersectionRatio'] < 0.7) {
+    //             var scrollpos = localStorage.getItem('scrollpos');
+    //             if (scrollpos < 5)
+    //             document.getElementsByClassName("nav")[0].classList.remove('navBackground');
+    //             else
+    //             document.getElementsByClassName('nav')[0].classList.add('navBackground');
+    //         }
               
-        }
-    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.99, 1] }).observe(document.querySelector("#home"));
-
-    // var MenuScrollobserver2 = new IntersectionObserver(function(entries) {
-    //     if (entries[0]['isIntersecting'] === true) {
-
-
-    //         if (entries[0]['intersectionRatio'] > 0.2) {
-
-    //         }
     //     }
-    // }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 1] }).observe(document.querySelector("#menu"));
+    // }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.99, 1] }).observe(document.querySelector("#home"));
 
-    // var ContactScrollobserver1 = new IntersectionObserver(function(entries) {
-    //     if (entries[0]['isIntersecting'] === true) {
-    //         if (entries[0]['intersectionRatio'] > 0.4) {
-
-
-    //         }
-    //     }
-    // }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#contact"));
-
-
-    // var AboutUsScrollobserver3 = new IntersectionObserver(function(entries) {
-    //     // since there is a single target to be observed, there will be only one entry
-    //     if (entries[0]['isIntersecting'] === true) {
-    //         if (entries[0]['intersectionRatio'] > 0.4) {
-
-
-    //         }
-
-    //     }
-    // }, { threshold: [0.5, 0.7, 1] }).observe(document.querySelector("#aboutus"));
-
+   
     window.addEventListener("scroll", function(event) {
         var scroll = this.scrollY;
         if (scroll < 5) {
@@ -80,104 +30,102 @@ $(document).ready(function() {
     });
 
     var scrolltoOffset = $('.nav').outerHeight();
-    $('.hamburger-menu a').on('click', function(e) {
-        var target = $(this.hash);
+
+    $('#side-nav-bar a').on('click', function(e) {
+        var target = $($(this).attr('scroll-id'));
+
         if (target.length) {
-            $(".hamburger-menu").focusout();
+            $('.ui.sidebar').sidebar('toggle');
             e.preventDefault();
 
             var scrollto = target.offset().top - scrolltoOffset;
 
             $('html, body').stop().animate({
                 scrollTop: scrollto
-            }, 1500, 'easeInOutExpo');
+            }, 1000, 'easeInOutExpo');
 
         }
     });
 
 
-    formcarry({
-        form: "2yWXkx33Cow4",
-        // id or the class name of the form element, only form element allowed
-        // works with css selectors
-        // # <= for id
-        // . <= for class
-        element: "#OrderForm",
-        extraData: {
-            // add whatever you want
-            Ordered_Items: getCartData(),
-        },
-        // Success callback, you can show alert messages
-        // or redirect the user in this function
-        onSuccess: function(response) {
-            alert("Your Order Has Been Placed Successfully!\nWe'll Contact You within 5 hrs");
-        },
-        // Error callback, a good place to show errors 🗿
-        onError: function(error) {
-            alert("Something Went Wrong!\nPlease Check Your Internet Connection!");
-        }
-    });
+    // formcarry({
+    //     form: "2yWXkx33Cow4",
+    //     // id or the class name of the form element, only form element allowed
+    //     // works with css selectors
+    //     // # <= for id
+    //     // . <= for class
+    //     element: "#OrderForm",
+    //     extraData: {
+    //         // add whatever you want
+    //         Ordered_Items: getCartData(),
+    //     },
+    //     // Success callback, you can show alert messages
+    //     // or redirect the user in this function
+    //     onSuccess: function(response) {
+    //         alert("Your Order Has Been Placed Successfully!\nWe'll Contact You within 5 hrs");
+    //     },
+    //     // Error callback, a good place to show errors 🗿
+    //     onError: function(error) {
+    //         alert("Something Went Wrong!\nPlease Check Your Internet Connection!");
+    //     }
+    // });
 
-    tnsConfig = {
-        // fixedWidth:300,
-        // axis:"vertical"
-        responsive: {
-            1281:{
-                gutter: 10,
-                items: 5
-            },
-            1025: {
-              gutter: 10,
-              items: 4
-            },
-            880:{
-               gutter: 10,
-               items:4
-            },
-            768: {
-               gutter: 10,
-               items:3
-            },
-            481: {
-              gutter: 10,
-              items: 2.5
-            },
-            321:{
-              gutter: 10,
-              items: 2,
-            },
-          },
-        // center: true,
-        // slideBy: 'page',
-        // startIndex: 1,
-        autoplayHoverPause: true,
-        autoplayButtonOutput: false,
-        loop: false,
-        items: 1,
-        autoplay: true,
-        mouseDrag: true,
-        speed: 1000,
-        controls: false,
-        navPosition: 'bottom',
-        gutter: 10,
-        arrowKeys: true
+    let carousel_settings = {
+        perPage: 5,
+        gap:10,
+        focus:'center',
+        start:1,
+        breakpoints: {
+                    1281:{
+                        perPage: 5
+                    },
+                    1025: {
+                   
+                        perPage: 4
+                    },
+                    880:{
+                        perPage:4
+                    },
+                    720: {
+                    
+                        perPage:3
+                    },
+                    600:{
+                        perPage:3
+                    },
+                    481: {
+                      
+                        perPage: 1.4
+                    },
+                    321:{
+                        perPage: 1,
+                    },
+                  },
+                  autoplay:true,
+                  pagination:false,
+                  interval:3000,
+                  
+
     };
+let prd_carausel1 = new Splide( '#prd-c1',carousel_settings);
+let prd_carausel2 = new Splide( '#prd-c2',carousel_settings);
+let prd_carausel3 = new Splide( '#prd-c3',carousel_settings);
 
-    // #prd-c3
-    var prd_carausel1 = tns({ container: '#prd-c1', ...tnsConfig });
-    var prd_carausel2 = tns({ container: '#prd-c2', ...tnsConfig });
-    var prd_carausel3 = tns({ container: '#prd-c3', ...tnsConfig });
+prd_carausel1.mount();
+prd_carausel2.mount();
+prd_carausel3.mount();
 
-    let review_carausel = tns({
-        container: '.review-slider',
-        center: true,
-        loop: true,
-        controls: false,
-        mouseDrag: true,
-        autoHeight: true,
-        autoplayButtonOutput: false,
-        navPosition: 'bottom',
-    });
+let review_cauraosel = new Splide( '#review',{
+    perPage:1,
+    arrows:false,
+    pagination:false,
+    autoplay:true,
+    interval:4000,
+    pauseOnHover:false,
+    pauseOnFocus:false
+});
+
+review_cauraosel.mount();
 
     $("#menu .product .prd-weight div").click(function() {
         $(this).parent().children(".selected").removeClass("selected")
