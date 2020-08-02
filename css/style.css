@@ -8,6 +8,7 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     font-size: 100%;
+
 }
 
 ::-webkit-scrollbar {
@@ -29,21 +30,26 @@ body {
         transform: translateZ(400px);
         opacity: 0;
     }
+
     40% {
         opacity: 0.6;
     }
+
     100% {
         transform: translateZ(0);
         opacity: 1;
     }
 }
 
-a:visited,a:hover,a:active,a {
+a:visited,
+a:hover,
+a:active,
+a {
     color: white;
     text-decoration: none;
 }
 
-.title-header{
+.title-header {
     color: #c12929;
     font-size: 3rem;
     width: 50%;
@@ -227,6 +233,7 @@ a:visited,a:hover,a:active,a {
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 #home .carousel-item::before {
@@ -478,12 +485,9 @@ svg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 }
 
-#review::before{
-    background-image: url('../assets/images/bg4.jpg');
-}
 
 .fixedbg::before {
     content: ' ';
@@ -517,33 +521,58 @@ svg {
 }
 
 /* CONTACT SECTION */
-#contact{
-    margin-top: 20px;
+#contact {
+    margin-top: 35px;
+    height: auto;
+}
+
+#contact>.inner {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 
-#contact .info{
-    width: 50%;
+#contact .info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    font-size: 1.2rem;
 }
 
-#contact .info > div{
-    margin: 10px;
+#contact .info>div {
+    margin: 20px;
 }
 
 
-#contact .info .main{
+#contact .info .main {
     font-weight: bold;
 }
 
+#contact .gmap-location {
+    flex-grow: 1;
+}
 
 
 
+/* FOOTER */
 
+#footer{
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0,0.92); 
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
-
-
+#footer .default{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
 
 
 
@@ -555,67 +584,85 @@ svg {
     .hamburger-menu {
         font-size: 0.9rem;
     }
+
     #navlogo {
         width: 50px;
     }
+
     #nav-text-logo {
         font-size: 1.2rem;
     }
+
     #nav-text-caption {
         font-size: 0.85rem;
     }
+
     .nav .SearchBar {
         width: 60%;
         font-size: 0.8rem;
     }
+
     .nav .hamburger-ico {
         /* width: 40px;
         height: 200%; */
     }
+
     #home .carousel .inner .wu {
         font-size: 3.4rem;
     }
+
     #home .carousel .inner .wur {
         font-size: 1.1rem;
         width: 90%;
     }
+
     #menu .p_category {
         font-size: 2.9rem;
     }
+
     #menu .subTitle .sub_category {
         font-size: 1.4rem;
     }
+
     #menu .subTitle .line {
         width: 75%;
     }
+
     #menu .carousel-cell {
         width: 22%;
         margin-right: 8px;
     }
+
     #menu .product .prd-name {
         font-size: 1.2rem;
         font-family: 'Galada', cursive;
     }
+
     #menu .product .prd-prop {
         font-size: 0.8rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
+
     #menu .product .prd-price {
         font-size: 1rem;
     }
+
     #menu .product .prd-weight {
         font-weight: bold;
         font-size: 0.89rem;
         cursor: pointer;
     }
+
     #review .review-slider {
         width: 100%;
         height: 50vh;
     }
+
     #review .review-slider .slide-item .inner img {
         max-width: 50%;
     }
+
     #review .review-slider .slide-item .inner2 {
         font-size: 1.3rem;
     }
@@ -626,64 +673,80 @@ svg {
     #navlogo {
         width: 45px;
     }
+
     #nav-text-logo {
         font-size: 1.1rem;
     }
+
     #nav-text-caption {
         font-size: 0.8rem;
     }
+
     .nav .SearchBar {
         width: 62%;
         font-size: 0.8rem;
     }
+
     .nav .hamburger-ico {
         /* width: 38px;
         height: 38px; */
     }
+
     .hamburger-menu {
         font-size: 0.87rem;
     }
+
     #home .carousel .inner .wu {
         font-size: 3.2rem;
     }
+
     #home .carousel .inner .wur {
         font-size: 1.05rem;
         width: 90%;
     }
+
     #menu .p_category {
         font-size: 2.9rem;
     }
+
     #menu .subTitle .sub_category {
         font-size: 1.4rem;
     }
+
     #menu .subTitle .line {
         width: 75%;
     }
+
     #menu .carousel-cell {
         width: 25%;
         margin-right: 8px;
     }
+
     #menu .product .prd-name {
         font-size: 1.2rem;
         font-family: 'Galada', cursive;
     }
+
     #menu .product .prd-prop {
         font-size: 0.8rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
+
     #menu .product .prd-price {
         font-size: 1rem;
     }
+
     #menu .product .prd-weight {
         font-weight: bold;
         font-size: 0.89rem;
         cursor: pointer;
     }
-  
+
     #review .review-slider .slide-item .inner img {
         width: 50%;
     }
+
     #review .review-slider .slide-item .inner2 {
         font-size: 1.1rem;
     }
@@ -693,68 +756,86 @@ svg {
     #navlogo {
         width: 40px;
     }
+
     #nav-text-logo {
         font-size: 1.1rem;
     }
+
     #nav-text-caption {
         font-size: 0.7rem;
         display: none;
     }
+
     .nav .SearchBar {
         width: 59%;
         font-size: 0.8rem;
     }
+
     .nav .hamburger-ico {
         /* width: 30px;
         height: 30px; */
     }
+
     .hamburger-menu {
         font-size: 0.8rem;
     }
+
     #home .carousel .inner .wu {
         font-size: 2.8rem;
     }
+
     #home .carousel .inner .wur {
         font-size: 0.9rem;
         width: 90%;
         line-height: 1.1rem;
     }
+
     #menu .p_category {
         font-size: 2.5rem;
     }
+
     #menu .subTitle .sub_category {
         font-size: 1.1rem;
     }
+
     #menu .subTitle .line {
         width: 75%;
     }
+
     #menu .carousel-cell {
         width: 40%;
         margin-right: 4px;
     }
+
     #menu .product .prd-prop {
         font-size: 0.7rem;
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
+
     #menu .product .prd-name {
         font-size: 1rem;
         font-family: 'Galada', cursive;
     }
+
     #menu .product .prd-weight {
         font-weight: bold;
         font-size: 0.8rem;
         cursor: pointer;
     }
+
     #menu .product .prd-price {
         font-size: 0.9rem;
     }
+
     #review .review-slider {
         height: 40vh;
     }
+
     #review .review-slider .slide-item .inner img {
         max-width: 30%;
     }
+
     #review .review-slider .slide-item .inner2 {
         font-size: 0.8rem;
     }
@@ -764,42 +845,53 @@ svg {
     #navlogo {
         width: 12vw;
     }
+
     #nav-text-logo {
         display: none;
         font-size: 1rem;
     }
+
     #nav-text-caption {
         font-size: 1rem;
         display: none;
     }
+
     .nav .SearchBar {
         width: 30%;
         font-size: 1rem;
     }
+
     .nav .hamburger-ico {
         /* width: 11vw;
         height: 11vw; */
     }
+
     .hamburger-menu {
         font-size: 1rem;
     }
+
     #home .carousel .inner .wu {
         font-size: 3rem;
     }
+
     #home .carousel .inner .wur {
         font-size: 1rem;
         width: 93%;
         line-height: 1rem;
     }
+
     #menu .p_category {
         font-size: 3rem;
     }
+
     #menu .subTitle .sub_category {
         font-size: 2rem;
     }
+
     #menu .subTitle .line {
         width: 90%;
     }
+
     #menu .carousel-cell {
         width: 60%;
         margin-right: 4px;
@@ -810,24 +902,30 @@ svg {
         color: rgb(48, 47, 47);
         font-weight: 600;
     }
+
     #menu .product .prd-name {
         font-size: 1.5rem;
         font-family: 'Galada', cursive;
     }
+
     #menu .product .prd-weight {
         font-weight: bold;
         font-size: 1rem;
         cursor: pointer;
     }
+
     #menu .product .prd-price {
         font-size: 1.2rem;
     }
+
     #review .review-slider {
         height: 40vh;
     }
+
     #review .review-slider .slide-item .inner img {
         max-width: 30%;
     }
+
     #review .review-slider .slide-item .inner2 {
         font-size: 0.98rem;
     }
