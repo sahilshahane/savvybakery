@@ -29,25 +29,28 @@ $(document).ready(function () {
         }
     });
 
-    var scrolltoOffset = $('.nav').outerHeight();
 
     $('#side-nav-bar a').on('click', function (e) {
         var target = $($(this).attr('scroll-id'));
-
         if (target.length) {
             $('.ui.sidebar').sidebar('toggle');
             e.preventDefault();
-
-            var scrollto = target.offset().top - scrolltoOffset;
-
-            $('html, body').stop().animate({
-                scrollTop: scrollto
-            }, 1000, 'easeInOutExpo');
-
+            ScrollToElement(target,700,'easeInOutExpo');
         }
     });
 
 
+    function ScrollToElement(scrollTo,Speed=0,AnimationType="linear"){
+        var scrolltoOffset = $('.nav').outerHeight();
+
+         scrollTo = scrollTo.offset().top - scrolltoOffset;
+
+        $('html, body').stop().animate({
+            scrollTop: scrollTo
+        }, Speed, AnimationType);
+
+    }
+   
     // formcarry({
     //     form: "2yWXkx33Cow4",
     //     // id or the class name of the form element, only form element allowed
@@ -74,7 +77,7 @@ $(document).ready(function () {
         perPage: 5,
         gap: 10,
         focus: 'center',
-        start: 1,
+        start: 0,
         breakpoints: {
             1281: {
                 perPage: 5
@@ -101,19 +104,37 @@ $(document).ready(function () {
                 perPage: 1,
             },
         },
-        autoplay: true,
+        // autoplay: true,
         pagination: false,
-        interval: 3000,
-
+        // interval: 3000,
+        trimSpace: false,
 
     };
     let prd_carausel1 = new Splide('#prd-c1', carousel_settings);
     let prd_carausel2 = new Splide('#prd-c2', carousel_settings);
     let prd_carausel3 = new Splide('#prd-c3', carousel_settings);
 
-    prd_carausel1.mount();
-    prd_carausel2.mount();
-    prd_carausel3.mount();
+    prd_carausel1.mount(window.splide.Extensions);
+    prd_carausel2.mount(window.splide.Extensions);
+    prd_carausel3.mount(window.splide.Extensions);
+
+    if(location.href.includes("#")){
+        navigationData =location.href.substring(location.href.indexOf('#')+1, location.href.length);
+        if(navigationData.substring(0,7)=="Product"){
+            viewType = navigationData[8];
+            if(viewType=="f"){}
+            else if(viewType=="c"){
+            //    var element = $("#"+$("#"+navigationData.substr(10)).parent().parent().parent().parent().attr('productCategory'));
+            
+               var element = $($("#"+navigationData.substr(10)).closest('.product-carousel').attr('productCategory'));
+
+            // setTimeout(function (){ScrollToElement(element,0,'linear')},100);
+            ScrollToElement(element,0,'linear');
+
+            }
+        }
+    }
+    
 
     let review_cauraosel = new Splide('#review', {
         perPage: 1,
