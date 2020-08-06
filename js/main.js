@@ -2,11 +2,22 @@ $(".nav .ui.search").css('width', $(".nav").outerWidth() - $(".nav .logo").outer
 
 $(document).ready(function () {
 
+    function ScrollToElement(scrollTo,Speed=0,AnimationType="linear",callback=null){
+        var scrolltoOffset = $('.nav').outerHeight();
+        
+         scrollTo = scrollTo.offset().top - scrolltoOffset;
+
+        $('html, body').stop().animate({
+            scrollTop: scrollTo
+        }, Speed, AnimationType,callback);
+
+    }
+
+
+    
+
     // var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
     //     if (entries[0]['isIntersecting'] === true) {
-
-
-
     //             if (entries[0]['intersectionRatio'] < 0.7) {
     //             var scrollpos = localStorage.getItem('scrollpos');
     //             if (scrollpos < 5)
@@ -14,7 +25,6 @@ $(document).ready(function () {
     //             else
     //             document.getElementsByClassName('nav')[0].classList.add('navBackground');
     //         }
-
     //     }
     // }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.99, 1] }).observe(document.querySelector("#home"));
 
@@ -39,18 +49,6 @@ $(document).ready(function () {
         }
     });
 
-
-    function ScrollToElement(scrollTo,Speed=0,AnimationType="linear"){
-        var scrolltoOffset = $('.nav').outerHeight();
-
-         scrollTo = scrollTo.offset().top - scrolltoOffset;
-
-        $('html, body').stop().animate({
-            scrollTop: scrollTo
-        }, Speed, AnimationType);
-
-    }
-   
     // formcarry({
     //     form: "2yWXkx33Cow4",
     //     // id or the class name of the form element, only form element allowed
@@ -110,31 +108,55 @@ $(document).ready(function () {
         trimSpace: false,
 
     };
-    let prd_carausel1 = new Splide('#prd-c1', carousel_settings);
-    let prd_carausel2 = new Splide('#prd-c2', carousel_settings);
-    let prd_carausel3 = new Splide('#prd-c3', carousel_settings);
 
-    prd_carausel1.mount(window.splide.Extensions);
-    prd_carausel2.mount(window.splide.Extensions);
-    prd_carausel3.mount(window.splide.Extensions);
+    var prd_carausel1 = new Splide('#prd-c1', carousel_settings);
+    var prd_carausel2 = new Splide('#prd-c2', carousel_settings);
+    var prd_carausel3 = new Splide('#prd-c3', carousel_settings);
 
-    if(location.href.includes("#")){
-        navigationData =location.href.substring(location.href.indexOf('#')+1, location.href.length);
+    // prd_carausel1.mount(window.splide.Extensions);
+    // prd_carausel2.mount(window.splide.Extensions);
+    // prd_carausel3.mount(window.splide.Extensions);
+
+    window.prd_carausel1 = prd_carausel1;
+
+    prd_carausel1.mount();
+    prd_carausel2.mount();
+    prd_carausel3.mount();
+
+    function slideToProduct(productElement,productCategoryElement,productSlideNumber){
+        var categoryName = productCategoryElement.attr('id');
+        if(categoryName=="chocolate_base")
+        splideObject = prd_carausel1;
+        else if(categoryName=="vanilla_base")
+        splideObject = prd_carausel2;
+        else if(categoryName=="flavoured_specials")
+        splideObject = prd_carausel3;
+        
+
+        splideObject.go(productSlideNumber);
+    }
+
+
+
+    if(location.hash){
+        navigationData =location.hash.substr(1);
         if(navigationData.substring(0,7)=="Product"){
             viewType = navigationData[8];
-            if(viewType=="f"){}
-            else if(viewType=="c"){
-            //    var element = $("#"+$("#"+navigationData.substr(10)).parent().parent().parent().parent().attr('productCategory'));
-            
-               var element = $($("#"+navigationData.substr(10)).closest('.product-carousel').attr('productCategory'));
+            if(viewType=="E"){}
+            else if(viewType=="I"){
+               var productElement = $("#"+navigationData.substr(10));           
+               var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
+               var productSlideNo = Number.parseInt(productElement.attr('slideNo'));
 
-            // setTimeout(function (){ScrollToElement(element,0,'linear')},100);
-            ScrollToElement(element,0,'linear');
+            setTimeout(function() {
+                ScrollToElement(productCategoryElement,200,'linear',()=>{
 
+                    slideToProduct(productElement,productCategoryElement,productSlideNo);
+                })
+        },500);
             }
         }
     }
-    
 
     let review_cauraosel = new Splide('#review', {
         perPage: 1,
@@ -180,8 +202,6 @@ $(document).ready(function () {
     });
 
     $('.ui.side-menu').accordion();
-
-
 
     categoryContent = [{
         "category": "Cake",
@@ -399,9 +419,7 @@ $(document).ready(function () {
 
 
 
-
-
-
+    
 
 });
 
