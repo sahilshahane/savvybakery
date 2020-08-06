@@ -146,7 +146,7 @@ $(document).ready(function () {
             else if(viewType=="I"){
                var productElement = $("#"+navigationData.substr(10));           
                var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
-               var productSlideNo = Number.parseInt(productElement.attr('slideNo'));
+               var productSlideNo = Number.parseInt(productElement.attr('slideNo'))-1;
 
             setTimeout(function() {
                 ScrollToElement(productCategoryElement,200,'linear',()=>{
