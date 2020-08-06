@@ -153,7 +153,7 @@ $(document).ready(function () {
 
                     slideToProduct(productElement,productCategoryElement,productSlideNo);
                 })
-        },500);
+        },800);
             }
         }
     }
