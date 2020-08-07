@@ -1,20 +1,42 @@
-$(".nav .ui.search").css('width', $(".nav").outerWidth() - $(".nav .logo").outerWidth() - $(".nav .hamburger-ico").outerWidth() - 30);
+$(".nav .ui.search").css('width', $(".nav").outerWidth() - $(".nav .logo").outerWidth() - $(".nav .hamburger-ico").outerWidth() - 80);
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-    function ScrollToElement(scrollTo,Speed=0,AnimationType="linear",callback=null){
+    function ScrollToElement(scrollTo, Speed = 0, AnimationType = 'easeInOutExpo', callback = null) {
         var scrolltoOffset = $('.nav').outerHeight();
-        
-         scrollTo = scrollTo.offset().top - scrolltoOffset;
+
+        scrollTo = scrollTo.offset().top - scrolltoOffset;
 
         $('html, body').stop().animate({
             scrollTop: scrollTo
-        }, Speed, AnimationType,callback);
+        }, Speed, AnimationType, callback);
 
     }
 
 
-    
+    homeSlider = new Splide('#home .splide', {
+        type: 'loop',
+        perPage: 1,
+        height: '75vh',
+        arrows: false,
+        arrowsPath: false,
+        pagination: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        keyboard: false,
+        autoplay: true,
+        interval: 3500,
+        resetProgress: false
+    });
+    homeSlider.mount();
+
+    var ParralaxImg = new simpleParallax(document.getElementsByClassName('bgParallax'), {
+        scale: 1.4,
+        delay: 0.6,
+        // transition: 'cubic-bezier(0,0,0,1)',
+    });
+
+
 
     // var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
     //     if (entries[0]['isIntersecting'] === true) {
@@ -43,9 +65,9 @@ $(document).ready(function () {
     $('#side-nav-bar a').on('click', function (e) {
         var target = $($(this).attr('scroll-id'));
         if (target.length) {
-            $('.ui.sidebar').sidebar('toggle');
+            $('.ui.side-menu').sidebar('toggle');
             e.preventDefault();
-            ScrollToElement(target,700,'easeInOutExpo');
+            ScrollToElement(target, 700, 'easeInOutExpo');
         }
     });
 
@@ -106,16 +128,12 @@ $(document).ready(function () {
         pagination: false,
         // interval: 3000,
         trimSpace: false,
-
+        type: 'loop',
     };
 
     var prd_carausel1 = new Splide('#prd-c1', carousel_settings);
     var prd_carausel2 = new Splide('#prd-c2', carousel_settings);
     var prd_carausel3 = new Splide('#prd-c3', carousel_settings);
-
-    // prd_carausel1.mount(window.splide.Extensions);
-    // prd_carausel2.mount(window.splide.Extensions);
-    // prd_carausel3.mount(window.splide.Extensions);
 
     window.prd_carausel1 = prd_carausel1;
 
@@ -123,37 +141,38 @@ $(document).ready(function () {
     prd_carausel2.mount();
     prd_carausel3.mount();
 
-    function slideToProduct(productElement,productCategoryElement,productSlideNumber){
+    function slideToProduct(productElement, productCategoryElement) {
+
+        var productSlideNumber = Number.parseInt(productElement.attr('slideNo')) - 1;
         var categoryName = productCategoryElement.attr('id');
-        if(categoryName=="chocolate_base")
-        splideObject = prd_carausel1;
-        else if(categoryName=="vanilla_base")
-        splideObject = prd_carausel2;
-        else if(categoryName=="flavoured_specials")
-        splideObject = prd_carausel3;
-        
+
+        if (categoryName == "chocolate_base")
+            splideObject = prd_carausel1;
+        else if (categoryName == "vanilla_base")
+            splideObject = prd_carausel2;
+        else if (categoryName == "flavoured_specials")
+            splideObject = prd_carausel3;
+
 
         splideObject.go(productSlideNumber);
     }
 
 
 
-    if(location.hash){
-        navigationData =location.hash.substr(1);
-        if(navigationData.substring(0,7)=="Product"){
+    if (location.hash) {
+        navigationData = location.hash.substr(1);
+        if (navigationData.substring(0, 7) == "Product") {
             viewType = navigationData[8];
-            if(viewType=="E"){}
-            else if(viewType=="I"){
-               var productElement = $("#"+navigationData.substr(10));           
-               var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
-               var productSlideNo = Number.parseInt(productElement.attr('slideNo'))-1;
+            if (viewType == "E") {} else if (viewType == "I") {
+                var productElement = $("#" + navigationData.substr(10));
+                var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
 
-            setTimeout(function() {
-                ScrollToElement(productCategoryElement,200,'linear',()=>{
+                setTimeout(() => {
+                    ScrollToElement(productCategoryElement, 200, 'easeInOutExpo', () => {
+                        slideToProduct(productElement, productCategoryElement);
+                    });
+                }, 100);
 
-                    slideToProduct(productElement,productCategoryElement,productSlideNo);
-                })
-        },800);
             }
         }
     }
@@ -203,193 +222,271 @@ $(document).ready(function () {
 
     $('.ui.side-menu').accordion();
 
-    categoryContent = [{
+    var categoryContent = [{
         "category": "Cake",
-        "title": "Chocolate syrup cake"
+        "title": "Chocolate syrup cake",
+        "id": "cak-cho-chocolate-syrup-cake"
     }, {
         "category": "Cake",
-        "title": "Black forest"
+        "title": "Black forest cake",
+        "id": "cak-cho-black-forest-cake"
     }, {
         "category": "Cake",
-        "title": "Chocolate truffel"
+        "title": "Chocolate truffel cake",
+        "id": "cak-cho-chocolate-truffel-cake"
     }, {
         "category": "Cake",
-        "title": "Dutch chocolate"
+        "title": "Dutch chocolate cake",
+        "id": "cak-cho-dutch-chocolate-cake"
     }, {
         "category": "Cake",
-        "title": "Ganache"
+        "title": "Ganache cake",
+        "id": "cak-cho-ganache-cake"
     }, {
         "category": "Cake",
-        "title": "Chocolate cheese cake"
+        "title": "Chocolate cheese cake",
+        "id": "cak-cho-chocolate-cheese-cake"
     }, {
         "category": "Cake",
-        "title": "Pineapple"
+        "title": "Pineapple cake",
+        "id": "cak-van-pineapple-cake"
     }, {
         "category": "Cake",
-        "title": "Butter scotch"
+        "title": "Butter scotch cake",
+        "id": "cak-van-butter-scotch-cake"
     }, {
         "category": "Cake",
-        "title": "Strawberry"
+        "title": "Strawberry cake",
+        "id": "cak-van-strawberry-cake"
     }, {
         "category": "Cake",
-        "title": "Pinacolada(tender coconut)"
+        "title": "Pinacolada(tender coconut) cake",
+        "id": "cak-fla-pinacolada-cake"
     }, {
         "category": "Cake",
-        "title": "Rasmalai"
+        "title": "Rasmalai cake",
+        "id": "cak-fla-rasmalai-cake"
     }, {
         "category": "Cake",
-        "title": "Kulfi falooda"
+        "title": "Kulfi falooda cake",
+        "id": "cak-fla-kulfi-falooda-cake"
     }, {
         "category": "Cake",
-        "title": "Blue berry"
+        "title": "Blue berry cake",
+        "id": "cak-fla-blue-berry-cake"
     }, {
         "category": "Cake",
-        "title": "Paan"
+        "title": "Paan cake",
+        "id": "cak-fla-paan-cake"
     }, {
         "category": "Cake",
-        "title": "Mango"
+        "title": "Mango cake",
+        "id": "cak-fla-mango-cake"
     }, {
         "category": "Cake",
-        "title": "Orange"
+        "title": "Orange cake",
+        "id": "cak-fla-orange-cake"
     }, {
         "category": "Cake",
-        "title": "Paani puri"
+        "title": "Paani puri cake",
+        "id": "cak-fla-paani-puri-cake"
     }, {
         "category": "Cake",
-        "title": "Merry berry"
+        "title": "Merry berry cake",
+        "id": "cak-fla-merry-berry-cake"
     }, {
         "category": "Cake",
-        "title": "Gulab jamun"
+        "title": "Gulab jamun cake",
+        "id": "cak-fla-gulab-jamun-cake"
     }, {
         "category": "Cake",
-        "title": "Honey cake"
+        "title": "Honey cake cake",
+        "id": "cak-fla-honey-cake-cake"
     }, {
         "category": "Cake",
-        "title": "Zebra marvel"
+        "title": "Zebra marvel cake",
+        "id": "cak-fla-zebra-marvel-cake"
     }, {
         "category": "Cake",
-        "title": "Red velvet"
+        "title": "Red velvet cake",
+        "id": "cak-fla-red-velvet-cake"
     }, {
         "category": "Cake",
-        "title": "Tiger cream cake"
+        "title": "Tiger cream cake",
+        "id": "cak-fla-tiger-cream-cake"
     }, {
         "category": "Cake",
-        "title": "Date cake (speciality)"
+        "title": "Date cake (speciality)",
+        "id": "cak-fla-date-cake"
     }, {
         "category": "Cake",
-        "title": "Plum cake (speciality)"
+        "title": "Plum cake (speciality)",
+        "id": "cak-fla-plum-cake"
     }, {
         "category": "Cake",
-        "title": "Marble"
+        "title": "Marble cake",
+        "id": "cak-fla-marble-cake"
     }, {
         "category": "Cake",
-        "title": "Wine cake"
+        "title": "Wine cake",
+        "id": "cak-fla-wine-cake"
     }, {
         "category": "Cake",
-        "title": "Sponge"
+        "title": "Sponge cake",
+        "id": "cak-fla-sponge-cake"
     }, {
         "category": "Cake",
-        "title": "Mix fruit cake"
+        "title": "Mix fruit cake",
+        "id": "cak-fla-mix-fruit-cake"
     }, {
         "category": "Cake",
-        "title": "Trooty frooty cake"
+        "title": "Trooty frooty cake",
+        "id": "cak-fla-trooty-frooty-cake"
     }, {
         "category": "Cake",
-        "title": "Christmas cake"
+        "title": "Christmas cake",
+        "id": "cak-des-christmas-cake"
     }, {
         "category": "Cake",
-        "title": "Carwheel cake"
+        "title": "Carwheel cake",
+        "id": "cak-des-carwheel-cake"
     }, {
         "category": "Cake",
-        "title": "Doll cake"
+        "title": "Doll cake",
+        "id": "cak-des-doll-cake"
     }, {
         "category": "Cake",
-        "title": "Marble"
+        "title": "Marble cake",
+        "id": "cak-des-marble-cake"
     }, {
         "category": "Cake Sides",
-        "title": "Cake pops"
+        "title": "Cake pops",
+        "id": "cak-des-cake-pops"
     }, {
         "category": "Cake Sides",
-        "title": "Cakesical"
+        "title": "Cakesical",
+        "id": "cak-des-cakesical"
     }, {
         "category": "Cake Sides",
-        "title": "Brownie"
+        "title": "Brownie",
+        "id": "cak-des-brownie"
     }, {
         "category": "Cake Sides",
-        "title": "Tea time cake"
+        "title": "Tea time cake",
+        "id": "cak-des-tea-time-cake"
     }, {
         "category": "Cake Sides",
-        "title": "Trooty frooty bread"
+        "title": "Trooty frooty bread",
+        "id": "cak-des-trooty-frooty-bread"
     }, {
         "category": "Cake Sides",
-        "title": "Plum cake"
+        "title": "Plum cake",
+        "id": "cak-des-plum-cake"
     }, {
         "category": "Cake Sides",
-        "title": "Muffins"
+        "title": "Muffins",
+        "id": "cak-des-muffins"
     }, {
         "category": "Cake Sides",
-        "title": "Cup cakes"
+        "title": "Cup cakes",
+        "id": "cak-des-cup-cakes"
     }, {
         "category": "Cake Sides",
-        "title": "Bake donut"
+        "title": "Bake donut",
+        "id": "cak-des-bake-donut"
     }, {
         "category": "Cake Sides",
-        "title": "Fried donut"
+        "title": "Fried donut",
+        "id": "cak-des-fried-donut"
     }, {
         "category": "Cake Sides",
-        "title": "Cinnamon roll"
+        "title": "Cinnamon roll",
+        "id": "cak-des-cinnamon-roll"
     }, {
         "category": "Cake Sides",
-        "title": "Sweet bread"
+        "title": "Sweet bread",
+        "id": "cak-des-sweet-bread"
     }, {
         "category": "Bakery",
-        "title": "Bread"
+        "title": "Bread",
+        "id": "bak-bre-bread"
     }, {
         "category": "Bakery",
-        "title": "Ladi pav"
+        "title": "Ladi pav",
+        "id": "bak-bre-ladi-pav"
     }, {
         "category": "Bakery",
-        "title": "Brown bread"
+        "title": "Brown bread",
+        "id": "bak-bre-brown-bread"
     }, {
         "category": "Bakery",
-        "title": "Garlic bread"
+        "title": "Garlic bread",
+        "id": "bak-bre-garlic-bread"
     }, {
         "category": "Bakery",
-        "title": "Braided bread"
+        "title": "Braided bread",
+        "id": "bak-bre-braided-bread"
     }, {
         "category": "Bakery",
-        "title": "Pizza base"
+        "title": "Pizza base",
+        "id": "bak-bre-pizza-base"
     }, {
         "category": "Bakery",
-        "title": "Whole wheat pizza base"
+        "title": "Whole wheat pizza base",
+        "id": "bak-bre-whole-wheat-pizza-base"
     }, {
         "category": "Bakery",
-        "title": "Burger bun"
+        "title": "Burger bun",
+        "id": "bak-bre-burger-bun"
     }, {
         "category": "Bakery",
-        "title": "Whole wheat burger bun"
+        "title": "Whole wheat burger bun",
+        "id": "bak-bre-whole-wheat-burger-bun"
     }, {
         "category": "Bakery",
-        "title": "Stuffed garlic bread"
+        "title": "Stuffed garlic bread",
+        "id": "bak-sna-stuffed-garlic-bread"
     }, {
         "category": "Bakery",
-        "title": "Pizza"
+        "title": "Pizza",
+        "id": "bak-sna-pizza"
     }, {
         "category": "Bakery",
-        "title": "Vegiee chesse"
+        "title": "Vegiee chesse",
+        "id": "bak-sna-vegiee-chesse"
     }, {
         "category": "Bakery",
-        "title": "Paneery cheese"
+        "title": "Paneery cheese",
+        "id": "bak-sna-paneery-cheese"
     }, {
         "category": "Bakery",
-        "title": "Soya cheese"
+        "title": "Soya cheese",
+        "id": "bak-sna-soya-cheese"
     }, {
         "category": "Bakery",
-        "title": "Foccasia"
+        "title": "Foccasia",
+        "id": "bak-sna-foccasia"
     }, {
         "category": "Bakery",
-        "title": "Stuffed braided bread"
-    }]
+        "title": "Stuffed braided bread",
+        "id": "bak-sna-stuffed-braided-bread"
+    }];
+
+
+    function gtps(result) { //gtps means go to specified product's section on search and show it/focus it
+        try {
+            
+            var productElement = $("#" + result.id);
+            var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
+
+            ScrollToElement(productCategoryElement, 200, 'easeInOutExpo', () => {
+
+                slideToProduct(productElement, productCategoryElement);
+
+            });
+        }catch (error) {alert("Product Not Listed/Displayed Yet!\nListed Products Till Now are Cakes");}
+
+    }
 
     $('.nav .ui.search').search({
         type: 'category',
@@ -397,7 +494,26 @@ $(document).ready(function () {
         searchFields: [
             'title',
             'category'
-        ]
+        ],
+        onSelect: gtps
+    });
+
+
+    $("#side-nav-bar a.productMenuNav").click(function (e) {
+        e.preventDefault();
+        $('.ui.side-menu').sidebar('toggle');
+
+        try {
+        var productElement = $($(this).attr('productID'));
+        var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
+
+        ScrollToElement(productCategoryElement, 200, 'easeInOutExpo', () => {
+
+            slideToProduct(productElement, productCategoryElement);
+
+        });
+        } catch (error) {alert("Product Not Listed/Displayed Yet!\nListed Products Till Now are Cakes");}
+        
     });
 
 
@@ -413,13 +529,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-    
 
 });
 
