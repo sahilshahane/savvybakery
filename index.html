@@ -24,13 +24,12 @@
 </head>
 
 <body>
-	<script>console.log("this is the Previous commit but with new Commit Title")</script>
-    <div id="side-nav-bar" class="ui side-menu right vertical accordion menu sidebar">
+    <div id="nav-sidebar" class="ui side-menu right vertical accordion menu sidebar">
         <a class="item" scroll-id="#menu">
             Menu
         </a>
-        <div class="">
-            <div class="title"><i class="dropdown icon"></i>Products</div>
+        <div class="item prodAccordion">
+            <div class="title"><i class="icon dropdown"></i>Products</div>
             <div class="content">
                 <div class="accordion">
                     <div class="title"><i class="dropdown icon"></i>Cakes</div>
@@ -38,12 +37,16 @@
                         <div class="accordion">
                             <div class="title"><i class="dropdown icon"></i>Chocolate Base</div>
                             <div class="content">
-                                <a class="item productMenuNav" productID="#cak-cho-chocolate-syrup-cake">Chocolate syrup cake</a>
+                                <a class="item productMenuNav" productID="#cak-cho-chocolate-syrup-cake">Chocolate syrup
+                                    cake</a>
                                 <a class="item productMenuNav" productID="#cak-cho-black-forest-cake">Black forest</a>
-                                <a class="item productMenuNav" productID="#cak-cho-chocolate-truffel-cake">Chocolate truffel</a>
-                                <a class="item productMenuNav" productID="#cak-cho-dutch-chocolate-cake">Dutch chocolate</a>
+                                <a class="item productMenuNav" productID="#cak-cho-chocolate-truffel-cake">Chocolate
+                                    truffel</a>
+                                <a class="item productMenuNav" productID="#cak-cho-dutch-chocolate-cake">Dutch
+                                    chocolate</a>
                                 <a class="item productMenuNav" productID="#cak-cho-ganache-cake">Ganache</a>
-                                <a class="item productMenuNav" productID="#cak-cho-chocolate-cheese-cake">Chocolate cheese cake</a>
+                                <a class="item productMenuNav" productID="#cak-cho-chocolate-cheese-cake">Chocolate
+                                    cheese cake</a>
                             </div>
                             <div class="title"><i class="dropdown icon"></i>Vanilla Base</div>
                             <div class="content">
@@ -66,14 +69,16 @@
                                 <a class="item productMenuNav" productID="#cak-fla-honey-cake-cake">Honey cake</a>
                                 <a class="item productMenuNav" productID="#cak-fla-zebra-marvel-cake">Zebra marvel</a>
                                 <a class="item productMenuNav" productID="#cak-fla-red-velvet-cake">Red velvet</a>
-                                <a class="item productMenuNav" productID="#cak-fla-tiger-cream-cake">Tiger cream cake</a>
+                                <a class="item productMenuNav" productID="#cak-fla-tiger-cream-cake">Tiger cream
+                                    cake</a>
                                 <a class="item productMenuNav" productID="#cak-fla-date-cake">Date cake (speciality)</a>
                                 <a class="item productMenuNav" productID="#cak-fla-plum-cake">Plum cake (speciality)</a>
                                 <a class="item productMenuNav" productID="#cak-fla-marble-cake">Marble</a>
                                 <a class="item productMenuNav" productID="#cak-fla-wine-cake">Wine cake</a>
                                 <a class="item productMenuNav" productID="#cak-fla-sponge-cake">Sponge</a>
                                 <a class="item productMenuNav" productID="#cak-fla-mix-fruit-cake">Mix fruit cake</a>
-                                <a class="item productMenuNav" productID="#cak-fla-trooty-frooty-cake">Trooty frooty cake</a>
+                                <a class="item productMenuNav" productID="#cak-fla-trooty-frooty-cake">Trooty frooty
+                                    cake</a>
                             </div>
                             <div class="title"><i class="dropdown icon"></i>Designer</div>
                             <div class="content">
@@ -112,19 +117,23 @@
                                 <a class="item productMenuNav" productID="#bak-bre-garlic-bread">Garlic bread</a>
                                 <a class="item productMenuNav" productID="#bak-bre-braided-bread">Braided bread</a>
                                 <a class="item productMenuNav" productID="#bak-bre-pizza-base">Pizza base</a>
-                                <a class="item productMenuNav" productID="#bak-bre-whole-wheat-pizza-base">Whole wheat pizza base</a>
+                                <a class="item productMenuNav" productID="#bak-bre-whole-wheat-pizza-base">Whole wheat
+                                    pizza base</a>
                                 <a class="item productMenuNav" productID="#bak-bre-burger-bun">Burger bun</a>
-                                <a class="item productMenuNav" productID="#bak-bre-whole-wheat-burger-bun">Whole wheat burger bun</a>
+                                <a class="item productMenuNav" productID="#bak-bre-whole-wheat-burger-bun">Whole wheat
+                                    burger bun</a>
                             </div>
                             <div class="title"><i class="dropdown icon"></i>Snacks</div>
                             <div class="content">
-                                <a class="item productMenuNav" productID="#bak-sna-stuffed-garlic-bread">Stuffed garlic bread</a>
+                                <a class="item productMenuNav" productID="#bak-sna-stuffed-garlic-bread">Stuffed garlic
+                                    bread</a>
                                 <a class="item productMenuNav" productID="#bak-sna-pizza">Pizza</a>
                                 <a class="item productMenuNav" productID="#bak-sna-vegiee-chesse">Vegiee chesse</a>
                                 <a class="item productMenuNav" productID="#bak-sna-paneery-cheese">Paneery cheese</a>
                                 <a class="item productMenuNav" productID="#bak-sna-soya-cheese">Soya cheese</a>
                                 <a class="item productMenuNav" productID="#bak-sna-foccasia">Foccasia</a>
-                                <a class="item productMenuNav" productID="#bak-sna-stuffed-braided-bread">Stuffed braided bread</a>
+                                <a class="item productMenuNav" productID="#bak-sna-stuffed-braided-bread">Stuffed
+                                    braided bread</a>
                             </div>
                         </div>
                     </div>
@@ -140,6 +149,19 @@
             Cart
         </a>
     </div>
+
+    <div id="productExternalView-sidebar" class="ui left vertical sidebar very wide" style="background-color: white;">
+        <div class="closeBtn" style="float: right;"><i class="link big close icon"></i></div>
+        
+        <!-- <div class="ui loading text active centered inline loader">Loading</div> -->
+
+        <div class="ui inverted dimmer loading">
+            <div class="ui huge text loader">Loading</div>
+        </div>
+
+        <div id="productExternalDisplay"></div>
+    </div>
+
 
     <div class="pusher">
 
@@ -179,20 +201,21 @@
                                 <div class="bgImg">
                                     <img src="assets/images/bg5.jpg" class="bgParallax">
                                 </div>
-    
+
                                 <div class="flexAllCenter contents">
                                     <div class="flex aItemsCenter jContentCenter inner">
                                         <div class="wu">Why <span style="color: #c12929;">Us</span>?</div>
                                         <div class="wur">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                             eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in
-                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur.
                                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                                             deserunt
                                             mollit anim id est laborum.</div>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
                         <div class="splide__slide">
@@ -200,20 +223,21 @@
                                 <div class="bgImg">
                                     <img src="assets/images/bg2.jpg" class="bgParallax">
                                 </div>
-    
+
                                 <div class="flexAllCenter contents">
                                     <div class="flex aItemsCenter jContentCenter inner">
                                         <div class="wu">Your <span style="color: #c12929;">Quote</span></div>
                                         <div class="wur">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                             eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in
-                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur.
                                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                                             deserunt
                                             mollit anim id est laborum.</div>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
                         <div class="splide__slide">
@@ -221,26 +245,27 @@
                                 <div class="bgImg">
                                     <img src="assets/images/bg3.jpg" class="bgParallax">
                                 </div>
-    
+
                                 <div class="flexAllCenter contents">
                                     <div class="flex aItemsCenter jContentCenter inner">
                                         <div class="wu">Why <span style="color: #c12929;">Us</span>?</div>
                                         <div class="wur">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                             eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in
-                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur.
                                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                                             deserunt
                                             mollit anim id est laborum.</div>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <section id="menu" class="padTop">
@@ -255,9 +280,12 @@
                 <div class="product-carousel splide" id="prd-c1" productCategory="#chocolate_base">
                     <div class="splide__track">
                         <div class="splide__list">
+
+
                             <div class="splide__slide">
                                 <div class="product" id="cak-cho-chocolate-syrup-cake" slideNo='1'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/1.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -265,49 +293,32 @@
                                         <div>
                                             <div class="prd-name">Chocolate Syrup Cake</div>
                                         </div>
-
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-
-
                             <div class="splide__slide">
                                 <div class="product" id="cak-cho-black-forest-cake" slideNo='2'>
                                     <div class="inner">
-
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/2.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -315,48 +326,35 @@
                                         <div>
                                             <div class="prd-name">Black Forest Cake</div>
                                         </div>
-
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
-
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
 
 
+
+
+
                             <div class="splide__slide">
                                 <div class="product" id="cak-cho-chocolate-truffel-cake" slideNo='3'>
                                     <div class="inner">
-
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/3.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -365,38 +363,24 @@
                                             <div class="prd-name">Chocolate Truffel Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -406,7 +390,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-cho-dutch-chocolate-cake" slideNo='4'>
                                     <div class="inner">
-
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/4.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -414,39 +398,26 @@
                                         <div>
                                             <div class="prd-name">Dutch Chocolate Cake</div>
                                         </div>
-
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" alt=""
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
 
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -457,7 +428,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-cho-ganache-cake" slideNo='5'>
                                     <div class="inner">
-
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/5.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -466,38 +437,22 @@
                                             <div class="prd-name">Ganache Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
-
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
-
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
                                     </div>
                                 </div>
                             </div>
@@ -507,7 +462,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-cho-chocolate-cheese-cake" slideNo='6'>
                                     <div class="inner">
-
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -516,41 +471,26 @@
                                             <div class="prd-name">Chocolate Cheese Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
-
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
-
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -566,8 +506,9 @@
 
                             <div class="splide__slide">
                                 <div class="product" id="cak-van-pineapple-cake" slideNo='1'>
-                                    <div class="inner">
+                                    <i class="external alternate icon"></i>
 
+                                    <div class="inner">
                                         <img src="assets/images/products/cakes/16.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -576,38 +517,22 @@
                                             <div class="prd-name">Pineapple Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
-
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
-
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
                                     </div>
                                 </div>
                             </div>
@@ -616,7 +541,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-van-butter-scotch-cake" slideNo='2'>
                                     <div class="inner">
-
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/14.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -625,38 +550,24 @@
                                             <div class="prd-name">Butter Scotch Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -665,6 +576,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-van-strawberry-cake" slideNo='3'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/20.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -673,38 +585,24 @@
                                             <div class="prd-name">Strawberry Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -724,6 +622,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-pinacolada-cake" slideNo='1'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/12.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -732,38 +631,24 @@
                                             <div class="prd-name">Pinacolada Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -772,6 +657,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-rasmalai-cake" slideNo='2'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/13.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -780,38 +666,24 @@
                                             <div class="prd-name">Rasmalai Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -820,6 +692,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-kulfi-falooda-cake" slideNo='3'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/19.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -828,38 +701,24 @@
                                             <div class="prd-name">Kulfi falooda Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -868,6 +727,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-blue-berry-cake" slideNo='4'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -876,38 +736,24 @@
                                             <div class="prd-name">Blue berry Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -917,6 +763,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-paan-cake" slideNo='5'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/21.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -925,38 +772,24 @@
                                             <div class="prd-name">Paan Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -966,6 +799,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-mango-cake" slideNo='6'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/6.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -974,38 +808,24 @@
                                             <div class="prd-name">Mango Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1015,6 +835,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-orange-cake" slideNo='7'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/7.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1023,38 +844,24 @@
                                             <div class="prd-name">Orange Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1064,6 +871,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-paani-puri-cake" slideNo='8'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/8.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1072,38 +880,24 @@
                                             <div class="prd-name">Paani puri Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1113,6 +907,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-merry-berry-cake" slideNo='9'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/9.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1121,38 +916,24 @@
                                             <div class="prd-name">Merry berry Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1162,6 +943,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-gulab-jamun-cake" slideNo='10'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/10.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1170,38 +952,24 @@
                                             <div class="prd-name">Gulab jamun Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1211,6 +979,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-honey-cake" slideNo='11'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/11.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1219,38 +988,24 @@
                                             <div class="prd-name">Honey Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1260,6 +1015,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-zebra-marvel-cake" slideNo='12'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/12.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1268,38 +1024,24 @@
                                             <div class="prd-name">Zebra Marvel Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1309,6 +1051,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-red-velvet-cake" slideNo='13'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/13.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1317,38 +1060,24 @@
                                             <div class="prd-name">Red Velvet Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1358,6 +1087,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-tiger-cream-cake" slideNo='14'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/14.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1366,38 +1096,24 @@
                                             <div class="prd-name">Tiger Cream Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1407,6 +1123,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-date-cake" slideNo='15'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/15.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1415,38 +1132,24 @@
                                             <div class="prd-name">Date Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1456,6 +1159,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-plum-cake" slideNo='16'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/16.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1464,38 +1168,24 @@
                                             <div class="prd-name">Plum Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1505,6 +1195,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-marble-cake" slideNo='17'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/17.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1513,38 +1204,24 @@
                                             <div class="prd-name">Marble Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1554,6 +1231,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-wine-cake" slideNo='18'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/18.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1562,38 +1240,24 @@
                                             <div class="prd-name">Wine Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1603,6 +1267,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-sponge-cake" slideNo='19'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/19.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1611,38 +1276,24 @@
                                             <div class="prd-name">Sponge Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1652,6 +1303,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-mix-fruit-cake" slideNo='20'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/20.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1660,38 +1312,24 @@
                                             <div class="prd-name">Mix Fruit Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1701,6 +1339,7 @@
                             <div class="splide__slide">
                                 <div class="product" id="cak-fla-trooty-frooty-cake" slideNo='21'>
                                     <div class="inner">
+                                        <i class="external alternate icon"></i>
                                         <img src="assets/images/products/cakes/21.jpg" class="prd-img" alt="">
                                     </div>
 
@@ -1709,38 +1348,24 @@
                                             <div class="prd-name">Trooty Frooty Cake</div>
                                         </div>
 
-                                        <div>
-                                            <span class="prd-prop">Weight:</span>
-                                            <div class="prd-weight">
-                                                <div class="selected">0.5 kg</div>
-                                                <div>1.0 kg</div>
-                                                <div>1.5 kg</div>
+                                        <div class="ui selection scrolling dropdown prd-weight">
+                                            <input type="hidden" value="50"></input>
+                                            <div class="text"></div>
+                                            <i class="dropdown icon"></i>
+                                            <div class="menu">
+                                                <div class="item" data-value="50">Pastry</div>
+                                                <div class="item" data-value="300">250 g</div>
+                                                <div class="item" data-value="500">500 g</div>
+                                                <div class="item" data-value="1000">1 kg</div>
+                                                <div class="item" data-value="1500">1.5 kg</div>
+                                                <div class="item" data-value="2000">2 kg</div>
                                             </div>
                                         </div>
+                                        <div class="ui fluid action input"><input class="prd-price" type="text"
+                                                readonly /><button class="ui teal icon button"><i
+                                                    class="cart right icon"></i></button></div>
 
-                                        <div class="inner3">
-                                            <div>
-                                                <span class="prd-prop">Price:</span>
-                                                <div class="prd-price">Rs.100</div>
-                                            </div>
 
-                                            <label class="addtoCartIcon">
-                                                <img class="cart-ico" src="assets/shoping-cart.svg" 
-                                                    style="width: 100%;">
-                                                <div class="tick-trigger" style="display: flex;">
-                                                    <div class="trigger"></div><svg version="1.1" id="tick"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                                                        xml:space="preserve">
-                                                        <polyline class="tick path"
-                                                            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                                                            points="11.6,20 15.9,24.2 26.4,13.8 " /></svg>
-                                                </div>
-                                                <input type="checkbox" class="addToCart">
-                                            </label>
-
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1760,8 +1385,7 @@
                 <div class="splide__list">
                     <div class="slide-item splide__slide">
                         <div class="inner">
-                            <img src="assets/images/customer-review/cr1.jpg" 
-                                style="border-radius: 100%;">
+                            <img src="assets/images/customer-review/cr1.jpg" style="border-radius: 100%;">
                         </div>
                         <div class="inner2">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -1771,8 +1395,7 @@
 
                     <div class="slide-item splide__slide">
                         <div class="inner">
-                            <img src="assets/images/customer-review/cr2.jpg" 
-                                style="border-radius: 100%;">
+                            <img src="assets/images/customer-review/cr2.jpg" style="border-radius: 100%;">
                         </div>
                         <div class="inner2">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -1782,8 +1405,7 @@
                     </div>
                     <div class="slide-item splide__slide">
                         <div class="inner">
-                            <img src="assets/images/customer-review/cr3.jpg" 
-                                style="border-radius: 100%;">
+                            <img src="assets/images/customer-review/cr3.jpg" style="border-radius: 100%;">
                         </div>
                         <div class="inner2">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -1792,8 +1414,7 @@
                     </div>
                     <div class="slide-item splide__slide">
                         <div class="inner">
-                            <img src="assets/images/customer-review/cr4.jpg" 
-                                style="border-radius: 100%;">
+                            <img src="assets/images/customer-review/cr4.jpg" style="border-radius: 100%;">
                         </div>
                         <div class="inner2">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -1802,8 +1423,7 @@
                     </div>
                     <div class="slide-item splide__slide">
                         <div class="inner">
-                            <img src="assets/images/customer-review/cr5.jpg" 
-                                style="border-radius: 100%;">
+                            <img src="assets/images/customer-review/cr5.jpg" style="border-radius: 100%;">
                         </div>
                         <div class="inner2">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -1848,7 +1468,8 @@
 
         <footer id="footer" class="flex jContentCenter">
             <div class="default flexAllCenter"><i class="inverted green big whatsapp icon link"></i></div>
-            <div class="default flexAllCenter" id="insta-foot"><i class="inverted purple big instagram icon link"></i></div>
+            <div class="default flexAllCenter" id="insta-foot"><i class="inverted purple big instagram icon link"></i>
+            </div>
             <div class="default flexAllCenter"><i class="inverted blue big telegram icon link"></i></div>
 
         </footer>
@@ -1866,7 +1487,12 @@
 
 <!-- <script src="assets/vendors/isotope.pkgd.min.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script> -->
-<script src="   assets/vendors/simpleParallax.min.js"></script>
+
+
+<!-- <script src="   assets/vendors/simpleParallax.min.js"></script> -->
+
+
+
 <script src="assets/vendors/semantic.min.js"></script>
 
 

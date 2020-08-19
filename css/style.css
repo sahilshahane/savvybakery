@@ -5,15 +5,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     height: 100%;
     width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     font-size: 100%;
     /* -webkit-transform: translate3d(0,0,0); */
 }
 
-::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
 
 * {
     box-sizing: border-box;
@@ -104,6 +102,12 @@ body .pusher > section.padTop{
 .flex.jContentCenter{justify-content: center}
 .flex.jItemsCenter{justify-items: center}
 
+#productExternalDisplay{
+    height: 100%;
+    width: 100%;
+}
+
+
 /* HOME */
 
 #home .homeSlide{
@@ -189,7 +193,7 @@ body .pusher > section.padTop{
 
 #menu .subTitle .sub_category {
     background-color: white;
-    padding: 0px 10px;
+    padding: 10px 10px;
     font-family: 'Galada', cursive;
     font-size: 1.5rem;
     height: auto;
@@ -215,15 +219,30 @@ body .pusher > section.padTop{
 
 #menu .product.splide__slide {
     border-radius: 10px;
-    /* transform: translateX(20%); */
+}
+
+#menu .product .external.icon{
+    position: absolute;
+    right: 0;
+    /* display: none; */
+}
+
+#menu .product .inner{
+    cursor: pointer;
+}
+
+#menu .product .inner:hover{
+    color: red;
+    filter: brightness(60%);
 }
 
 #menu .product .prd-img {
     width: 100%;
     height: auto;
-    transition: filter 0.2s;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
 }
+
+
 
 #menu .product .inner2 {
     z-index: 4;
@@ -236,9 +255,11 @@ body .pusher > section.padTop{
     display: flex;
     flex-flow: column nowrap;
     margin-top: -10%;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 8px 0px 8px;
 }
-
+#menu .product .inner2 > *{
+    margin-bottom: 8px;
+}
 #menu .product .inner2:after {
     position: absolute;
     content: '';
@@ -259,79 +280,10 @@ body .pusher > section.padTop{
     font-family: 'Galada', cursive;
 }
 
-#menu .product .prd-prop {
-    font-size: 0.8rem;
-    color: rgb(48, 47, 47);
-    font-weight: 600;
-}
-
-#menu .product .prd-price {
-    font-weight: bold;
-}
-
-#menu .product .prd-weight {
-    font-weight: bold;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-#menu .product .prd-weight div {
-    display: inline-block;
-    padding: 3px 6px 3px 6px;
-}
-
-#menu .product .prd-weight .selected {
-    color: #000;
-    background-color: white;
-    border-radius: 50px;
-}
-
-#menu .product .addtoCartIcon {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-    float: right;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    cursor: pointer;
-}
-
-#menu .product .addtoCartIcon input {
-    display: none;
-}
-
-.tick {
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    transition: stroke-dashoffset 1s ease-out;
-}
-
-.drawn+svg .path {
-    opacity: 1;
-    stroke-dashoffset: 0;
-}
-
-svg {
-    width: 100%;
-    height: auto;
-}
-
-#menu .product .inner3 {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
 #menu .splide .product{
     transform: scale(0.9);
     transition: transform 0.1s;
 }
-
 
 #menu .splide .is-active .product{
     transform: scale(1);
@@ -388,10 +340,12 @@ svg {
     padding: 5px;
     font-size: 1.2rem;
 }
+
 #footer .default:hover{
     transition: all 0.3s;
     background-color: rgb(34, 34, 34);
 }
+
 
 
 

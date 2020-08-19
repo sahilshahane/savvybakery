@@ -1,6 +1,22 @@
 $(".nav .ui.search").css('width', $(".nav").outerWidth() - $(".nav .logo").outerWidth() - $(".nav .hamburger-ico").outerWidth() - 80);
 
 document.addEventListener('DOMContentLoaded', function () {
+    $('#menu .product .prd-weight').dropdown({
+        transition:"slide up",
+        allowTab:false,
+        direction:"upward",
+        saveRemoteData:false,
+        onChange:function(value){
+            $(this).parent().children(".input").children(".prd-price").val("Rs. "+value)
+        }
+    });
+
+    $("#menu .product .inner2").after(function(){
+        data = $(this).children(".prd-weight").children("input").val();
+        displayInp = $(this).children(".input").children(".prd-price");
+        displayInp.val("Rs. "+data);
+    });
+   
 
     function ScrollToElement(scrollTo, Speed = 0, AnimationType = 'easeInOutExpo', callback = null) {
         var scrolltoOffset = $('.nav').outerHeight();
@@ -27,28 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: true,
         interval: 3500,
         resetProgress: false
-    });
-    homeSlider.mount();
+    }).mount();
 
-    var ParralaxImg = new simpleParallax(document.getElementsByClassName('bgParallax'), {
-        scale: 1.4,
-        delay: 0.6,
-        // transition: 'cubic-bezier(0,0,0,1)',
-    });
-
-
-
-    // var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
-    //     if (entries[0]['isIntersecting'] === true) {
-    //             if (entries[0]['intersectionRatio'] < 0.7) {
-    //             var scrollpos = localStorage.getItem('scrollpos');
-    //             if (scrollpos < 5)
-    //             document.getElementsByClassName("nav")[0].classList.remove('navBackground');
-    //             else
-    //             document.getElementsByClassName('nav')[0].classList.add('navBackground');
-    //         }
-    //     }
-    // }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.99, 1] }).observe(document.querySelector("#home"));
 
 
     window.addEventListener("scroll", function (event) {
@@ -62,42 +58,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    $('#side-nav-bar a').on('click', function (e) {
+    $('#nav-sidebar a').on('click', function (e) {
         var target = $($(this).attr('scroll-id'));
         if (target.length) {
-            $('.ui.side-menu').sidebar('toggle');
+            $('#nav-sidebar').sidebar('toggle');
             e.preventDefault();
             ScrollToElement(target, 700, 'easeInOutExpo');
         }
     });
 
-    // formcarry({
-    //     form: "2yWXkx33Cow4",
-    //     // id or the class name of the form element, only form element allowed
-    //     // works with css selectors
-    //     // # <= for id
-    //     // . <= for class
-    //     element: "#OrderForm",
-    //     extraData: {
-    //         // add whatever you want
-    //         Ordered_Items: getCartData(),
-    //     },
-    //     // Success callback, you can show alert messages
-    //     // or redirect the user in this function
-    //     onSuccess: function(response) {
-    //         alert("Your Order Has Been Placed Successfully!\nWe'll Contact You within 5 hrs");
-    //     },
-    //     // Error callback, a good place to show errors 🗿
-    //     onError: function(error) {
-    //         alert("Something Went Wrong!\nPlease Check Your Internet Connection!");
-    //     }
-    // });
-
     let carousel_settings = {
         perPage: 5,
         gap: 10,
         focus: 'center',
-        start: 0,
         breakpoints: {
             1281: {
                 perPage: 5
@@ -126,20 +99,46 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         // autoplay: true,
         pagination: false,
-        // interval: 3000,
         trimSpace: false,
-        type: 'loop',
+        // updateOnMove:true,
+        // type: 'loop',
+        waitForTransition: true,
+        keyboard:false,
+        slideFocus:false,
+        // updateOnMove:true,
+        // easing:"ease",
     };
+
+    function initSlider(Sliderobj) {
+        Sliderobj.mount();
+        
+        // try {
+        //     Sliderobj.on("active", function (element) {
+        //         element = $(element.slide).children(".product").children("div.inner").children("i.external.alternate.icon");
+        //         element.show();
+        //     });
+    
+        //     Sliderobj.on("inactive", function (element) {
+        //         element = $(element.slide).children(".product").children("div.inner").children("i.external.alternate.icon");
+        //         element.hide();
+        //     });
+        // } catch (error){}
+
+       
+    }
 
     var prd_carausel1 = new Splide('#prd-c1', carousel_settings);
     var prd_carausel2 = new Splide('#prd-c2', carousel_settings);
     var prd_carausel3 = new Splide('#prd-c3', carousel_settings);
 
-    window.prd_carausel1 = prd_carausel1;
+    initSlider(prd_carausel1)
+    initSlider(prd_carausel2)
+    initSlider(prd_carausel3)
 
-    prd_carausel1.mount();
-    prd_carausel2.mount();
-    prd_carausel3.mount();
+
+
+
+
 
     function slideToProduct(productElement, productCategoryElement) {
 
@@ -163,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navigationData = location.hash.substr(1);
         if (navigationData.substring(0, 7) == "Product") {
             viewType = navigationData[8];
-            if (viewType == "E") {} else if (viewType == "I") {
+            if (viewType == "E") { } else if (viewType == "I") {
                 var productElement = $("#" + navigationData.substr(10));
                 var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
 
@@ -209,26 +208,71 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    $('#nav-sidebar').sidebar({
+        dimPage: true,
+        transition: 'overlay',
+        mobileTransition: 'overlay',
+    });
+
+    $("#productExternalView-sidebar").sidebar({
+        dimPage: true,
+        transition: 'overlay',
+        mobileTransition: 'overlay',
+    });
+
+    
+
+    $("#menu .product .inner").click(function(){
+
+        productID = $(this).parent().attr("id")
+        productSideBar = $("#productExternalView-sidebar")
+        productView = $("#productExternalDisplay")
+
+        productSideBar.children(".loading").toggleClass("active");
+        productSideBar.sidebar('toggle');
+
+
+        async function fetchHtmlAsText(url) {
+            productSideBar.children(".loading").toggleClass("active");
+            return await (await fetch(url)).text();
+        }
+        
+
+        productView.innerHTML = fetchHtmlAsText("index.html");
+
+
+        // LOAD HTML PAGE OF THAT PRODUCT
+        // productView.load("https://google.com"
+        
+        
+        // ,()=>{
+        //     // PAGE LOADED REMOVE LOADING
+        //     setTimeout(()=>{
+        //         productSideBar.children(".loading").removeClass("active");
+        //     },1000)
+        // });
+
+    });
+
+    $("#productExternalView-sidebar .closeBtn").click(function(){
+
+        
+        $("#productExternalView-sidebar").sidebar("toggle");
+    });
+    
 
     $('.nav .hamburger-ico').click(function () {
         $(this).addClass('is-active');
 
-        $('.side-menu').sidebar({
-            dimPage: false,
-            transition: 'overlay',
-            mobileTransition: 'overlay',
-        }).sidebar('toggle');
+        $('#nav-sidebar').sidebar('toggle');
     });
 
     $('.ui.side-menu').accordion();
 
-    var categoryContent = [{
-        "category": "Cake",
-        "title": "Chocolate syrup cake",
-        "id": "cak-cho-chocolate-syrup-cake"
+    var categoryContent = [{"category": "Cake","title": "Chocolate syrup cake","id": "cak-cho-chocolate-syrup-cake"
     }, {
-        "category": "Cake",
-        "title": "Black forest cake",
+            "category": "Cake",
+            "title": "Black forest cake",
         "id": "cak-cho-black-forest-cake"
     }, {
         "category": "Cake",
@@ -475,7 +519,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function gtps(result) { //gtps means go to specified product's section on search and show it/focus it
         try {
-            
+
             var productElement = $("#" + result.id);
             var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
 
@@ -484,7 +528,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 slideToProduct(productElement, productCategoryElement);
 
             });
-        }catch (error) {alert("Product Not Listed/Displayed Yet!\nListed Products Till Now are Cakes");}
+        } catch (error) { alert("Product Not Listed/Displayed Yet!\nListed Products Till Now are Cakes"); }
 
     }
 
@@ -499,21 +543,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    $("#side-nav-bar a.productMenuNav").click(function (e) {
+    $("#nav-sidebar a.productMenuNav").click(function (e) {
         e.preventDefault();
         $('.ui.side-menu').sidebar('toggle');
 
         try {
-        var productElement = $($(this).attr('productID'));
-        var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
+            var productElement = $($(this).attr('productID'));
+            var productCategoryElement = $((productElement).closest('.product-carousel').attr('productCategory'));
 
-        ScrollToElement(productCategoryElement, 200, 'easeInOutExpo', () => {
+            ScrollToElement(productCategoryElement, 200, 'easeInOutExpo', () => {
 
-            slideToProduct(productElement, productCategoryElement);
+                slideToProduct(productElement, productCategoryElement);
 
-        });
-        } catch (error) {alert("Product Not Listed/Displayed Yet!\nListed Products Till Now are Cakes");}
-        
+            });
+        } catch (error) { alert("Product Not Listed/Displayed Yet!\nListed Products Till Now are Cakes"); }
+
     });
 
 
@@ -524,10 +568,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    // PARALLAX IMAGES
+
+    // var ParralaxImg = new simpleParallax(document.getElementsByClassName('bgParallax'), {
+    //     scale: 1.4,
+    //     delay: 0.6,
+    //     // transition: 'cubic-bezier(0,0,0,1)',
+    // });
 
 
+    // var HomeScrollobserver1 = new IntersectionObserver(function(entries) {
+    //     if (entries[0]['isIntersecting'] === true) {
+    //             if (entries[0]['intersectionRatio'] < 0.7) {
+    //             var scrollpos = localStorage.getItem('scrollpos');
+    //             if (scrollpos < 5)
+    //             document.getElementsByClassName("nav")[0].classList.remove('navBackground');
+    //             else
+    //             document.getElementsByClassName('nav')[0].classList.add('navBackground');
+    //         }
+    //     }
+    // }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.99, 1] }).observe(document.querySelector("#home"));
 
 
+    // formcarry({
+    //     form: "2yWXkx33Cow4",
+    //     // id or the class name of the form element, only form element allowed
+    //     // works with css selectors
+    //     // # <= for id
+    //     // . <= for class
+    //     element: "#OrderForm",
+    //     extraData: {
+    //         // add whatever you want
+    //         Ordered_Items: getCartData(),
+    //     },
+    //     // Success callback, you can show alert messages
+    //     // or redirect the user in this function
+    //     onSuccess: function(response) {
+    //         alert("Your Order Has Been Placed Successfully!\nWe'll Contact You within 5 hrs");
+    //     },
+    //     // Error callback, a good place to show errors 🗿
+    //     onError: function(error) {
+    //         alert("Something Went Wrong!\nPlease Check Your Internet Connection!");
+    //     }
+    // });
 
 
 });
